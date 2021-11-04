@@ -1,0 +1,22 @@
+{
+  "name": "toyhouse",
+  "version": "1.0.0",
+  "description": "Repositorio: https://github.com/cirorroig/grupo7_ToyHouse.git",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cirorroig/grupo7_ToyHouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cirorroig/grupo7_ToyHouse/issues"
+  },
+  "homepage": "https://github.com/cirorroig/grupo7_ToyHouse#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
