@@ -67,7 +67,6 @@ h1{
 main div.information{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     width: 80%;
 }
 main div.information h3{
@@ -79,7 +78,6 @@ main div.information input{
 }
 main div.notifications {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 80%;
@@ -92,9 +90,10 @@ main div.notifications p{
     
 }
 main div.notifications i{
-    width: 10%;
+    width: 100%;
     text-align: center;
     font-size:25px;
+    position: relative;
 }
 main button.check{
     background-color: transparent;
