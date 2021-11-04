@@ -96,6 +96,10 @@ main div.notifications i{
     text-align: center;
     font-size:25px;
 }
+main button.check{
+    background-color: transparent;
+    border: none;
+}
 main div.register{
     display: flex;
     width: 80%;
