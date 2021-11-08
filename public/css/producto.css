@@ -1,0 +1,69 @@
+
+body div.main{
+margin: 0px;
+padding: 0px;
+}
+
+.percent{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+div.producto{
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 250px;
+}
+
+
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+h2{
+  display: flex;
+  margin: 14px;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+div.brand{
+display: flex;
+flex-wrap: wrap;
+margin: -20px;
+justify-content: center;
+}
+
+div.price{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: px;
+  }
+  
+  button.comprar{
+    background-color: #47525E;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
+  button.cart{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    color: #47525E;
+    justify-content: center;
+    border: none;
+    align-items: center;
+  }
+
+.button{
+  display: flex;
+  justify-content: center;
+}
