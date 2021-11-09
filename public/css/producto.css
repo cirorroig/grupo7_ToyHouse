@@ -1,8 +1,14 @@
-
-body div.main{
-margin: 0px;
-padding: 0px;
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color:white;
+}
+
 
 .percent{
   display: flex;
@@ -13,19 +19,36 @@ div.producto{
   display:flex;
   flex-wrap: nowrap;
   justify-content: center;
+  width: 100%;
   height: 250px;
+  align-items: center;
 }
-
-
-
+div.producto img{
+  position: relative;
+  left: 5px;
+  margin:0px 0px 0px 20px;
+  width: 200px;
+  height: 200px;
+}
+div.producto i{
+  background-color: white;
+  font-size: 20px;
+  position: relative;
+bottom: 103px;
+right: 215px;
+border:solid black;
+padding: 5px;
+border-radius: 50%;
+}
 main{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 h2{
   display: flex;
-  margin: 14px;
+  margin: 11px;
   flex-wrap: nowrap;
   justify-content: center;
 }
@@ -33,11 +56,12 @@ h2{
 div.brand{
 display: flex;
 flex-wrap: wrap;
-margin: -20px;
+margin: 20px;
 justify-content: center;
 }
 
 div.price{
+  width: 60%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -45,6 +69,8 @@ div.price{
   }
   
   button.comprar{
+    font-size: 20px;
+    padding: 5px;
     background-color: #47525E;
     display: flex;
     flex-wrap: wrap;
@@ -64,6 +90,10 @@ div.price{
   }
 
 .button{
+  margin: 13px;
+  position: relative;
+  left: 13px;
+  width: 40%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
