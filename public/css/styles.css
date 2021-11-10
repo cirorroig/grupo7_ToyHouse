@@ -119,26 +119,39 @@ main.register button.reg-button{
     margin:0px 0px 20px;
 }
 main.cart-page div.title{
+    display: flex;
     margin-top: 15px ;
-    padding-left: 15%;
+    width: 100%;
+    justify-content: center;
 }
 main.cart-page div.total{
-    padding-left: 15%;
-    margin: 15px 15px 15px 0px;
-}
-main.cart-page .percent{
     display: flex;
-    flex-wrap: nowrap;
-  }
-main.cart-page div.product{
-    display:flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+    margin: 15px 15px 15px 0px;
     width: 100%;
-    align-items: center;
+    justify-content: center;
+}
+
+.percent{
+    position: relative;
+    left: 60px;
+    top: 21px;
+}
+
+
+  .close-button{
+      border: none;
+background-color: transparent;
+font-size: 16px;
+  }
+
+main.cart-page div.product{
+    position: relative;
+    width: 100%;
+    left: 90px;
   }
  main.cart-page div.product img{
      width: 50%;
+     margin-bottom: -40;    
   }
 main.cart-page div.product i{
     background-color: white;
@@ -150,9 +163,14 @@ main.cart-page div.product i{
     padding: 5px;
     border-radius: 50%;
   }
-
+ header .top-header .logo{
+    margin-top: 15px;
+    width: 109px;
+}
 main.cart-page h2{
     display: flex;
+    position: relative;
+    bottom: 30px;
     margin: 20px;
     flex-wrap: nowrap;
     justify-content: center;
@@ -160,12 +178,16 @@ main.cart-page h2{
   
 main.cart-page div.brand{
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   margin: 0px 10px 10px 10px;
   justify-content: center;
+  bottom: 30px;
   }
 main.cart-page div.price{
     width: 60%;
+    position: relative;
+    bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -173,11 +195,23 @@ main.cart-page div.price{
 main.cart-page div.subtotal{
         margin: 15px;
         margin-right: 47%;
+        position: relative;
+        bottom: 30px;
 }
-main.cart-page div.finish-button{
-        background-color: #47525E; 
-        margin: 15px;
+main.cart-page div.finish-button{ 
+        margin: 15px
 }
+
+.finish-button .finalizar{
+    position: relative;
+    bottom: 40px;
+    border: none;
+    background-color: #47525E;
+    color: white;
+    padding: 5px 9px 5px 9px;
+    border-radius: 13%;
+}
+
 main.product-page .percent{
         display: flex;
         flex-wrap: nowrap;
@@ -311,6 +345,12 @@ main.login-page  button.login{
         font-size: 20px;
         padding: 5px;
 }
+
+.logos{
+    margin: 15px;
+    width: 67px;
+}
+
 main.home-page .banner{
     position: relative;
     display: flex;
