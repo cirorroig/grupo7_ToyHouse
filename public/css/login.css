@@ -55,64 +55,50 @@ h1{
 main div.information{
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 200px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
+   padding: 20px;
 }
-.mail{
-    font-size: 20px;
+main div.information label{
+    font-weight: 600;
+}
+main div.information input{
+    margin:5px 0px;
+    padding: 5px 0px;
 }
 main div.mail{
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
-    position: relative;
-    right: 30px;
-    margin:0px 0px 15px 0px;
 } 
 main div.password{
     display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 100%;
-    position: relative;
-right: 30px;
-margin:0px 0px 15px 0px;
 }
-main div.information h3{
-    padding: 10px 0px;
-}
-main information.remember{
+
+main form div.remember{
     display: flex;
-    margin:20px 
+    justify-content: center;
+    align-items: center;
 }
-.remember{
-    margin: 25px;
-    width: 100%;
-    
-}
-main div.remember h4{
-    padding:0px 5px ;
-   
+main form div.remember input{
+    margin: 10px;
 }
 main button.check{
     background-color: transparent;
     border: none;   
 }
+main form.login-form{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content:center;
+    
+}
 main div.login{
     display: flex;
-    width: 80%;
-    flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
 }
 main button.login{
     background-color: #47525E;
     color: white;
-    width: 100%;
-    text-align: center;
+    width: 90%;
     border-radius: 5px;
     font-size: 20px;
+    padding: 5px;
 }
