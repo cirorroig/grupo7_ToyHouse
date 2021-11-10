@@ -311,3 +311,116 @@ main.login-page  button.login{
         font-size: 20px;
         padding: 5px;
 }
+main.home-page .banner{
+    position: relative;
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+main.home-page h1{
+    margin: 12px;
+}
+main.home-page .arrows{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+    bottom: 60px;
+    border: none;
+}
+.arrow-left{
+    border: none;
+    background-color: transparent;
+    font-size: 19px;
+}
+.arrow-right{
+    border: none;
+    background-color: transparent;
+    font-size: 19px;
+}
+.dots{
+    position: relative;
+    bottom: 43px;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    color: #47525E;
+}
+main.home-page .products{
+    position: relative;
+    bottom: 20px;
+}
+main.home-page .price{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+main.home-page div.producto i{
+    position: relative;
+    bottom: 140px;
+    right: 8px;
+    border: solid black;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: white;
+}
+main.home-page button.buy{
+    border: none;
+    background-color:#47525E;
+    padding: 6px 8px 6px 8px;
+    border-radius: 10%;
+    color: white;
+}
+main.home-page button.cart{
+    font-size: 17px;
+    border: none;
+}
+.footer{
+    margin-top: 20px;
+    background-color:#47525E;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+     
+}
+.pay{
+    margin: 8px;
+    color: white;
+    text-decoration: none;
+}
+.inform{
+    text-decoration: none;
+    margin-bottom: 8px;
+    color: white;
+}
+.contact-us{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 8px;
+}
+.social-media{
+    display: flex;
+    position: relative;
+    width: 28%; 
+    justify-content: space-around;
+    font-size: 30px;
+    left: 136px;
+}
+.copyright{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+.instagram{
+    color: lightgray;
+}
+.twitter{
+    color: white;
+   
+}
+.facebook{
+    color: white;
+}
