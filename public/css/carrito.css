@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:white;
+}
+header div.top-header{
+    display: flex;
+    background-color:#E5E9F2;
+    justify-content: space-between;
+    height: 100px;
+}
+header div.logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header button.logo-button{
+    background-color: transparent;
+    border: none;
+}
+header div.logo img{
+    width: 65%;
+}
+header div.topright-header{
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+}
+div.title{
+    margin-top: 15px ;
+    padding-left: 15%;
+}
+div.total{
+    padding-left: 15%;
+    margin: 15px 15px 15px 0px;
+}
+.percent{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+div.producto{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    align-items: center;
+  }
+  div.producto img{
+    position: relative;
+    left: 5px;
+    margin:20px 0px 0px 20px;
+    width: 250px;
+    height: 250px;
+  }
+  div.producto i{
+    background-color: white;
+    font-size: 20px;
+    position: relative;
+    bottom: 110px;
+    right: 260px;
+    border:solid black;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h2{
+    display: flex;
+    margin: 20px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  div.brand{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 10px 10px 10px;
+  justify-content: center;
+  }
+  
+  div.price{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    div.subtotal{
+        margin: 15px;
+        margin-right: 47%;
+    }
+    div.boton{
+        background-color: #47525E; 
+        margin: 15px;
+    }
+
