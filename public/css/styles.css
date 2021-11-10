@@ -1,0 +1,313 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:white;
+}
+header div.top-header{
+    display: flex;
+    background-color:#E5E9F2;
+    justify-content: space-between;
+    height: 100px;
+}
+header div.logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header button.logo-button{
+    background-color: transparent;
+    border: none;
+}
+header div.logo img{
+    width: 65%;
+}
+header div.topright-header{
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header button.cart{
+    background-color: transparent;
+    border: none;
+}
+header button.burger-menu{
+    background-color: transparent;
+    border: none;
+}
+header div i.fa-shopping-cart{
+    display: flex;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+header div i.fa-bars{
+    display: flex;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 5px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main.register h1{
+    margin:10px 0px;
+    width: 90%;
+    text-align: center;
+}
+main.register form.register-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main.register div.information{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+main.register div.information label{
+    font-weight: 600;
+}
+main.register div.information input{
+    margin:5px 0px;
+    padding: 5px 0px;
+}
+main.register div.notifications {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+}
+main.register div.notifications label{
+    width: 90%;
+    text-align: center;
+    font-size: 15px;
+    
+}
+main.register div.notifications input{
+    padding: 2px;
+}
+main.register button.check{
+    background-color: transparent;
+    border: none;
+}
+
+main.register button.reg-button{
+    font-size: 15px;
+    background-color: #47525E;
+    color:white;
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    margin:0px 0px 20px;
+}
+main.cart-page div.title{
+    margin-top: 15px ;
+    padding-left: 15%;
+}
+main.cart-page div.total{
+    padding-left: 15%;
+    margin: 15px 15px 15px 0px;
+}
+main.cart-page .percent{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+main.cart-page div.product{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+ main.cart-page div.product img{
+     width: 50%;
+  }
+main.cart-page div.product i{
+    background-color: white;
+    font-size: 20px;
+    position: relative;
+    bottom: 110px;
+    right: 260px;
+    border:solid black;
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+main.cart-page h2{
+    display: flex;
+    margin: 20px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+main.cart-page div.brand{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 10px 10px 10px;
+  justify-content: center;
+  }
+main.cart-page div.price{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+main.cart-page div.subtotal{
+        margin: 15px;
+        margin-right: 47%;
+}
+main.cart-page div.finish-button{
+        background-color: #47525E; 
+        margin: 15px;
+}
+main.product-page .percent{
+        display: flex;
+        flex-wrap: nowrap;
+}
+      
+main.product-page div.producto{
+        display:flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+        height: 250px;
+        align-items: center;
+}
+main.product-page div.producto img{
+        position: relative;
+        left: 5px;
+        margin:0px 0px 0px 20px;
+        width: 200px;
+        height: 200px;
+    }
+main.product-page div.producto i{
+    background-color: white;
+    font-size: 20px;
+    position: relative;
+    bottom: 103px;
+      right: 215px;
+      border:solid black;
+      padding: 5px;
+      border-radius: 50%;
+}
+    
+main.product-page  h2{
+        display: flex;
+        margin: 11px;
+        flex-wrap: nowrap;
+        justify-content: center;
+      }
+      
+main.product-page div.brand{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+      justify-content: center;
+      }
+main.product-page div.price{
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: px;
+        }
+        
+main.product-page button.buy{
+          font-size: 20px;
+          padding: 5px;
+          background-color: #47525E;
+          display: flex;
+          flex-wrap: wrap;
+          color: white;
+          justify-content: center;
+          border-radius: 5px;
+        }
+      
+main.product-page button.cart{
+          background-color: white;
+          display: flex;
+          flex-wrap: wrap;
+          color: #47525E;
+          justify-content: center;
+          border: none;
+          align-items: center;
+          font-size: 20px;
+}
+main.product-page div.button{
+        margin: 13px;
+        position: relative;
+        left: 13px;
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+}
+main.login-page h1{
+        margin: 25px 0px;
+}
+main.login-page  div.information{
+        display: flex;
+        flex-direction: column;
+       padding: 20px;
+}
+main.login-page  div.information label{
+        font-weight: 600;
+}
+main.login-page  div.information input{
+        margin:5px 0px;
+        padding: 5px 0px;
+}
+main.login-page  div.mail{
+        display: flex;
+} 
+main.login-page  div.password{
+        display: flex;
+}
+main.login-page  form div.remember{
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+}
+main.login-page  form div.remember input{
+        margin: 10px;
+}
+main.login-page  button.check{
+        background-color: transparent;
+        border: none;   
+}
+main.login-page  form.login-form{
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        justify-content:center;
+        
+}
+main.login-page  div.login{
+        display: flex;
+        justify-content: center;
+}
+main.login-page  button.login{
+        background-color: #47525E;
+        color: white;
+        width: 90%;
+        border-radius: 5px;
+        font-size: 20px;
+        padding: 5px;
+}
