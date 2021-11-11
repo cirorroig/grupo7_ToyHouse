@@ -18,6 +18,22 @@ header div.top-header{
     justify-content: space-between;
     height: 100px;
 }
+header div.top-header a.cart{
+    color: transparent;
+}
+header div.account{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header div.account button.register, button.login{
+    border:none;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    background-color:#E5E9F2;
+    font-family: 'Roboto', sans-serif;
+}
 header div.logo {
     display: flex;
     flex-wrap: wrap;
@@ -37,7 +53,7 @@ header div.topright-header{
     align-items: center;
 }
 header button.cart{
-    background-color: transparent;
+    background-color: transparent ;
     border: none;
 }
 header button.burger-menu{
@@ -59,7 +75,6 @@ header div i.fa-bars{
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    margin: 5px;
 }
 main{
     display: flex;
@@ -112,11 +127,14 @@ main.register button.check{
 main.register button.reg-button{
     font-size: 15px;
     background-color: #47525E;
-    color:white;
     padding: 10px;
     width: 80%;
     border-radius: 5px;
     margin:0px 0px 20px;
+}
+main.register button.reg-button a{
+    text-decoration: none;
+    color:white;
 }
 main.cart-page div.title{
     display: flex;
@@ -163,10 +181,6 @@ main.cart-page div.product i{
     padding: 5px;
     border-radius: 50%;
   }
- header .top-header .logo{
-    margin-top: 15px;
-    width: 109px;
-}
 main.cart-page h2{
     display: flex;
     position: relative;
@@ -274,6 +288,10 @@ main.product-page button.buy{
           justify-content: center;
           border-radius: 5px;
         }
+main.product-page button.buy a{
+    text-decoration: none;
+    color:white;
+}
       
 main.product-page button.cart{
           background-color: white;
@@ -322,6 +340,26 @@ main.login-page  form div.remember{
 main.login-page  form div.remember input{
         margin: 10px;
 }
+main.login-page  form div.forgot{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}   
+main.login-page  form div.forgot button{
+    border: none;
+    background-color: white;
+}
+main.login-page  form div.forgot a{
+    color: #000;
+    text-decoration: none;
+}
+main.login-page  form div.forgot label{
+   font-size: 15px;
+}
+main.login-page  form div.remember input{
+    margin: 10px;
+}
 main.login-page  button.check{
         background-color: transparent;
         border: none;   
@@ -336,19 +374,18 @@ main.login-page  form.login-form{
 main.login-page  div.login{
         display: flex;
         justify-content: center;
+        margin:10px 0px;
 }
 main.login-page  button.login{
         background-color: #47525E;
-        color: white;
         width: 90%;
         border-radius: 5px;
         font-size: 20px;
         padding: 5px;
 }
-
-.logos{
-    margin: 15px;
-    width: 67px;
+main.login-page  button.login a{
+    color: white;
+    text-decoration: none;
 }
 
 main.home-page .banner{
@@ -368,17 +405,17 @@ main.home-page .arrows{
     bottom: 60px;
     border: none;
 }
-.arrow-left{
+main.home-page .arrow-left{
     border: none;
     background-color: transparent;
     font-size: 19px;
 }
-.arrow-right{
+main.home-page .arrow-right{
     border: none;
     background-color: transparent;
     font-size: 19px;
 }
-.dots{
+main.home-page .dots{
     position: relative;
     bottom: 43px;
     border: none;
@@ -390,12 +427,13 @@ main.home-page .products{
     position: relative;
     bottom: 20px;
 }
+
 main.home-page .price{
     display: flex;
     justify-content: space-around;
     width: 60%;
 }
-main.home-page div.producto i{
+main.home-page div.product i{
     position: relative;
     bottom: 140px;
     right: 8px;
@@ -404,43 +442,46 @@ main.home-page div.producto i{
     padding: 4px;
     background-color: white;
 }
+main.home-page div.product a{
+    width: 100%;
+    text-decoration: none;
+    color:#000000;
+}
 main.home-page button.buy{
     border: none;
     background-color:#47525E;
     padding: 6px 8px 6px 8px;
     border-radius: 10%;
     color: white;
+    text-decoration: none;
 }
 main.home-page button.cart{
     font-size: 17px;
     border: none;
+    background-color: transparent;
+    color:none;
 }
-.footer{
+main.home-page button.cart a{
+    background-color: transparent;
+    color:#000000;
+    
+}
+footer{
     margin-top: 20px;
     background-color:#47525E;
 }
-.info{
+footer .inform, .pay, .contact-us{
+    text-decoration: none;
+    margin-bottom: 8px;
+    color: white;
+}
+footer div.info{
     display: flex;
     flex-direction: column;
-    align-items: center; 
-     
+    align-items: center;
 }
-.pay{
-    margin: 8px;
-    color: white;
-    text-decoration: none;
-}
-.inform{
-    text-decoration: none;
-    margin-bottom: 8px;
-    color: white;
-}
-.contact-us{
-    text-decoration: none;
-    color: white;
-    margin-bottom: 8px;
-}
-.social-media{
+
+footer .social-media{
     display: flex;
     position: relative;
     width: 28%; 
@@ -454,13 +495,6 @@ main.home-page button.cart{
     text-align: center;
     font-size: 13px;
 }
-.instagram{
-    color: lightgray;
-}
-.twitter{
-    color: white;
-   
-}
-.facebook{
+.instagram, .twitter, .facebook{
     color: white;
 }

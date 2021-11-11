@@ -12,10 +12,16 @@
 <body>
     <header>
         <div class="top-header">
-            <a href="/"><div class="logo"><button type="submit" class="logo-button"><img src="images/logo plantilla.png" alt="logo"></button></div></a>
+            <div class="logo"><a href="/"><button type="submit" class="logo-button"><img src="images/logo plantilla.png" alt="logo"></button></a></div>
+            <div class="account">
+                <a href="/register"><button class="register">Registrarme</button></a>
+                <a href="/login"><button class="login">Iniciar Sesion</button></a>
+            </div>
             <div class="topright-header">
-                <button type="submit" class="cart"><i class="fas fa-shopping-cart"></i></button>
-                <button  type="submit" class="burger-menu"><i class="fas fa-bars"></i></button>
+                <a href="/carrito" class="cart">
+                    <button type="submit" class="cart"><i class="fas fa-shopping-cart"></i></button>
+                </a>
+                    <button  type="submit" class="burger-menu"><i class="fas fa-bars"></i></button>          
             </div>
         </div>
     </header>
@@ -31,12 +37,15 @@
                 <input type="password" name="password" id="password"> 
         </div>
         </div>
+        <div class="forgot">
+            <button ><a href="/Recuperar Contraseña"><label for="forgot">Olvide mi Contraseña</label></a></button>  
+        </div>
         <div class="remember">
             <input type="checkbox" name="check">  
             <label for="remember">Recordarme</label>
-        </div>
+        </div>        
         <div class="login">
-            <button type="submit" class="login">Inicia sesion</button>
+            <button type="submit" class="login"><a href="/">Inicia sesion</a></button>
         </div>
         </form>
     </main>

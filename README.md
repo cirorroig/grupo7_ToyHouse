@@ -17,3 +17,6 @@ https://www.elmundodeljuguete.com.ar/
 https://cebra.com.ar/
 https://www.jugueteriassantaclaus.com/
 
+Enlace a tablero de trabajo:
+https://github.com/cirorroig/grupo7_ToyHouse/projects/1?add_cards_query=is%3Aopen
+

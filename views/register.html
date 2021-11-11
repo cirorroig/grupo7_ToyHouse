@@ -12,10 +12,17 @@
 <body>
     <header>
         <div class="top-header">
-            <div class="logo"><button type="submit" class="logo-button"><img src="images/logo plantilla.png" alt="logo"></button></div>
+            <div class="logo"><a href="/"><button type="submit" class="logo-button"><img src="images/logo plantilla.png" alt="logo"></button></a></div>
+            <div class="account">
+                <a href="/register"><button class="register">Registrarme</button></a>
+                <a href="/login"><button class="login">Iniciar Sesion</button></a>
+            </div>
             <div class="topright-header">
-                <button type="submit" class="cart"><i class="fas fa-shopping-cart"></i></button>
-                <button  type="submit" class="burger-menu"><i class="fas fa-bars"></i></button>
+                <a href="/carrito" class="cart">
+                    <button type="submit" class="cart"><i class="fas fa-shopping-cart"></i></button>
+                </a>
+                    <button  type="submit" class="burger-menu"><i class="fas fa-bars"></i></button>
+                    
             </div>
         </div>
     </header>
@@ -45,7 +52,7 @@
                 <div class="notifications">
                     <input type="checkbox" name="send-notif" id="notifications"><label for="notifications">Quiero recibir notificaciones de productos nuevos a mi correo electrónico</label>
                 </div>
-                <button type="submit" class="reg-button">Registrarme</button>
+                <button type="submit" class="reg-button"><a href="/login">Registrarme</a></button>
             </form>
         </div> 
        
