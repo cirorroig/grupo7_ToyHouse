@@ -6,11 +6,12 @@
 
 img{
     width: 100%;
+    box-shadow:  0px 0px 10px rgb(100, 100, 100);
 }
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color:white;
+    background-image: url("../images/Fondo-2.jpg");
 }
 header div.top-header{
     display: flex;
@@ -20,7 +21,10 @@ header div.top-header{
 }
 header div.top-header a.cart{
     color: transparent;
+    transition: all 600ms;
+    
 }
+
 header div.account{
     display: flex;
     flex-direction: column;
@@ -33,18 +37,31 @@ header div.account button.register, button.login{
     font-weight: 700;
     background-color:#E5E9F2;
     font-family: 'Roboto', sans-serif;
+    cursor: pointer;
 }
 header div.logo {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: 10px;
+    transition: all 400ms;
 }
+header div.logo:hover{
+    transform: rotate(-360deg);
+}
+
 header button.logo-button{
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 header div.logo img{
-    width: 65%;
+    width: 70px;
+    border-radius: 50%;
+    size: 20px;
+    box-shadow: 0px 0px 3px rgb(100, 100, 100);
 }
 header div.topright-header{
     width: 100px;
@@ -55,10 +72,13 @@ header div.topright-header{
 header button.cart{
     background-color: transparent ;
     border: none;
+    cursor: pointer;
 }
 header button.burger-menu{
     background-color: transparent;
     border: none;
+    cursor: pointer;
+    position: relative;
 }
 header div i.fa-shopping-cart{
     display: flex;
@@ -118,6 +138,7 @@ main.register div.notifications label{
 }
 main.register div.notifications input{
     padding: 2px;
+    cursor: pointer;
 }
 main.register button.check{
     background-color: transparent;
@@ -131,6 +152,7 @@ main.register button.reg-button{
     width: 80%;
     border-radius: 5px;
     margin:0px 0px 20px;
+    cursor: pointer;
 }
 main.register button.reg-button a{
     text-decoration: none;
@@ -168,8 +190,9 @@ main.cart-page div.product{
     left: 90px;
   }
  main.cart-page div.product img{
-     width: 50%;
-     margin-bottom: -40;    
+    width: 50%;
+    height: 10%;
+    margin-bottom: -40;    
   }
 main.cart-page div.product i{
     background-color: white;
@@ -223,7 +246,8 @@ main.cart-page div.finish-button{
     background-color: #47525E;
     color: white;
     padding: 5px 9px 5px 9px;
-    border-radius: 13%;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 main.product-page .percent{
@@ -243,8 +267,8 @@ main.product-page div.producto img{
         position: relative;
         left: 5px;
         margin:0px 0px 0px 20px;
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
     }
 main.product-page div.producto i{
     background-color: white;
@@ -287,6 +311,7 @@ main.product-page button.buy{
           color: white;
           justify-content: center;
           border-radius: 5px;
+          
         }
 main.product-page button.buy a{
     text-decoration: none;
@@ -340,6 +365,7 @@ main.login-page  form div.remember{
 main.login-page  form div.remember input{
         margin: 10px;
 }
+
 main.login-page  form div.forgot{
     display: flex;
     align-items: center;
@@ -353,13 +379,18 @@ main.login-page  form div.forgot button{
 main.login-page  form div.forgot a{
     color: #000;
     text-decoration: none;
+    background-color: transparent;
 }
 main.login-page  form div.forgot label{
    font-size: 15px;
+   cursor: pointer;
+   background-color: rgba(208,227,234,255);
 }
 main.login-page  form div.remember input{
     margin: 10px;
+    cursor: pointer;
 }
+
 main.login-page  button.check{
         background-color: transparent;
         border: none;   
@@ -409,11 +440,13 @@ main.home-page .arrow-left{
     border: none;
     background-color: transparent;
     font-size: 19px;
+    cursor: pointer;
 }
 main.home-page .arrow-right{
     border: none;
     background-color: transparent;
     font-size: 19px;
+    cursor: pointer;
 }
 main.home-page .dots{
     position: relative;
@@ -422,6 +455,7 @@ main.home-page .dots{
     background-color: transparent;
     font-size: 18px;
     color: #47525E;
+    cursor: pointer;
 }
 main.home-page .products{
     position: relative;
@@ -442,6 +476,15 @@ main.home-page div.product i{
     padding: 4px;
     background-color: white;
 }
+main.home-page div.product img{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+}
+
 main.home-page div.product a{
     width: 100%;
     text-decoration: none;
@@ -451,9 +494,10 @@ main.home-page button.buy{
     border: none;
     background-color:#47525E;
     padding: 6px 8px 6px 8px;
-    border-radius: 10%;
+    border-radius: 5px;
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 main.home-page button.cart{
     font-size: 17px;
