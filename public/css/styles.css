@@ -498,9 +498,7 @@ main.home-page article.product i.fa-percent{
     font-size: 20px;
     background-color: white;
 }
-main.home-page article.product img{
-    
-}
+
 
 main.home-page p.product-name{
     text-align: center;
@@ -540,9 +538,9 @@ main.home-page button.cart{
     margin-left: 10px;
     font-size: 28px;
 }
-main.home-page button.cart a{
 
-}
+
+
 footer{
     margin-top: 20px;
     background-color:#47525E;
