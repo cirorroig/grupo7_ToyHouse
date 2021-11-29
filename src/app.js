@@ -1,6 +1,3 @@
-
-
-
 const path=require("path");
 const express=require("express");
 const app=express();
@@ -10,6 +7,7 @@ const indexRouter = require('./routes/index');
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+app.use(express.static(path.join(__dirname, "public")))
 
 app.use('/', indexRouter);
 
@@ -20,6 +18,5 @@ app.get("/carrito",(req,res)=> res.sendFile(path.join(__dirname,"/src/views/prod
 app.get("/producto",(req,res)=> res.sendFile(path.join(__dirname,"/src/views/productDetail.ejs")))*/
 
 
-app.use(express.static(path.join(__dirname, "public")))
 
 app.listen(3000,()=>console.log("Funcionando en el puerto 3000"))
