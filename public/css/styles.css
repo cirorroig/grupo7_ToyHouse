@@ -16,7 +16,7 @@ body{
 }
 header div.top-header{
     display: flex;
-    background-color:#E5E9F2;
+    background-color:rgba(254, 74, 38, 0.8);
     justify-content: space-between;
     height: 100px;
 }
@@ -543,7 +543,7 @@ main.home-page button.cart{
 
 footer{
     margin-top: 20px;
-    background-color:#47525E;
+    background-color:#044C8B;
 }
 footer .inform, .pay, .contact-us{
     text-decoration: none;
