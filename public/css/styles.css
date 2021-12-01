@@ -9,7 +9,7 @@ img{
 }
 body{
     font-family: 'Roboto', sans-serif;
-    background-image: url("../images/Fondo-2.jpg");
+    background-color: #ebebeb;
     background-repeat:repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -22,10 +22,8 @@ header div.top-header{
 }
 header div.top-header a.cart{
     color: transparent;
-    transition: all 600ms;
-    
+    transition: all 600ms; 
 }
-
 header div.account{
     display: flex;
     flex-direction: column;
@@ -33,10 +31,10 @@ header div.account{
 }
 header div.account button.register, button.login{
     border:none;
+    background-color: transparent;
     text-decoration: none;
     font-size: 18px;
     font-weight: 700;
-    background-color:#E5E9F2;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
 }
@@ -106,6 +104,7 @@ main.register h1{
     margin:10px 0px;
     width: 90%;
     text-align: center;
+    color: #3880bf;
 }
 main.register form.register-form{
     display: flex;
@@ -123,6 +122,7 @@ main.register div.information label{
 main.register div.information input{
     margin:5px 0px;
     padding: 5px 0px;
+    border: #3880bf solid 1px;
 }
 main.register div.notifications {
     display: flex;
@@ -339,11 +339,12 @@ main.product-page div.button{
 }
 main.login-page h1{
         margin: 25px 0px;
+        color: #3880bf;
 }
 main.login-page  div.information{
         display: flex;
         flex-direction: column;
-       padding: 20px;
+        padding: 20px;
 }
 main.login-page  div.information label{
         font-weight: 600;
@@ -351,7 +352,9 @@ main.login-page  div.information label{
 main.login-page  div.information input{
         margin:5px 0px;
         padding: 5px 0px;
+        border: solid #3880bf 1px;
 }
+
 main.login-page  div.mail{
         display: flex;
 } 
@@ -373,9 +376,11 @@ main.login-page  form div.forgot{
     width: 100%;
     justify-content: center;
 }   
+main.login-page  form div.forgot button label{
+    background-color: transparent;
+}
 main.login-page  form div.forgot button{
     border: none;
-    background-color: white;
 }
 main.login-page  form div.forgot a{
     color: #000;
@@ -409,7 +414,7 @@ main.login-page  div.login{
         margin:10px 0px;
 }
 main.login-page  button.login{
-        background-color: #47525E;
+        background-color: #3880bf;
         width: 90%;
         border-radius: 5px;
         font-size: 20px;
@@ -525,12 +530,18 @@ main.home-page div.buy-button{
     margin:5px
 }
 main.home-page button.buy{
- background-color: #EB7777;
- color:#fff;
+ background-color: #fff;
+ color:rgb(62, 193, 253);
  font-size: 20px;
- border-radius: 10%;
+ border-radius: 7px;
  padding: 5px;
- border: #FED82F 3px solid;
+ border: rgb(62, 193, 253) 2px solid;
+}
+main.home-page button.buy:hover{
+    background-color: rgb(62, 193, 253);
+    border: #fff 2px solid;
+    color: #fff;
+    cursor: pointer;
 }
 main.home-page button.cart{
     background-color: transparent;
