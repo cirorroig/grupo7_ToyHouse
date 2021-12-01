@@ -11,7 +11,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"../public")))
 
 app.use('/', indexRouter);
-app.use("/products",productsRouter)
+app.use("/product",productsRouter)
 
 /*app.get("/",(req,res)=> res.sendFile(path.join(__dirname,"/src/views/index.ejs")))
 app.get("/register",(req,res)=> res.sendFile(path.join(__dirname,"/src/views/register.ejs")))

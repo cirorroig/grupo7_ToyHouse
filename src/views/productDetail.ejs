@@ -3,24 +3,28 @@
     <%- include("./partials/head") %>
 <body>
     <main class="product-page">
-        <div class="producto">
-            <img src="images/producto-1.jpg" alt="product">
-            <i class="fas fa-percent"></i>
-        </div> 
-        <h2>Nombre del producto</h2>
-        </div> 
-        <div class="brand">
-            <h3>Marca</h3>
-        </div>
-        <div class="price">
-            <h3>Precio</h3>
-            <h3> %Precio</h3>
-        </div>
-        <div class="button">
-            <button type="submit" class="buy"><a href="/cart"> Comprar</a></button>
-            <button type="submit" class="cart"><i class="fas fa-shopping-cart"></i></button>
-        </div>
-
+        <article class="product">
+            <div class="image">
+                <a href="/product/detail">
+                <img src="images/BuzzLightYear.jpg" alt="product">
+                <i class="fas fa-percent"></i>
+                </a>
+            </div>
+            <div class="description">
+                <p class="product-name">Buzz Lighyear Muñeco Articulado</p>
+                <div class="brand">
+                    <p>Vendido por Disney Pixar</p>
+                </div>
+                <div class="price">
+                    <p>$5000</p>
+                    <p> %3750</p>
+                </div>
+            </div> 
+            <div class="buy-button">
+                <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
+                <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
+            </div>
+        </article>
        </main>
         
 </body>
