@@ -2,22 +2,7 @@
 <html lang="en">   
     <%- include("./partials/head")%>
 <body>
-    <header>
-        <div class="top-header">
-            <div class="logo"><a href="/"><button type="submit" class="logo-button"><img src="images/LogoToyhouse.png" alt="logo"></button></a></div>
-            <div class="account">
-                <a href="/register"><button class="register">Registrarme</button></a>
-                <a href="/login"><button class="login">Iniciar Sesion</button></a>
-            </div>
-            <div class="topright-header">
-                <a href="/carrito" class="cart">
-                    <button type="submit" class="cart"><i class="fas fa-shopping-cart"></i></button>
-                </a>
-                    <button  type="submit" class="burger-menu"><i class="fas fa-bars"></i></button>
-                    
-            </div>
-        </div>
-    </header>
+    <%- include("./partials/header")%>
     <main class="home-page">
         <h1>¡NOVEDADES!</h1>
         <section class="banner">
@@ -120,20 +105,6 @@
             </article>  
         </section>
     </main>
-    <footer>
-        <div class="info">
-        <a class="pay" href="payment">Metodos de pago</a>
-        <a class="inform" href="information">Sobre nosotros</a>
-        <a class="contact-us" href="contact">Contáctanos</a>
-        </div>
-        <div class="social-media">
-        <a class="facebook" href="https://es-la.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-        <a class="instagram" href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram"></i></a>
-        <a class="twitter" href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
-        </div>
-        <div class="copyright">
-            <p>Copyrigth 2021 © ToyHouse</p>
-        </div>
-    </footer>
+    <%- include("./partials/footer")%>
 </body>
 </html>
