@@ -1,23 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partial/head") %>
+    <%- include("./partials/head")%>
 <body>
-    <header>
-        <div class="top-header">
-            <div class="logo"><a href="/"><button type="submit" class="logo-button"><img src="images/LogoToyhouse.png" alt="logo"></button></a></div>
-            <div class="account">
-                <a href="/register"><button class="register">Registrarme</button></a>
-                <a href="/login"><button class="login">Iniciar Sesion</button></a>
-            </div>
-            <div class="topright-header">
-                <a href="/carrito" class="cart">
-                    <button type="submit" class="cart"><i class="fas fa-shopping-cart"></i></button>
-                </a>
-                    <button  type="submit" class="burger-menu"><i class="fas fa-bars"></i></button>
-                    
-            </div>
-        </div>
-    </header>
+    <%- include("./partials/header")%>
     <main class="register">
         <h1>¡Registra tu cuenta!</h1>
             <form action="" method="post" class="register-form">
