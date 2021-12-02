@@ -9,5 +9,9 @@ Sprint 2:
 1.Comenzar a hacer: aprendimos a hacer html y css de una pagina
 2.Hacer más: juntarnos mas a trabajar durante la semana
 3.Continuar haciendo: estar bien organizados
-4.Hacer menos: destraernos mientras trabajamos
+4.Hacer menos: distraernos mientras trabajamos
 5.Dejar de hacer: hacer todo sobre la hora
+
+Sprint 3:
+1.Comenzar a hacer: armamos las vistas con ejs para poder arrancar bien el sprint 4
+2.Hacer más:

@@ -1,6 +1,6 @@
 const productController={
     list:(req,res)=>{
-        res,render("products")
+        res.render("productList")
     },
     detail:(req,res)=>{
         res.render("productDetail")

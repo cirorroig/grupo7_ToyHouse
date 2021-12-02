@@ -16,9 +16,12 @@ body{
 }
 header div.top-header{
     display: flex;
-    background-color:rgba(254, 74, 38, 0.8);
+    position: fixed;
+    background-color:#ff4545f8;
     justify-content: space-between;
-    height: 100px;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
 }
 header div.top-header a.cart{
     color: transparent;
@@ -96,6 +99,7 @@ header div i.fa-bars{
     font-size: 30px;
 }
 main{
+    padding-top:100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -467,33 +471,49 @@ main.home-page .dots{
     font-size: 30px;
     bottom:1px;
 }
-main.home-page section.our-products{
+main section.our-products{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 90%;
+    width: 100%;
     flex-wrap: wrap;   
 }
-main.home-page section.our-products h2{
+main section.our-products h2{
     width: 100%;
     text-align: center;
 }
-main.home-page .products{
+main .products{
     margin-bottom: 20px;
 }
-main.home-page article.product{
+main article.product{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center;
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
     margin: 10px;
+    height: 400px;
     position: relative;
     background-color: #fff;
     border: 1px solid #47525E;
 }
-main.home-page article.product i.fa-percent{
+main article div.image{
+    height: 200px;
+}
+main article div.image img{
+    height: 100%;
+}
+main article div.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 130px;
+    text-align: center;
+  
+}
+article.product i.fa-percent{
     position: absolute;
     top: -16px;
     left: -18px;
@@ -505,31 +525,36 @@ main.home-page article.product i.fa-percent{
 }
 
 
-main.home-page p.product-name{
+main p.product-name{
     text-align: center;
     font-size: 20px;
 }
-main.home-page div.brand{
+main div.brand{
     text-align: center;
     font-size: 18px;
+    width: 90%;
 }
-main.home-page div.price{
+main div.price{
+    width: 100%;
     display: flex;
+    align-content: space-around;
     justify-content: space-around;
 }
-main.home-page div.price p{
+main div.price p{
     font-size: 18px;
 }
-main.home-page article.product a{
+main article.product a{
   text-decoration: none;
   color: black;
 }
-main.home-page div.buy-button{
+main div.buy-button{
     display: flex;
     justify-content: center;
-    margin:5px
+    align-items: center;
+    margin:5px;
+    height: 50px;
 }
-main.home-page button.buy{
+main button.buy{
  background-color: #fff;
  color:rgb(62, 193, 253);
  font-size: 20px;
@@ -537,30 +562,24 @@ main.home-page button.buy{
  padding: 5px;
  border: rgb(62, 193, 253) 2px solid;
 }
-main.home-page button.buy:hover{
+main button.buy:hover{
     background-color: rgb(62, 193, 253);
     border: #fff 2px solid;
     color: #fff;
     cursor: pointer;
 }
-main.home-page button.cart{
+main button.cart{
     background-color: transparent;
     border:none;
     margin-left: 10px;
     font-size: 28px;
-}
-main.productForm-page .product-create{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 }
 main.productForm-page div.information{
     display: flex;
     flex-direction: column;
     margin: 5px;
 }
+
 main.productForm-page div.information input{
     display: flex;
     flex-direction: column;
@@ -622,6 +641,10 @@ main.productForm-page div.send-reset{
     display: flex;
     flex-direction: row;
 }
+.all-products{
+    margin: 20px;
+    font-size: 40px;
+}
 
 
 footer{
@@ -658,13 +681,13 @@ footer .social-media{
 }
 
 @media (min-width: 768px) {
-    main.home-page section article.product{
+    main section article.product{
         width: 40%;
         margin: 20px;
     }
 }
 @media (min-width: 1024px){
-    main.home-page section article.product{
-        width: 22%;
+    main section article.product{
+        width: 20%;
     }
 }
