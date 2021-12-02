@@ -549,7 +549,79 @@ main.home-page button.cart{
     margin-left: 10px;
     font-size: 28px;
 }
-
+main.productForm-page .product-create{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+main.productForm-page div.information{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+main.productForm-page div.information input{
+    display: flex;
+    flex-direction: column;
+    border: #3880bf solid 1px;
+    padding: 5px 0px;
+    margin: 5px;
+    border-radius: 2px;
+}
+main.productForm-page div.description input{
+    display: flex;
+    flex-direction: column;
+    border: #3880bf solid 1px;
+    padding: 5px 0px;
+    margin: 5px;
+    border-radius: 2px;
+}
+main.productForm-page div.image input#file-upload-button{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    border: #3880bf solid 1px;  
+}
+main.productForm-page div.age select{
+    display: flex;
+    flex-direction: column;
+    border: #3880bf solid 1px;
+    padding: 3px 0px;
+    margin: 5px;
+    border-radius: 2px;
+}
+main.productForm-page div.detailed-description textarea{
+    display: flex;
+    flex-direction: column;
+    border: #3880bf solid 1px;
+    padding: 5px 0px;
+    margin: 5px;
+    border-radius: 2px;
+}
+main.productForm-page div.price input{
+    display: flex;
+    flex-direction: column;
+    border: #3880bf solid 1px;
+    padding: 5px 0px;
+    margin: 5px;
+    border-radius: 2px;
+}
+main.productForm-page div.send-reset input{
+    color: white;
+    background-color: #3880bf;
+    width: 90%;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+    border: none;
+    margin: 3px;
+    font-size: 16px;
+}
+main.productForm-page div.send-reset{
+    display: flex;
+    flex-direction: row;
+}
 
 
 footer{
