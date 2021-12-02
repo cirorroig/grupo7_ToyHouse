@@ -115,7 +115,7 @@ main.register form.register-form{
     flex-direction: column;
     align-items: center;
 }
-main.register div.information{
+main div.information{
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -407,7 +407,6 @@ main.login-page  button.check{
 }
 main.login-page  form.login-form{
         display: flex;
-        width: 90%;
         flex-direction: column;
         justify-content:center;
         
