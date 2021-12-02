@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head")%> 
+<body>
+    <%- include("./partials/header")%>
+    <main class="productForm-page">
+        <form action="" method="post" class="product-create">
+            <div class="information">
+                <label for="name">Nombre del producto</label>
+                <input type="name" name="product-name" id="name">
+            </div>
+            <div class="description">
+                <label for="description">Descripción</label>
+                <input type="text" name="description" id="description">
+            </div>
+            <div class="image">
+                <input type="file" name="product-image" id="image">
+            </div>
+            <div class="age">
+                <label for="age">Rango de edad</label>
+                <select name="edad" id="age" required>
+                    <option disabled selected value>Seleccionar</option>
+                    <option value="1">Menores de 3 años</option>
+                    <option value="2">De 3 a 5 años</option>
+                    <option value="3">De 5 a 8 años</option>
+                    <option value="4">De 8 a 13 años</option>
+                    <option value="5">Mayores de 13 años</option>
+                </select>
+                <div class="category">
+                    <label for="category">Categoría</label>
+                    <select name="category" required>
+                        <option disabled selected value>Seleccionar</option>
+                        <option value="1">Disfraces</option>
+                        <option value="2">Juegos de mesa</option>
+                        <option value="3">Vehículos</option>
+                        <option value="4">Peluches y muñecos</option>
+                        <option value="5">Bebés</option>
+                        <option value="6">Instrumentos musicales</option>
+                        <option value="7">Juegos de agua y playa</option>
+                        <option value="8">Puzzles</option>
+                        <option value="9">Juegos de primera infancia</option>
+                    </select>
+                </div>
+                <div class="size">
+                    <label for="size">Talle</label>
+                    <select name="size">
+                        <option value="1" disabled selected value>Seleccionar</option>
+                        <option value="2">XS</option>
+                        <option value="3">S</option>
+                        <option value="4">M</option>
+                        <option value="5">L</option>
+                    </select>
+                </div>
+                <div class="detailed-description">
+                    <label for="desc">Descripcion detallada</label>
+                    <textarea name="textarea" id="desc" cols="30" rows="6" placeholder="Color, tamaño, etc."></textarea>
+                </div>
+                <div class="price">
+                    <label for="price">Precio</label>
+                    <input type="number" name="precio" id="price">
+                </div>
+                <div class="send-reset">
+                    <input type="submit" name="send">
+                    <input type="reset" name="reset">
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
