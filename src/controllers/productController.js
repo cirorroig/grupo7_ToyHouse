@@ -1,3 +1,4 @@
+const fs=require("fs")
 const productController={
     list:(req,res)=>{
         res.render("productList")
