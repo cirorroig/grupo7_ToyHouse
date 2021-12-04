@@ -1,8 +1,12 @@
-const fs=require("fs")
+const fs = require('fs');
+const path = require('path');
+
+const productsFile = path.join(__dirname, '../data/products.json');
+let products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
 
 const indexController = {
     index: (req,res) => {
-        res.render("index")
+        res.render("index",{products})
     },
     login:(req,res)=>{
         res.render("login")

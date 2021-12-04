@@ -10,12 +10,15 @@ app.set("view engine", "ejs");
 
 app.use(methodOverride("_method"))
 app.use(express.static(path.join(__dirname,"../public")))
+app.use(express.urlencoded({extended:false}) )
+app.use(express.json())
 
+// RUTAS //
 app.use('/', indexRouter);
 app.use("/product",productsRouter)
 
 
 app.use((req,res,next)=>{
-    req.status(404).render("not-found")
+    res.status(404).render("not-found")
 })
 app.listen(3000,()=>console.log("Funcionando en el puerto 3000"))

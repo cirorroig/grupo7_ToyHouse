@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "name":"Buzz Lightyear Muñeco Articulado",
+        "description":"Vendido por Disney Pixar" ,
+        "detailed-description": "Muñeco articulado de Buzz LightYear, famoso personaje de las peliculas Toy Story, 30cm de altura y gran rango de movimientos de brazos y piernas. ¡Para hacer todas las poses que se te puedan ocurrir! ",
+        "image":"BuzzLightYear.jpg ",
+        "age":"Mayores 3 años",
+        "category":"Peluches y muñecos",
+        "size":null,
+        "price":5000
+    },
+    {
+        "id": 2,
+        "name":"T-Rex muñeco articulado",
+        "description":"Vendido por Jurassic world" ,
+        "detailed-description": "Un ",
+        "image":"t-rex.jpg",
+        "age":"Mayores 5 años",
+        "category":"Peluches y muñecos",
+        "size":null,
+        "price":1200
+    },
+    {
+        "id": 3,
+        "name":"Godzilla Muñeco articulado",
+        "description":"Vendido por King of the monsters" ,
+        "detailed-description": "",
+        "image":"godzilla.jpg ",
+        "age":"Mayores 5 años",
+        "category":"Peluches y muñecos",
+        "size":null,
+        "price":4500
+    },
+    {
+        "id": 4,
+        "name":"Arma de juguete de Fortnite",
+        "description":"Vendido por Nerf" ,
+        "detailed-description":"" ,
+        "image":"nerf fort.jpg ",
+        "age":"Mayores 13 años",
+        "category":"Armas de Juguete",
+        "size":null,
+        "price":2450
+    },
+    {
+        "id": 5,
+        "name":"Spiderman muñeco de plastico",
+        "description":"Vendido por PlayTienda" ,
+        "detailed-description":"" ,
+        "image":"spiderman.jpg",
+        "age":"Mayores 5 años",
+        "category":"Peluches y muñecos",
+        "size":null,
+        "price":1100
+    },
+    {
+        "id": 6,
+        "name":"Muñeco armable de Minion",
+        "description":"Vendido por Lego" ,
+        "detailed-description":"" ,
+        "image":"rompecabezas minion.jpg ",
+        "age":"Mayores 8 años",
+        "category":"Puzzles",
+        "size":null,
+        "price":3750
+    },
+    {
+        "id": 7,
+        "name":"Slinky",
+        "description":"Vendido por Toyrose" ,
+        "detailed-description":"" ,
+        "image":"resorte.jpg ",
+        "age":"Mayores 3 años",
+        "category":"Peluches y muñecos",
+        "size":null,
+        "price":450
+    },
+    {
+        "id": 8,
+        "name":"Muñeco señor cara de papa",
+        "description":"Vendido por PlaysCool" ,
+        "detailed-description": "",
+        "image":"señor cara de papa.jpg ",
+        "age":"Mayores 3 años",
+        "category":"Peluches y muñecos",
+        "size":null,
+        "price":1800
+    }
+]

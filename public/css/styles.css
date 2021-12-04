@@ -7,21 +7,30 @@
 img{
     width: 100%;
 }
+html{
+    min-height: 100%;
+  position: relative;
+}
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
     background-repeat:repeat;
     background-size: cover;
     background-attachment: fixed;
+    height: 100%;
+
+}
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 2;
 }
 header div.top-header{
     display: flex;
-    position: fixed;
     background-color:#ff4545f8;
     justify-content: space-between;
     height: 80px;
-    z-index: 1;
-    width: 100%;
+
 }
 header div.top-header a.cart{
     color: transparent;
@@ -151,13 +160,15 @@ main.register button.check{
 }
 
 main.register button.reg-button{
-    font-size: 15px;
-    background-color: #47525E;
     padding: 10px;
     width: 80%;
     border-radius: 5px;
     margin:0px 0px 20px;
     cursor: pointer;
+    background-color: #3880bf;
+    border-radius: 5px;
+    font-size: 20px;
+    border:none;
 }
 main.register button.reg-button a{
     text-decoration: none;
@@ -480,6 +491,7 @@ main section.our-products{
 main section.our-products h2{
     width: 100%;
     text-align: center;
+    font-size: 30px;
 }
 main .products{
     margin-bottom: 20px;
@@ -489,7 +501,7 @@ main article.product{
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
-    width: 100%;
+    width: 87%;
     flex-wrap: wrap;
     margin: 10px;
     height: 400px;
@@ -647,8 +659,9 @@ main.productForm-page div.send-reset{
 
 
 footer{
-    margin-top: 20px;
     background-color:#044C8B;
+    width: 100%;
+    padding:7px
 }
 footer .inform, .pay, .contact-us{
     text-decoration: none;

@@ -15,186 +15,58 @@
         </section>
         <section class="our-products">
            <h2 class="products">Nuestros productos</h2>
+           <% for(let i=0;i<4;i++) {%>
             <article class="product">
                 <div class="image">
                     <a href="/product/detail">
-                    <img src="images/BuzzLightYear.jpg" alt="product">
+                    <img src="../images/<%=products[i].image%>" alt="product">
                     <i class="fas fa-percent"></i>
                     </a>
                 </div>
                 <div class="description">
-                    <p class="product-name">Buzz Lighyear Muñeco Articulado</p>
+                    <p class="product-name"><%=products[i].name%></p>
                     <div class="brand">
-                        <p>Vendido por Disney Pixar</p>
+                        <p><%=products[i].description%></p>
                     </div>
                     <div class="price">
-                        <p>$5000</p>
-                        <p> %3750</p>
-                    </div>
-                </div> 
-                <div class="buy-button">
-                    <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-                    <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
+                        <p>$<%=products[i].price%></p>
+                        <p> $<%= products[i].price/2 %></p>
                 </div>
-            </article>
-            <article class="product">
-                <div class="image">
-                    <a href="/product/detail">
-                    <img src="images/t-rex.jpg" alt="product">
-                    <i class="fas fa-percent"></i>
-                    </a>
-                </div>
-                <div class="description">
-                    <p class="product-name">T-Rex muñeco articulado</p>
-                    <div class="brand">
-                        <p>Vendido por Jurassic world</p>
-                    </div>
-                    <div class="price">
-                        <p>$1200</p>
-                        <p> %850</p>
-                    </div>
                 </div> 
                 <div class="buy-button">
                     <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
                     <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
                 </div>
             </article> 
-            <article class="product">
-                <div class="image">
-                    <a href="/product/detail">
-                    <img src="images/godzilla.jpg" alt="product">
-                    <i class="fas fa-percent"></i>
-                    </a>
-                </div>
-                <div class="description">
-                    <p class="product-name">godzilla muñeco articulado</p>
-                    <div class="brand">
-                        <p>Vendido por King of the monsters</p>
-                    </div>
-                    <div class="price">
-                        <p>$4500</p>
-                        <p> %3350</p>
-                    </div>
-                </div> 
-                <div class="buy-button">
-                    <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-                    <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
-                </div>
-            </article> 
-            <article class="product">
-                <div class="image">
-                    <a href="/product/detail">
-                    <img src="images/nerf fort.jpg" alt="product">
-                    <i class="fas fa-percent"></i>
-                    </a>
-                </div>
-                <div class="description">
-                    <p class="product-name">Arma de juguete de Fortnite</p>
-                    <div class="brand">
-                        <p>vendido por Nerf</p>
-                    </div>
-                    <div class="price">
-                        <p>$2450</p>
-                        <p> %1850</p>
-                    </div>
-                </div> 
-                <div class="buy-button">
-                    <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-                    <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
-                </div>
-            </article>  
+            <%}%>                
         </section>
     </section>
     <section class="our-products">
        <h2 class="products">¡Ofertas!</h2>
+       <% for(let i=4;i<8;i++) {%>
         <article class="product">
             <div class="image">
                 <a href="/product/detail">
-                <img src="images/spiderman.jpg" alt="product">
+                <img src="../images/<%=products[i].image%>" alt="product">
                 <i class="fas fa-percent"></i>
                 </a>
             </div>
             <div class="description">
-                <p class="product-name">Spiderman muñeco de plastico</p>
+                <p class="product-name"><%=products[i].name%></p>
                 <div class="brand">
-                    <p>Vendido por PlayTienda</p>
+                    <p><%=products[i].description%></p>
                 </div>
                 <div class="price">
-                    <p>$1100</p>
-                    <p> %950</p>
-                </div>
-            </div> 
-            <div class="buy-button">
-                <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-                <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
+                    <p>$<%=products[i].price%></p>
+                    <p> $<%= products[i].price/2 %></p>
             </div>
-        </article>
-        <article class="product">
-            <div class="image">
-                <a href="/product/detail">
-                <img src="images/rompecabezas minion.jpg" alt="product">
-                <i class="fas fa-percent"></i>
-                </a>
-            </div>
-            <div class="description">
-                <p class="product-name">muñeco armable de minion</p>
-                <div class="brand">
-                    <p>Vendido por Lego</p>
-                </div>
-                <div class="price">
-                    <p>$4000</p>
-                    <p> %3750</p>
-                </div>
             </div> 
             <div class="buy-button">
                 <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
                 <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
             </div>
         </article> 
-        <article class="product">
-            <div class="image">
-                <a href="/product/detail">
-                <img src="images/resorte.jpg" alt="product">
-                <i class="fas fa-percent"></i>
-                </a>
-            </div>
-            <div class="description">
-                <p class="product-name">resorte de plastico</p>
-                <div class="brand">
-                    <p>Vendido por Toyrose</p>
-                </div>
-                <div class="price">
-                    <p>$450</p>
-                    <p> %320</p>
-                </div>
-            </div> 
-            <div class="buy-button">
-                <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-                <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
-            </div>
-        </article> 
-        <article class="product">
-            <div class="image">
-                <a href="/product/detail">
-                <img src="images/señor cara de papa.jpg" alt="product">
-                <i class="fas fa-percent"></i>
-                </a>
-            </div>
-            <div class="description">
-                <p class="product-name">muñeco señor cara de papa</p>
-                <div class="brand">
-                    <p>vendido por playscool</p>
-                </div>
-                <div class="price">
-                    <p>$1800</p>
-                    <p> %1650</p>
-                </div>
-            </div> 
-            <div class="buy-button">
-                <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-                <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
-            </div>
-        </article>  
+        <%}%>     
     </section>
     </main>
     <%- include("./partials/footer")%>
