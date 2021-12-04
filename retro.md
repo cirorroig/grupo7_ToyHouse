@@ -16,5 +16,5 @@ Sprint 3:
 1.Comenzar a hacer: armamos las vistas con ejs y las rutas para poder arrancar bien el sprint 4
 2.Hacer más: practicar JS y estudiar bien los temas
 3.Continuar haciendo:trabajar en grupo
-4.Hacer menos:
+4.Hacer menos:Perder tiempo
 5.Dejar de hacer: hacer todo sobre la hora
