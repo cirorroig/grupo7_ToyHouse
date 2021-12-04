@@ -360,18 +360,20 @@ main.login-page  div.information{
         display: flex;
         flex-direction: column;
         padding: 20px;
+        width: 100%;
 }
 main.login-page  div.information label{
         font-weight: 600;
 }
 main.login-page  div.information input{
         margin:5px 0px;
-        padding: 5px 0px;
+        padding: 5px 90px 5px 2px;
         border: solid #3880bf 1px;
 }
 
 main.login-page  div.mail{
         display: flex;
+        width: 100%;
 } 
 main.login-page  div.password{
         display: flex;
@@ -585,57 +587,86 @@ main button.cart{
     margin-left: 10px;
     font-size: 28px;
 }
+main.productForm-page label
 main.productForm-page div.information{
     display: flex;
     flex-direction: column;
     margin: 5px;
 }
-
+main.productForm-page div.information{
+    width: 100%;
+}
 main.productForm-page div.information input{
     display: flex;
     flex-direction: column;
     border: #3880bf solid 1px;
     padding: 5px 0px;
-    margin: 5px;
+    margin: 5px 4px 5px 4px;
     border-radius: 2px;
+}
+main.productForm-page div.description{
+    display: flex;
+    flex-direction: column;
 }
 main.productForm-page div.description input{
     display: flex;
     flex-direction: column;
     border: #3880bf solid 1px;
     padding: 5px 0px;
-    margin: 5px;
+    margin: 5px 4px 5px 4px;
     border-radius: 2px;
 }
-main.productForm-page div.image input#file-upload-button{
+main.productForm-page div.image input{
     display: flex;
     flex-direction: column;
-    margin: 5px;
-    border: #3880bf solid 1px;  
+    margin: 5px 0px 5px 0px;  
+    padding: 8px;
 }
-main.productForm-page div.age select{
+main.productForm-page div.especifications{
     display: flex;
     flex-direction: column;
-    border: #3880bf solid 1px;
     padding: 3px 0px;
     margin: 5px;
     border-radius: 2px;
+    justify-content: center;
+}
+main.productForm-page div.especifications select{
+    padding: 3px 0px;
+    margin: 5px 0px 5px 0px;
+    border-radius: 2px;
+    justify-content: center;
+    border: #3880bf solid 1px;
+    width: 100%;
+}
+main.productForm-page div.category select{
+    width: 100%;
+}
+main.productForm-page div.category{
+    display: flex;
+    flex-direction: column;
 }
 main.productForm-page div.detailed-description textarea{
     display: flex;
     flex-direction: column;
     border: #3880bf solid 1px;
     padding: 5px 0px;
-    margin: 5px;
+    margin: 5px 0px 5px 0px;
     border-radius: 2px;
+    width: 100%;
+}
+main.productForm-page div.price{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 main.productForm-page div.price input{
     display: flex;
     flex-direction: column;
     border: #3880bf solid 1px;
     padding: 5px 0px;
-    margin: 5px;
+    margin: 5px 0px 5px 0px;
     border-radius: 2px;
+    width: 100%;
 }
 main.productForm-page div.send-reset input{
     color: white;
