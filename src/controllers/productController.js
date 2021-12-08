@@ -1,4 +1,5 @@
 const fs = require('fs');
+
 const path = require('path');
 
 const productsFile = path.join(__dirname, '../data/products.json');
@@ -26,10 +27,18 @@ const productController={
 		res.redirect("/");
     },
     edit:(req,res)=>{
-
+        let id=req.params.id-1;
+        res.render("productEdit",{products,id})
     },
     update:(req,res)=>{
-
+        let editedProduct=req.body;
+        let id=req.params.id-1;
+        editedProduct.id=req.params.id;
+        
+        products.splice(id,1,editedProduct)
+        console.log(products)
+        fs.writeFileSync(productsFile,JSON.stringify(products));
+		res.redirect("/");
     },
     destroy:(req,res)=>{
 

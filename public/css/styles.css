@@ -679,6 +679,7 @@ main.productForm-page div.send-reset button{
     border: none;
     margin: 3px;
     font-size: 16px;
+    cursor: pointer;
 }
 main.productForm-page div.send-reset{
     display: flex;
