@@ -175,18 +175,7 @@ main.register button.reg-button a{
     text-decoration: none;
     color:white;
 }
-main.cart-page div.title{
-    display: flex;
-    margin-top: 15px ;
-    width: 100%;
-    justify-content: center;
-}
-main.cart-page div.total{
-    display: flex;
-    margin: 15px 15px 15px 0px;
-    width: 100%;
-    justify-content: center;
-}
+
 
 .percent{
     position: relative;
@@ -201,60 +190,7 @@ background-color: transparent;
 font-size: 16px;
   }
 
-main.cart-page div.product{
-    position: relative;
-    width: 100%;
-    left: 90px;
-  }
- main.cart-page div.product img{
-    width: 50%;
-    height: 10%;
-    margin-bottom: -40;    
-  }
-main.cart-page div.product i{
-    background-color: white;
-    font-size: 20px;
-    position: relative;
-    bottom: 110px;
-    right: 260px;
-    border:solid black;
-    padding: 5px;
-    border-radius: 50%;
-  }
-main.cart-page h2{
-    display: flex;
-    position: relative;
-    bottom: 30px;
-    margin: 20px;
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-  
-main.cart-page div.brand{
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  margin: 0px 10px 10px 10px;
-  justify-content: center;
-  bottom: 30px;
-  }
-main.cart-page div.price{
-    width: 60%;
-    position: relative;
-    bottom: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-main.cart-page div.subtotal{
-        margin: 15px;
-        margin-right: 47%;
-        position: relative;
-        bottom: 30px;
-}
-main.cart-page div.finish-button{ 
-        margin: 15px
-}
+
 
 .finish-button .finalizar{
     position: relative;
@@ -688,7 +624,9 @@ main.productForm-page div.send-reset{
     margin: 20px;
     font-size: 40px;
 }
-
+main.cart-page .total-product{
+    color:green;
+}
 
 footer{
     background-color:#044C8B;

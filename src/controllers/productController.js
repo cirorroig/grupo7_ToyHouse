@@ -32,7 +32,8 @@ const productController={
 
     },
     destroy:(req,res)=>{
-
+      let id= req.body.id-1
+      products.splide(id,1);
     }
 }
 
