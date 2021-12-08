@@ -88,14 +88,23 @@
         "price": 1800
     },
     {
-        "name": "un juanca",
-        "description": "Vendido por Marvel",
+        "name": "Monopatin",
+        "description": "Vendido por Scooter",
         "product-image": "monopatin-scooter-verde.jpg",
         "edad": "3",
+        "category": "3",
+        "detailed-description": "Un monopatin",
+        "price": "4000",
+        "id": 9
+    },
+    {
+        "name": "un juanca",
+        "description": "Vendido por Marvel",
+        "product-image": "LogoToyHouse.png",
+        "edad": "2",
         "category": "2",
-        "size": "3",
-        "detailed-description": "qasdasdasd",
-        "price": "6546546",
+        "detailed-description": "adasdadasdasdasdasdadad",
+        "price": "10000",
         "id": 10
     }
 ]
