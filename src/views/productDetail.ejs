@@ -2,24 +2,24 @@
 <html lang="en">
     <%- include("./partials/head") %>
 <body>
-    <main class="product-page">
+    <%- include("./partials/header")%>
+    <main>
         <section class="our-products">
-
             <article class="product">
                 <div class="image">
-                    <a href="/product/detail">
-                    <img src="images/BuzzLightYear.jpg" alt="product">
+                    <a href="/products/<%=products[id].id%>">
+                    <img src="../images/<%=products[id].image%>" alt="product">
                     <i class="fas fa-percent"></i>
                     </a>
                 </div>
                 <div class="description">
-                    <p class="product-name">Buzz Lighyear Muñeco Articulado</p>
+                    <p class="product-name"><%=products[id].name%></p>
                     <div class="brand">
-                        <p>Vendido por Disney Pixar</p>
+                        <p><%=products[id].description%></p>
                     </div>
                     <div class="price">
-                        <p>$5000</p>
-                        <p> %3750</p>
+                        <p>$<%=products[id].price%></p>
+                        <p> $<%= products[id].price/2 %></p>
                 </div>
                 </div> 
                 <div class="buy-button">
@@ -29,6 +29,6 @@
             </article>
         </section>
        </main>
-        
+       <%- include("./partials/footer")%>
 </body>
 </html>

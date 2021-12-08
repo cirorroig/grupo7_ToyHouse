@@ -4,10 +4,10 @@
 <body>
     <%- include("./partials/header")%>
     <main class="productForm-page">
-        <form action="" method="post" class="product-create">
+        <form action="/products" method="post" class="product-create">
             <div class="information">
                 <label for="name">Nombre del producto</label>
-                <input type="name" name="product-name" id="name">
+                <input type="name" name="name" id="name">
             </div>
             <div class="description">
                 <label for="description">Descripción</label>
@@ -58,11 +58,11 @@
                 </div>
                 <div class="price">
                     <label for="price">Precio</label>
-                    <input type="number" name="precio" id="price">
+                    <input type="number" name="price" id="price">
                 </div>
                 <div class="send-reset">
-                    <input type="submit" name="send">
-                    <input type="reset" name="reset">
+                    <button type="submit" class="buy-now-button">Guardar producto</button>
+                    <button type="reset" class="buy-now-button">Reestablecer</button>
                 </div>
             </div>
         </form>
