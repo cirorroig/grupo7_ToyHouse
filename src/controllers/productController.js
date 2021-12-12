@@ -1,5 +1,5 @@
 const fs = require('fs');
-
+const { validationResult } = require('express-validator');
 const path = require('path');
 
 const productsFile = path.join(__dirname, '../data/products.json');
@@ -19,19 +19,22 @@ const productController={
         res.render("productForm")
     },
     store:(req,res)=>{
+        const resultValidation= validationResult(req)
 
-        if(req.file){
-            let lastId=products.length;
-            let newProduct=req.body;
-            newProduct.id=lastId+1;
-            newProduct.image=req.file.filename
-    
-            products.push(newProduct)
-            fs.writeFileSync(productsFile,JSON.stringify(products));
-            res.redirect("/");
+        if(resultValidation.errors.length > 0){
+            return res.render("productForm",{
+                errors:resultValidation.mapped(),
+                oldData:req.body
+            })
         }
         else{
-            res.render("productForm")
+                let lastId=products.length;
+                let newProduct=req.body;
+                newProduct.id=lastId+1;
+                newProduct.image=req.file.filename
+                products.push(newProduct)
+                fs.writeFileSync(productsFile,JSON.stringify(products));
+                res.redirect("/");
         }
     },
     edit:(req,res)=>{

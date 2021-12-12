@@ -3,7 +3,20 @@ const multer = require("multer");
 const router = express.Router();
 const path=require("path")
 const productController = require("../controllers/productController")
+const { body } = require('express-validator');
 
+// Express Validator
+const productFormValidations=[
+    body("name").notEmpty().withMessage("Ingrese un nombre de producto"),
+    body("description").notEmpty().withMessage("Ingrese una descripcion"),
+    body("image").notEmpty().withMessage("Suba una imagen para el producto"),
+    body("age").notEmpty().withMessage("Seleccione un rango de edad"),
+    body("category").notEmpty().withMessage("Seleccione una categoria para el producto"),
+    body("detailedDescription").notEmpty().withMessage("Escriba una descripcion detallada del producto"),
+    body("price").notEmpty().withMessage("Ingrese el precio del producto"),
+]
+
+// Multer
 const storage=multer.diskStorage({
     destination:(req,file,cb)=>{
         cb(null,"./public/images/Products")
@@ -12,7 +25,6 @@ const storage=multer.diskStorage({
         cb(null,"product-" + Date.now() + path.extname(file.originalname))
     }
 })
-
 const upload=multer({storage})
 
 
@@ -24,7 +36,7 @@ router.get("/:id",productController.detail)
 router.get("/:id/edit",productController.edit)
 
 // Creacion de  Productos //
-router.post("/",upload.single("image"),productController.store)
+router.post("/",upload.single("image"),productFormValidations,productController.store)
 
 // Edicion de Productos //
 router.put("/:id",upload.single("image") ,productController.update)

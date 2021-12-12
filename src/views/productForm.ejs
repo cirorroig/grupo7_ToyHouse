@@ -7,11 +7,23 @@
         <form action="/products" enctype="multipart/form-data" method="post" class="product-create">
             <div class="information">
                 <label for="name">Nombre del producto</label>
-                <input type="name" name="name" id="name">
+                <input type="name" name="name" id="name"
+                class="<%= locals.errors && errors.name? "is-invalid": null %>"  > 
+                <% if (locals.errors && errors.name) { %>                
+                    <div class="text-danger">
+                    <%= errors.name.msg %> 
+                    </div>
+                <% } %>
             </div>
             <div class="description">
                 <label for="description">Descripción</label>
-                <input type="text" name="description" id="description">
+                <input type="text" name="description" id="description"
+                class="<%= locals.errors && errors.description? "is-invalid": null %>">
+                <% if (locals.errors && errors.description) { %>                
+                    <div class="text-danger">
+                    <%= errors.description.msg %> 
+                    </div>
+                <% } %>
             </div>
             <div class="image">
                 <label for="image">Imagen del Producto</label>
@@ -19,18 +31,23 @@
             </div>
             <div class="especifications">
                 <label for="age">Rango de edad</label>
-                <select name="age" id="age" required>
-                    <option disabled selected value>Seleccionar</option>
+                <select name="age" id="age" class="<%= locals.errors && errors.age? "is-invalid2": null %>" >
+                    <option value="">Seleccionar</option>
                     <option value="1">Menores de 3 años</option>
                     <option value="2">Mayores 3 años</option>
                     <option value="3">Mayores 5 años</option>
                     <option value="4">Mayores 8 años</option>
                     <option value="5">Mayores de 13 años</option>
                 </select>
+                <% if (locals.errors && errors.age) { %>                
+                    <div class="text-danger">
+                    <%= errors.age.msg %> 
+                    </div>
+                <% } %>
                 <div class="category">
                     <label for="category">Categoría</label>
-                    <select name="category" required>
-                        <option disabled selected value>Seleccionar</option>
+                    <select name="category" class="<%= locals.errors && errors.category? "is-invalid2": null %>" >
+                        <option value="">Seleccionar</option>
                         <option value="1">Disfraces</option>
                         <option value="2">Juegos de mesa</option>
                         <option value="3">Vehículos</option>
@@ -43,24 +60,46 @@
                         <option value="10">Armas de juguete</option>
                     </select>
                 </div>
+                <% if (locals.errors && errors.category) { %>                
+                    <div class="text-danger">
+                    <%= errors.category.msg %> 
+                    </div>
+                <% } %>
                 <div class="size">
                     <label for="size">Talle</label>
                     <select name="size">
-                        <option value="1" disabled selected value>Seleccionar</option>
-                        <option value="2">XS</option>
-                        <option value="3">S</option>
-                        <option value="4">M</option>
-                        <option value="5">L</option>
+                        <option value="">Seleccionar</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
                     </select>
                 </div>
-                <div class="detailed-description">
-                    <label for="detailed-description">Descripcion detallada</label>
-                    <textarea name="detailed-description" id="detailedDescription" cols="37" rows="6" placeholder="Color, tamaño, etc."></textarea>
+                <% if (locals.errors && errors.size) { %>                
+                    <div class="text-danger">
+                    <%= errors.size.msg %> 
+                    </div>
+                <% } %>
+                <div class="detailedDescription">
+                    <label for="detailedDescription">Descripcion detallada</label>
+                    <textarea name="detailedDescription" id="detailedDescription" cols="37" rows="6" placeholder="Color, tamaño, etc."
+                    class="<%= locals.errors && errors.name? "is-invalid": null %>"></textarea>
                 </div>
+                <% if (locals.errors && errors.detailedDescription) { %>                
+                    <div class="text-danger">
+                    <%= errors.detailedDescription.msg %> 
+                    </div>
+                <% } %>
                 <div class="price">
                     <label for="price">Precio</label>
-                    <input type="number" name="price" id="price">
+                    <input type="number" name="price" id="price"
+                    class="<%= locals.errors && errors.price? "is-invalid": null %>">
                 </div>
+                <% if (locals.errors && errors.price) { %>                
+                    <div class="text-danger">
+                    <%= errors.price.msg %> 
+                    </div>
+                <% } %>
             </div>
             <div class="send-reset">
                 <button type="submit" class="buy-now-button">Guardar producto</button>
