@@ -4,7 +4,7 @@
 <body>
     <%- include("./partials/header")%>
     <main class="productForm-page">
-        <form action="/products" method="post" class="product-create">
+        <form action="/products" enctype="multipart/form-data" method="post" class="product-create">
             <div class="information">
                 <label for="name">Nombre del producto</label>
                 <input type="name" name="name" id="name">
@@ -14,11 +14,12 @@
                 <input type="text" name="description" id="description">
             </div>
             <div class="image">
-                <input type="file" name="product-image" id="image">
+                <label for="image">Imagen del Producto</label>
+                <input type="file" name="image" id="image">
             </div>
             <div class="especifications">
                 <label for="age">Rango de edad</label>
-                <select name="edad" id="age" required>
+                <select name="age" id="age" required>
                     <option disabled selected value>Seleccionar</option>
                     <option value="1">Menores de 3 años</option>
                     <option value="2">Mayores 3 años</option>
@@ -54,16 +55,16 @@
                 </div>
                 <div class="detailed-description">
                     <label for="detailed-description">Descripcion detallada</label>
-                    <textarea name="detailed-description" id="detailed-description" cols="37" rows="6" placeholder="Color, tamaño, etc."></textarea>
+                    <textarea name="detailed-description" id="detailedDescription" cols="37" rows="6" placeholder="Color, tamaño, etc."></textarea>
                 </div>
                 <div class="price">
                     <label for="price">Precio</label>
                     <input type="number" name="price" id="price">
                 </div>
-                <div class="send-reset">
-                    <button type="submit" class="buy-now-button">Guardar producto</button>
-                    <button type="reset" class="buy-now-button">Reestablecer</button>
-                </div>
+            </div>
+            <div class="send-reset">
+                <button type="submit" class="buy-now-button">Guardar producto</button>
+                <button type="reset" class="buy-now-button">Reestablecer</button>
             </div>
         </form>
     </main>

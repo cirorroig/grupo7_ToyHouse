@@ -6,10 +6,10 @@
 
 img{
     width: 100%;
+    height: 100%;
 }
 html{
     min-height: 100%;
-  position: relative;
 }
 body{
     font-family: 'Roboto', sans-serif;
@@ -17,8 +17,6 @@ body{
     background-repeat:repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100%;
-
 }
 header{
     width: 100%;
@@ -112,7 +110,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: calc(100vh -80px -157px);
+   
 }
 main.register h1{
     margin:10px 0px;
@@ -451,9 +449,7 @@ main article.product{
 main article div.image{
     height: 200px;
 }
-main article div.image img{
-    height: 100%;
-}
+
 main article div.description{
     display: flex;
     flex-direction: column;
@@ -504,7 +500,7 @@ main div.buy-button{
     margin:5px;
     height: 50px;
 }
-main button.buy{
+main button.buy,.edit{
  background-color: #fff;
  color:rgb(62, 193, 253);
  font-size: 20px;
@@ -513,6 +509,12 @@ main button.buy{
  border: rgb(62, 193, 253) 2px solid;
 }
 main button.buy:hover{
+    background-color: rgb(62, 193, 253);
+    border: #fff 2px solid;
+    color: #fff;
+    cursor: pointer;
+}
+main button.edit:hover{
     background-color: rgb(62, 193, 253);
     border: #fff 2px solid;
     color: #fff;
@@ -538,7 +540,7 @@ main.productForm-page div.information input{
     flex-direction: column;
     border: #3880bf solid 1px;
     padding: 5px 0px;
-    margin: 5px 4px 5px 4px;
+    margin: 5px 4px 5px 0px;
     border-radius: 2px;
 }
 main.productForm-page div.description{
@@ -550,7 +552,7 @@ main.productForm-page div.description input{
     flex-direction: column;
     border: #3880bf solid 1px;
     padding: 5px 0px;
-    margin: 5px 4px 5px 4px;
+    margin: 5px 4px 5px 0px;
     border-radius: 2px;
 }
 main.productForm-page div.image input{
@@ -563,7 +565,7 @@ main.productForm-page div.especifications{
     display: flex;
     flex-direction: column;
     padding: 3px 0px;
-    margin: 5px;
+    margin: 5px 0px;
     border-radius: 2px;
     justify-content: center;
 }
@@ -613,7 +615,7 @@ main.productForm-page div.send-reset button{
     font-size: 20px;
     padding: 5px;
     border: none;
-    margin: 3px;
+    margin: 2px;
     font-size: 16px;
     cursor: pointer;
 }
@@ -628,11 +630,32 @@ main.productForm-page div.send-reset{
 main.cart-page .total-product{
     color:green;
 }
+main.product-detail h1{
+    text-align: center;
+    margin: 5px;
+}
+main.product-detail div.img{
+    width: 90%;
+}
+main.product-detail div.information p{
+    font-size: 20px;
+}
+main div.detail-buy-button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:5px;
+    flex-wrap: wrap;
+
+}
 
 footer{
     background-color:#044C8B;
     width: 100%;
-    padding:7px
+    padding:7px;
+    position:relative;
+    bottom:0px;
+    
 }
 footer .inform, .pay, .contact-us{
     text-decoration: none;

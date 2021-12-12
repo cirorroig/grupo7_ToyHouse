@@ -3,32 +3,21 @@
     <%- include("./partials/head") %>
 <body>
     <%- include("./partials/header")%>
-    <main>
-        <section class="our-products">
-            <article class="product">
-                <div class="image">
-                    <a href="/products/<%=products[id].id%>">
-                    <img src="../images/<%=products[id].image%>" alt="product">
-                    <i class="fas fa-percent"></i>
-                    </a>
-                </div>
-                <div class="description">
-                    <p class="product-name"><%=products[id].name%></p>
-                    <div class="brand">
-                        <p><%=products[id].description%></p>
-                    </div>
-                    <div class="price">
-                        <p>$<%=products[id].price%></p>
-                        <p> $<%= products[id].price/2 %></p>
-                </div>
-                </div> 
-                <div class="buy-button">
-                    <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-                    <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
-                </div>
-            </article>
-        </section>
-       </main>
+    <main class="product-detail">
+        <h1> 
+            <%=products[id].name%>
+        </h1>
+        <div class="img">
+            <img src="../images/Products/<%=products[id].image%>" alt="product">
+        </div>
+        <div class="information">
+            <p><%=products[id].detailedDescription%></p>
+        </div>
+         <div class="detail-buy-button">
+            <a href="/cart"><button type="submit"class="buy">Comprar</button></a>
+            <a href="/products/<%=id+1%>/edit"><button class="edit">Editar Producto<button></a>
+        </div>
+    </main>
        <%- include("./partials/footer")%>
 </body>
 </html>
