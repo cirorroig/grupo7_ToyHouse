@@ -106,5 +106,16 @@
         "price": "6000",
         "id": "10",
         "image": "product-1639247944819.jpg"
+    },
+    {
+        "name": "Chevrolet Camaro 2017 Hotwheels",
+        "description": "Vendido por Hotwheels",
+        "age": "Mayores 3 años",
+        "category": "Vehículos",
+        "size": "",
+        "detailedDescription": "Modelo a escala del famoso Chevrolet Camaro en color rojo. ¡Perfecto para correr carreras con tus amigos!",
+        "price": "1500",
+        "id": 11,
+        "image": "product-1639363023203.jpg"
     }
 ]

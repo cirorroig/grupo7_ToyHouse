@@ -9,11 +9,25 @@ const { body } = require('express-validator');
 const productFormValidations=[
     body("name").notEmpty().withMessage("Ingrese un nombre de producto"),
     body("description").notEmpty().withMessage("Ingrese una descripcion"),
-    body("image").notEmpty().withMessage("Suba una imagen para el producto"),
     body("age").notEmpty().withMessage("Seleccione un rango de edad"),
     body("category").notEmpty().withMessage("Seleccione una categoria para el producto"),
     body("detailedDescription").notEmpty().withMessage("Escriba una descripcion detallada del producto"),
     body("price").notEmpty().withMessage("Ingrese el precio del producto"),
+    body('image').custom((value, { req }) => {
+		let file = req.file;
+		let acceptedExtensions = ['.jpg', '.png', '.jpeg'];
+		
+		if (!file) {
+			throw new Error('Tienes que subir una imagen');
+		} else {
+			let fileExtension = path.extname(file.originalname);
+			if (!acceptedExtensions.includes(fileExtension)) {
+				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+			}
+		}
+
+		return true;
+	})
 ]
 
 // Multer

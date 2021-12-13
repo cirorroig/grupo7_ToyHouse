@@ -16,15 +16,21 @@ const productController={
         res.render("productDetail",{products,id})
     },
     create:(req,res)=>{
-        res.render("productForm")
+        let categories=["Disfraces","Juegos de mesa","Vehículos","Peluches y muñecos","Bebés","Instrumentos musicales","Juegos de agua y playa","Puzzles","Juegos de primera infancia","Armas de juguete"]
+        let sizes=["XS","S","M","L"]
+        let ages=["Menores de 3 años","Mayores 3 años","Mayores 5 años","Mayores 8 años","Mayores de 13 años"]
+        res.render("productForm",{categories,sizes,ages})
     },
     store:(req,res)=>{
         const resultValidation= validationResult(req)
-
+        let categories=["Disfraces","Juegos de mesa","Vehículos","Peluches y muñecos","Bebés","Instrumentos musicales","Juegos de agua y playa","Puzzles","Juegos de primera infancia","Armas de juguete"]
+        let sizes=["XS","S","M","L"]
+        let ages=["Menores de 3 años","Mayores 3 años","Mayores 5 años","Mayores 8 años","Mayores de 13 años"]
         if(resultValidation.errors.length > 0){
             return res.render("productForm",{
                 errors:resultValidation.mapped(),
-                oldData:req.body
+                oldData:req.body,
+                categories,sizes,ages
             })
         }
         else{
