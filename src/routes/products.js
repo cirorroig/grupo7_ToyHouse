@@ -6,7 +6,7 @@ const productController = require("../controllers/productController")
 const { body } = require('express-validator');
 
 // Express Validator
-const productFormValidations=[
+const productValidations=[
     body("name").notEmpty().withMessage("Ingrese un nombre de producto"),
     body("description").notEmpty().withMessage("Ingrese una descripcion"),
     body("age").notEmpty().withMessage("Seleccione un rango de edad"),
@@ -16,6 +16,27 @@ const productFormValidations=[
     body('image').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.jpeg'];
+		
+		if (!file) {
+			throw new Error('Tienes que subir una imagen');
+		} else {
+			let fileExtension = path.extname(file.originalname);
+			if (!acceptedExtensions.includes(fileExtension)) {
+				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+			}
+		}
+
+		return true;
+	})
+]
+const registerValidations=[
+    body('fullName').notEmpty().withMessage('Tienes que escribir un nombre'),
+	body('email').notEmpty().withMessage('Tienes que escribir un correo electrónico').bail().isEmail().withMessage('Debes escribir un formato de correo válido'),
+	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('confirmPassword').notEmpty().withMessage('Tienes que escribir una contraseña'),
+	body('avatar').custom((value, { req }) => {
+		let file = req.file;
+		let acceptedExtensions = ['.jpg', '.png', '.gif'];
 		
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');
@@ -50,10 +71,10 @@ router.get("/:id",productController.detail)
 router.get("/:id/edit",productController.edit)
 
 // Creacion de  Productos //
-router.post("/",upload.single("image"),productFormValidations,productController.store)
+router.post("/",upload.single("image"),productValidations,productController.store)
 
 // Edicion de Productos //
-router.put("/:id",upload.single("image") ,productController.update)
+router.put("/:id",upload.single("image"),productValidations ,productController.update)
 
 // Eliminacion de productos //
 router.delete("/:id",productController.destroy)

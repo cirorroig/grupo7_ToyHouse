@@ -136,6 +136,17 @@ main.register div.information input{
     padding: 5px 0px;
     border: #3880bf solid 1px;
 }
+main.register div.image{
+    display: flex;
+    flex-direction: column;
+ width: 80%;
+}
+main.register div.image input{
+    margin: 5px;
+}
+main.register div.image label{
+    font-weight: 600;
+}
 main.register div.notifications {
     display: flex;
     align-items: center;
@@ -635,7 +646,19 @@ main.product-detail h1{
     margin: 5px;
 }
 main.product-detail div.img{
-    width: 90%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+main.product-detail div.info{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+main.product-detail div.information{
+    display: flex;
+
+    justify-content: center;
 }
 main.product-detail div.information p{
     font-size: 20px;
@@ -646,6 +669,10 @@ main div.detail-buy-button{
     align-items: center;
     margin:5px;
     flex-wrap: wrap;
+
+}
+main div.detail-buy-button a{
+    margin: 5px;
 
 }
 
@@ -740,6 +767,12 @@ footer .social-media{
     main section article.product{
         width: 40%;
         margin: 20px;
+    }
+    main.product-detail section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
     }
 }
 @media (min-width: 1024px){

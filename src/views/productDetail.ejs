@@ -7,16 +7,27 @@
         <h1> 
             <%=products[id].name%>
         </h1>
+        <section>
         <div class="img">
             <img src="../images/Products/<%=products[id].image%>" alt="product">
         </div>
-        <div class="information">
+        <div class="info">
+          <div class="information">
             <p><%=products[id].detailedDescription%></p>
+            <ul>
+                <li>Este producto esta recomendado para niños y niñas <%=products[id].age%></li>
+                <li>Este producto pertenece a la categoria de <%=products[id].category%></li>
+                <% if (products[id].size) { %>
+                 <li> El talle de este producto es <%=products[id].size%></li>
+                 <% } %>                
+            </ul>
         </div>
-         <div class="detail-buy-button">
-            <a href="/cart"><button type="submit"class="buy">Comprar</button></a>
-            <a href="/products/<%=id+1%>/edit"><button class="edit">Editar Producto<button></a>
-        </div>
+        <div class="detail-buy-button">
+            <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
+            <a href="/products/11/edit"><button class="edit">Editar Producto</button></a></div>  
+        </div>       
+        </section>
+        
     </main>
        <%- include("./partials/footer")%>
 </body>
