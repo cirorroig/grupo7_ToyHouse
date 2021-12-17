@@ -18,3 +18,10 @@ Sprint 3:
 3.Continuar haciendo:trabajar en grupo
 4.Hacer menos:Perder tiempo
 5.Dejar de hacer: hacer todo sobre la hora
+
+Sprint 4:
+1.Comenzar a hacer: implementamos los metodos HTTP y las validaciones
+2.Hacer más: seguir practicando los temas
+3.Continuar haciendo:trabajar en grupo y hacer las cosas con mas tiempo
+4.Hacer menos: no estar todos al dia con los temas
+5.Dejar de hacer: perder tiempo con otras cosas
