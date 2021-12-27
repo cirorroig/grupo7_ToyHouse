@@ -22,7 +22,7 @@ const productValidations=[
 		} else {
 			let fileExtension = path.extname(file.originalname);
 			if (!acceptedExtensions.includes(fileExtension)) {
-				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+				throw new Error("Las extensiones de archivo permitidas son" + acceptedExtensions.join(', '));
 			}
 		}
 
