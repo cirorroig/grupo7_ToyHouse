@@ -46,7 +46,7 @@
                         <option value="<%= age %>"<%= locals.oldData && (age == oldData.age)? "selected" :null%>>
                             <%= age %>
                          </option>
-                    <% } %>
+                    <% } %> 
                 </select>
                 <% if (locals.errors && errors.age) { %>                
                     <div class="text-danger">
@@ -116,3 +116,4 @@
     </main>
 </body>
 </html>
+

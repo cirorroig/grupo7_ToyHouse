@@ -30,6 +30,12 @@ header div.top-header{
     height: 80px;
 
 }
+header div.logo-buttons{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-around;
+}
 header div.top-header a.cart{
     color: transparent;
     transition: all 600ms; 
@@ -38,8 +44,10 @@ header div.account{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
-header div.account button.register, button.login{
+
+header div.account button.register, button.login,button.products{
     border:none;
     background-color: transparent;
     text-decoration: none;
@@ -179,12 +187,9 @@ main.register button.reg-button{
     border-radius: 5px;
     font-size: 20px;
     border:none;
-}
-main.register button.reg-button a{
     text-decoration: none;
     color:white;
 }
-
 
 .percent{
     position: relative;
@@ -762,7 +767,8 @@ footer .social-media{
 
 
 
-
+@media (min-width: 375px){
+}
 @media (min-width: 768px) {
     main section article.product{
         width: 40%;

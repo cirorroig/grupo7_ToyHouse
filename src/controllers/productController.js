@@ -5,8 +5,14 @@ const path = require('path');
 const productsFile = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
 
+let ages=["Menores de 3 años","Mayores 3 años","Mayores 5 años","Mayores 8 años","Mayores de 13 años"]
+let categories=["Disfraces","Juegos de mesa","Vehículos","Peluches y muñecos","Bebés","Instrumentos musicales","Juegos de agua y playa","Puzzles","Juegos de primera infancia","Armas de juguete"] 
+let sizes=["XS","S","M","L"] 
 
 const productController={
+    ages:["Menores de 3 años","Mayores 3 años","Mayores 5 años","Mayores 8 años","Mayores de 13 años"],
+    categories:["Disfraces","Juegos de mesa","Vehículos","Peluches y muñecos","Bebés","Instrumentos musicales","Juegos de agua y playa","Puzzles","Juegos de primera infancia","Armas de juguete"] ,
+    sizes:["XS","S","M","L"] ,
     list:(req,res)=>{
         res.render("productList",{products})
     },
@@ -16,16 +22,11 @@ const productController={
         res.render("productDetail",{products,id})
     },
     create:(req,res)=>{
-        let categories=["Disfraces","Juegos de mesa","Vehículos","Peluches y muñecos","Bebés","Instrumentos musicales","Juegos de agua y playa","Puzzles","Juegos de primera infancia","Armas de juguete"]
-        let sizes=["XS","S","M","L"]
-        let ages=["Menores de 3 años","Mayores 3 años","Mayores 5 años","Mayores 8 años","Mayores de 13 años"]
+
         res.render("productForm",{categories,sizes,ages})
     },
     store:(req,res)=>{
         const resultValidation= validationResult(req)
-        let categories=["Disfraces","Juegos de mesa","Vehículos","Peluches y muñecos","Bebés","Instrumentos musicales","Juegos de agua y playa","Puzzles","Juegos de primera infancia","Armas de juguete"]
-        let sizes=["XS","S","M","L"]
-        let ages=["Menores de 3 años","Mayores 3 años","Mayores 5 años","Mayores 8 años","Mayores de 13 años"]
         if(resultValidation.errors.length > 0){
             return res.render("productForm",{
                 errors:resultValidation.mapped(),
@@ -45,17 +46,11 @@ const productController={
     },
     edit:(req,res)=>{
         let id=req.params.id-1;
-        let categories=["Disfraces","Juegos de mesa","Vehículos","Peluches y muñecos","Bebés","Instrumentos musicales","Juegos de agua y playa","Puzzles","Juegos de primera infancia","Armas de juguete"]
-        let sizes=["XS","S","M","L"]
-        let ages=["Menores de 3 años","Mayores 3 años","Mayores 5 años","Mayores 8 años","Mayores de 13 años"]
         res.render("productEdit",{products,id,categories,sizes,ages})
     },
     update:(req,res)=>{
         const resultValidation= validationResult(req)
         let id=req.params.id-1;
-        let categories=["Disfraces","Juegos de mesa","Vehículos","Peluches y muñecos","Bebés","Instrumentos musicales","Juegos de agua y playa","Puzzles","Juegos de primera infancia","Armas de juguete"]
-        let sizes=["XS","S","M","L"]
-        let ages=["Menores de 3 años","Mayores 3 años","Mayores 5 años","Mayores 8 años","Mayores de 13 años"]
         if(resultValidation.errors.length > 0){
             return res.render("productEdit",{
                 products,id,
@@ -65,14 +60,13 @@ const productController={
             })
         }
         else{
-           let id=req.params.id;
-        let editedProduct=req.body;
-
-        editedProduct.id=id;
-        editedProduct.image=req.file.filename
-        products.splice(id-1,1,editedProduct)
-        fs.writeFileSync(productsFile,JSON.stringify(products));
-		res.redirect("/");  
+            let id=req.params.id;
+            let editedProduct=req.body;
+            editedProduct.id=id;
+            editedProduct.image=req.file.filename
+            products.splice(id-1,1,editedProduct)
+            fs.writeFileSync(productsFile,JSON.stringify(products));
+            res.redirect("/");  
         }
        
     },

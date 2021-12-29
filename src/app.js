@@ -3,6 +3,7 @@ const express=require("express");
 const app=express();
 const indexRouter = require('./routes/index');
 const productsRouter = require('./routes/products');
+const usersRouter = require('./routes/users');
 const methodOverride=require("method-override")
 
 app.set("views", path.join(__dirname,"views"));
@@ -15,6 +16,7 @@ app.use(express.json())
 
 // RUTAS //
 app.use('/', indexRouter);
+app.use("/users",usersRouter)
 app.use("/products",productsRouter)
 
 app.use((req,res,next)=>{
