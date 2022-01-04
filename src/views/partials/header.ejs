@@ -1,24 +1,31 @@
-<header>
-    <div class="top-header">
-        <div class="logo-buttons">
-           <div class="logo">
-            <a href="/"><button type="submit" class="logo-button"><img src="../../images/LogoToyhouse.png" alt="logo"></button></a>
-        </div> 
-        <div class="products">
-            <a href="/products">
-               <button class="products">Productos</button> 
-            </a>
+<header class="header">
+    <div class="logo-nav-container">
+        <div class="logo-list">
+            <div class="logo">
+            <a href="/"><img src="../../images/LogoToyhouse.png"alt="logo"></a>
+            </div>
+            <div class="list">
+                <ul>
+                     <li class="products"><a href="/products">Productos</a></li>    
+                </ul>        
+            </div>   
         </div>
-        </div>    
-        <div class="account">
-            <a href="/users/register"><button class="register">Registrarme</button></a>
-            <a href="/users/login"><button class="login">Iniciar Sesion</button></a>
-        </div>
-        <div class="topright-header">
-            <a href="/cart" class="cart">
-                <button type="submit" class="cart"><i class="fas fa-shopping-cart"></i></button>
-            </a>
-                <button  type="submit" class="burger-menu"><i class="fas fa-bars"></i></button>               
-        </div>
-    </div>
+         
+        <nav class="navigation">
+            <% if (locals.isLogged) { %>
+             <ul>
+                <li class="user-image"><img src="../../images/Users/<%=  locals.userLogged.image %>"><a href="#">Hola <%= locals.userLogged.first_name%></a></li>                         
+                <li><a href="/users/profile">Mi perfil</a></li>           
+                <li><a href="/users/logout">Cerrar sesion</a></li>              
+            
+            </ul>   
+            <% } else { %>                   
+            <ul>
+                
+                <li><a href="/users/register">Registrarse</a></li>
+                <li><a href="/users/login">Iniciar sesion</a></li>
+            </ul>
+            <% } %> 
+        </nav>  
+    </div> 
 </header>

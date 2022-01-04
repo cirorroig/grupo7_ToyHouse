@@ -8,113 +8,91 @@ img{
     width: 100%;
     height: 100%;
 }
-html{
-    min-height: 100%;
-}
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
-    background-repeat:repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-header{
-    width: 100%;
-    position: fixed;
-    z-index: 2;
-}
-header div.top-header{
-    display: flex;
-    background-color:#ff4545f8;
-    justify-content: space-between;
-    height: 80px;
-
-}
-header div.logo-buttons{
-    display: flex;
-    align-items: center;
-    width: 20%;
-    justify-content: space-around;
-}
-header div.top-header a.cart{
-    color: transparent;
-    transition: all 600ms; 
-}
-header div.account{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-header div.account button.register, button.login,button.products{
-    border:none;
-    background-color: transparent;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 700;
-    font-family: 'Roboto', sans-serif;
-    cursor: pointer;
-}
-header div.logo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    border-radius: 50%;
-    margin-top: 4px;
-    margin-left: 10px;
-    transition: all 400ms;
-}
-header div.logo:hover{
-    transform: rotate(-360deg);
-}
-
-header button.logo-button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-header div.logo img{
-    width: 70px;
-    border-radius: 50%;
-    size: 20px;
-    box-shadow: 0px 0px 3px rgb(100, 100, 100);
-}
-header div.topright-header{
-    width: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-header button.cart{
-    background-color: transparent ;
-    border: none;
-    cursor: pointer;
-}
-header button.burger-menu{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
     position: relative;
 }
-header div i.fa-shopping-cart{
-    display: flex;
-    width: 50%;
-    height: 50%;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
+header.header{
+    background-color:#ff4545f8;
+    padding: 0.5rem 0;
+    font-size: 18px;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 2;
 }
-header div i.fa-bars{
+header .menu-icon{
+    display: none;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+}
+
+header div.logo-nav-container{
+    width: 95%;
+    margin:0 auto;
     display: flex;
-    width: 50%;
-    height: 50%;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 30px;
+    flex-wrap: wrap;
+}
+header div.logo-list{
+    width: 30%;
+    display: flex;
+    height: 100px;
+}
+header div.logo {
+    width: 100px;
+    
+}
+header div.logo img{
+    border-radius: 50%;
+}
+header div.list{
+width: 60%;
+display: flex;
+align-items: center;
+padding-left: 2rem;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+header .navigation ul li{
+    display: inline-block;
+}
+header .navigation ul li.user-image{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    padding-left: 40px;
+}
+header .navigation ul li.user-image a img{
+    width: 30%;
+}
+header .navigation ul li img{
+    width: 30%;
+    border-radius: 50%;
+}
+header  ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+header ul li a:hover{
+        background-color:#f88888f8 ;
 }
 main{
-    padding-top:100px;
+    padding-top:8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -373,7 +351,7 @@ main.login-page  form.login-form{
         display: flex;
         flex-direction: column;
         justify-content:center;
-        
+        width: 50%;
 }
 main.login-page  div.login{
         display: flex;
@@ -382,11 +360,19 @@ main.login-page  div.login{
 }
 main.login-page  button.login{
         background-color: #3880bf;
-        width: 90%;
+        padding: 10px;
+        width: 80%;
+        border-radius: 5px;
+        margin:0px 0px 20px;
+        cursor: pointer;
+        background-color: #3880bf;
         border-radius: 5px;
         font-size: 20px;
-        padding: 5px;
+        border:none;
+        text-decoration: none;
+        color:white;   
 }
+
 main.login-page  button.login a{
     color: white;
     text-decoration: none;
@@ -765,9 +751,36 @@ footer .social-media{
     box-shadow: 0 0 0 .25rem rgba(25, 135, 84, .25)
 }
 
+div.profile-image{
+    width: 50%;
+}
 
 
-@media (min-width: 375px){
+@media (max-width: 767px){
+    header div.logo-nav-container{
+       justify-content: center;
+    }
+    header .menu-icon{
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+    }
+    header .navigation{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    header .navigation ul li{
+        display: block;
+    }
+    header .navigation ul li a{
+        display: block;
+        padding: 0.5rem 0;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+    header .navigation ul li a:hover{
+            background-color:#f88888f8 ;
+    }
 }
 @media (min-width: 768px) {
     main section article.product{

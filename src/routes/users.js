@@ -1,10 +1,16 @@
+// Express y otros modulos
 const express = require('express');
 const router = express.Router();
-const usersController = require("../controllers/usersController")
 const { body } = require('express-validator');
 const path = require('path');
 const multer = require("multer");
 
+// Controladores
+const usersController = require("../controllers/usersController")
+
+// Middlewares
+const guestMiddleware = require('../../middlewares/guestMiddleware');
+const authMiddleware = require('../../middlewares/authMiddleware');
 // Express Validator
 const registerValidations=[
     body('first_name').notEmpty().withMessage('Tienes que escribir un nombre'),
@@ -36,11 +42,22 @@ const storage=multer.diskStorage({
 })
 const upload=multer({storage})
 
-// Rutas
-router.get("/login",usersController.login);
-router.get("/register",usersController.register);
+// Formulario de Login
+router.get("/login",guestMiddleware,usersController.login);
+
+// Proceso del Login
+router.post("/login",usersController.processLogin);
+
+// Formulario de Registro
+router.get("/register",guestMiddleware,usersController.register);
+
+// Proceso de Registro
 router.post("/register",upload.single("image"),registerValidations,usersController.processRegister)
 
+// Vista del perfil de usuario
+router.get("/profile",authMiddleware,usersController.userProfile);
 
+// Logout
+router.get("/logout",usersController.logout);
 
 module.exports = router;

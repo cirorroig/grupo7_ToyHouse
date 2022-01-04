@@ -44,11 +44,51 @@ const usersController = {
 
         User.register(newUser)
 
-        res.render("login")
+        res.redirect("/users/login")
     },
     login:(req,res)=>{
         res.render("login")
     },
+    processLogin:(req,res)=>{
+        let userToLogin = User.findByField("email",req.body.email)
+        if(userToLogin){
+            let correctPassword= bcryptjs.compareSync(req.body.password,userToLogin.password)
+                if(correctPassword){
+                    delete userToLogin.password;
+                    req.session.userLogged=userToLogin
+
+                    if(req.body.rememberUser){
+                        res.cookie("userEmail",req.body.email, { maxAge: (1000 * 60)*2})
+                    }
+
+                    return res.redirect("/users/profile")  
+                }
+            return res.render("login",{
+                  errors:{
+                      email:{
+                        msg:"Las credenciales son inválidas"
+                  }
+                }
+                })
+        }
+        return res.render("login",{
+            errors:{
+                email:{
+                    msg:"El email que usted ingreso no se encuentra registrado"
+                }
+            }
+        })
+    },
+    userProfile:(req,res)=>{
+        res.render("userProfile",{
+            user:req.session.userLogged
+        })
+    },
+    logout:(req,res)=>{
+        res.clearCookie("userEmail")
+        req.session.destroy();
+        return res.redirect("/")
+    }
 }
 
 module.exports = usersController;

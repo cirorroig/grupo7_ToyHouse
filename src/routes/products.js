@@ -3,6 +3,8 @@ const multer = require("multer");
 const router = express.Router();
 const path=require("path")
 const productController = require("../controllers/productController")
+const guestMiddleware = require('../../middlewares/guestMiddleware');
+const authMiddleware = require('../../middlewares/authMiddleware');
 const { body } = require('express-validator');
 
 // Express Validator
@@ -46,9 +48,9 @@ const upload=multer({storage})
 // Envio de formularios y htmls //
 
 router.get("/",productController.list);
-router.get("/create",productController.create)
+router.get("/create",authMiddleware,productController.create)
 router.get("/:id",productController.detail)
-router.get("/:id/edit",productController.edit)
+router.get("/:id/edit",authMiddleware,productController.edit)
 
 // Creacion de  Productos //
 router.post("/",upload.single("image"),productValidations,productController.store)
