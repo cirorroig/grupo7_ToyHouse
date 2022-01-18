@@ -25,3 +25,10 @@ Sprint 4:
 3.Continuar haciendo:trabajar en grupo y hacer las cosas con mas tiempo
 4.Hacer menos: no estar todos al dia con los temas
 5.Dejar de hacer: perder tiempo con otras cosas
+
+Sprint 5:
+1.Comenzar a hacer: armamos el Crud de inicio y registro con session
+2.Hacer más: seguir practicando los temas
+3.Continuar haciendo:trabajar en grupo y hacer las cosas con mas tiempo
+4.Hacer menos: no estar todos al dia con los temas
+5.Dejar de hacer: perder tiempo con otras cosas
