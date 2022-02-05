@@ -22,7 +22,7 @@ const productController={
         res.render("productDetail",{products,id})
     },
     create:(req,res)=>{
-
+//
         res.render("productForm",{categories,sizes,ages})
     },
     store:(req,res)=>{

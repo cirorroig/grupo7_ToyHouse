@@ -766,8 +766,27 @@ div.profile-image{
 
 
 @media (max-width: 767px){
+    header{
+        font-size: 15px;
+    }
     header div.logo-nav-container{
-       justify-content: center;
+       justify-content:space-around;
+       display: flex;
+       
+    }
+    header div.logo-list{
+        width: 50%;
+        display: flex;
+    }
+    header div.logo-list div.logo{
+        width: 100px;
+    }
+    header div.logo-list div.logo a{
+        width: 100%;
+    }
+    header div.logo-list div.list{
+        width: 60%;
+        padding:0px;
     }
     header .menu-icon{
         display: block;
@@ -775,8 +794,12 @@ div.profile-image{
         padding: 0.5rem 1rem;
     }
     header .navigation{
-        width: 100%;
+        width: 40%;
         margin-top: 1rem;
+    }
+    header .navigation ul {
+        display: flex;
+        flex-direction: column;
     }
     header .navigation ul li{
         display: block;
@@ -789,6 +812,9 @@ div.profile-image{
     }
     header .navigation ul li a:hover{
             background-color:#f88888f8 ;
+    }
+    main.login-page form.login-form{
+        width: 80%;
     }
 }
 @media (min-width: 768px) {
