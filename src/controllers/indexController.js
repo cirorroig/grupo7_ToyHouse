@@ -18,5 +18,5 @@ const indexController = {
         res.render("productCart")
     },
 }
-
+//akjdhgasjhidhgasjhdghasd
 module.exports = indexController;
