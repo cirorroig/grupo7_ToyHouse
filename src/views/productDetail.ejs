@@ -5,26 +5,26 @@
     <%- include("./partials/header")%>
     <main class="product-detail">
         <h1> 
-            <%=products[id].name%>
+            <%=product.name%>
         </h1>
         <section>
         <div class="img">
-            <img src="../images/Products/<%=products[id].image%>" alt="product">
+            <img src="../images/Products/<%=product.image%>" alt="product">
         </div>
         <div class="info">
           <div class="information">
-            <p><%=products[id].detailedDescription%></p>
+            <p><%=product.detailedDescription%></p>
             <ul>
-                <li>Este producto esta recomendado para niños y niñas <%=products[id].age%></li>
-                <li>Este producto pertenece a la categoria de <%=products[id].category%></li>
-                <% if (products[id].size) { %>
-                 <li> El talle de este producto es <%=products[id].size%></li>
+                <li>Este producto esta recomendado para niños y niñas <%=product.edad.range%></li>
+                <li>Este producto pertenece a la categoria de <%=product.categoria.name%></li>
+                <% if (product.talle) { %>
+                 <li> El talle de este producto es <%=product.talle.talle%></li>
                  <% } %>                
             </ul>
         </div>
         <div class="detail-buy-button">
             <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-            <a href="/products/<%= id+1 %>/edit"><button class="edit">Editar Producto</button></a></div>   
+            <a href="/products/<%= product.id_producto %>/edit"><button class="edit">Editar Producto</button></a></div>   
         </div>       
         </section>
         

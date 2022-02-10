@@ -8,7 +8,7 @@ module.exports=(sequelize,dataTypes)=>{
             autoIncrement:true,
             allowNull: false,
         },
-        categoria:{
+        name:{
             type:dataTypes.STRING(45),
             allowNull: false,
         }
@@ -16,8 +16,8 @@ module.exports=(sequelize,dataTypes)=>{
     }
 
     let config = {
-        tableName:"edades",
-        timeStamps:false,
+        tableName:"categorias",
+        timestamps:false,
     }
 
     let Categoria =sequelize.define(alias,cols,config)

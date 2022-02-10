@@ -1,8 +1,6 @@
-CREATE DATABASE  IF NOT EXISTS `toyhouse_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `toyhouse_db`;
 -- MariaDB dump 10.19  Distrib 10.4.22-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: toyhouse_db
+-- Host: 127.0.0.1    Database: toyhouse_db
 -- ------------------------------------------------------
 -- Server version	10.4.22-MariaDB
 
@@ -74,11 +72,11 @@ DROP TABLE IF EXISTS `productos`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `productos` (
   `id_producto` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
+  `name` varchar(300) NOT NULL,
   `description` text NOT NULL,
   `detailedDescription` text NOT NULL,
   `price` decimal(10,0) NOT NULL,
-  `image` varchar(100) NOT NULL,
+  `image` varchar(255) NOT NULL,
   `id_categoria` int(11) NOT NULL,
   `id_talle` int(11) DEFAULT NULL,
   `id_edad` int(11) NOT NULL,
@@ -135,11 +133,12 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(500) NOT NULL,
   `image` varchar(100) NOT NULL,
+  `is_admin` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id_usuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -150,7 +149,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Ciro','Rodriguez','cirorodriguezroig@gmail.com','$2a$10$xZLyVSIdm4KN2fpMIXCQ8OXBcU2NVi1S3ulfqOXVD.KGXZDr9vWey','user-1641344873943.jpg');
+INSERT INTO `usuarios` VALUES (1,'Ciro','Rodriguez','cirorodriguezroig@gmail.com','$2a$10$xZLyVSIdm4KN2fpMIXCQ8OXBcU2NVi1S3ulfqOXVD.KGXZDr9vWey','user-1641344873943.jpg',1);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -163,4 +162,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-31 16:32:36
+-- Dump completed on 2022-02-05 16:43:38

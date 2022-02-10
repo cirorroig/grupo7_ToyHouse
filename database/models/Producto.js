@@ -26,7 +26,7 @@ module.exports=(sequelize,dataTypes)=>{
         },
         image:{
             type:dataTypes.STRING,
-            allowNull: false,
+         
         },
         id_categoria:{
             type: dataTypes.INTEGER,
@@ -45,7 +45,7 @@ module.exports=(sequelize,dataTypes)=>{
 
     let config = {
         tableName:"productos",
-        timeStamps:false,
+        timestamps:false,
     }
 
     let Producto =sequelize.define(alias,cols,config)

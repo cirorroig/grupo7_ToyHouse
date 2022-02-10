@@ -5,14 +5,14 @@
     <%- include("./partials/header")%>
     <main class="productForm-page" >
         <section>
-            <h2>Edicion de <%=products[id].name%></h2>
-            <form action="/products/<%=id+1%>?_method=PUT" method="post"class="product-create" enctype="multipart/form-data">
+            <h2>Edicion de <%=product.name%></h2>
+            <form action="/products/<%= product.id_producto%>?_method=PUT" method="post"class="product-create" enctype="multipart/form-data">
                 <div class="information">
                     <label for="name">Nombre del producto</label>
                     <input type="name" name="name" id="name"
                     class="<%= locals.errors && errors.name? "is-invalid": null %> <%= locals.oldData && oldData.name? "is-valid": null %>"  
-                    value="<%= locals.oldData ? oldData.name: null %>"
-                    > 
+                    value="<%= locals.oldData && oldData.name?oldData.name:product.name%>">
+                    
                     <% if (locals.errors && errors.name) { %>                
                         <div class="text-danger">
                         <%= errors.name.msg %> 
@@ -23,7 +23,7 @@
                     <label for="description">Descripción</label>
                     <input type="text" name="description" id="description"
                     class="<%= locals.errors && errors.description? "is-invalid": null %> <%= locals.oldData && oldData.description? "is-valid": null %>"
-                    value="<%= locals.oldData ? oldData.description: null %>">
+                    value="<%= locals.oldData && oldData.description?oldData.description:product.description%>">
                     <% if (locals.errors && errors.description) { %>                
                         <div class="text-danger">
                         <%= errors.description.msg %> 
@@ -31,17 +31,20 @@
                     <% } %>
                 </div>
                 <div class="image">
-                    <input type="file" name="image" id="image">
+                    <input type="file" name="image" id="image" value="<%= product.image %>">
                 </div>
                 <div class="especifications">
                     <label for="age">Rango de edad</label>
                     <select name="age" id="age" class="<%= locals.errors && errors.age? "is-invalid2": null %> <%= locals.oldData && oldData.age? "is-valid2": null %>" 
-                        value="<%= locals.oldData ? oldData.age: null %>">
+                        value=" <%= ages.id_edad %>">
                         <option value="">Seleccionar</option>
                         <% for( const age of ages ) { %>
-                            <option value="<%= age %>"<%= locals.oldData && (age == oldData.age)? "selected" :null%>>
-                                <%= age %>
-                            </option>
+                            <% if (age.id_edad == product.id_edad) { %>
+                             <option value=" <%= age.id_edad %> " selected> <%= age.range %> </option> 
+                            
+                          <% } else { %>
+                            <option value=" <%= age.id_edad %>  "> <%= age.range %> </option>
+                        <% } %>
                         <% } %>
                     </select>
                     <% if (locals.errors && errors.age) { %>                
@@ -52,11 +55,14 @@
                     <div class="category">
                         <label for="category">Categoría</label>
                         <select name="category" class="<%= locals.errors && errors.category? "is-invalid2": null %> <%= locals.oldData && oldData.category? "is-valid2": null %>" >
-                            <option value="">Seleccionar</option>
+                            <option value= null >Seleccionar</option>
                             <% for( const category of categories ) { %>
-                                <option value="<%= category %>"<%= locals.oldData && (category == oldData.category)? "selected" :null%>>
-                                    <%= category %>
-                                 </option>
+                                <% if (category.id_categoria == product.id_categoria) { %>
+                                 <option value=" <%= category.id_categoria %>  "selected><%= category.name %></option> 
+                                
+                              <% } else { %>
+                                <option value=" <%= category.id_categoria %> "> <%= category.name %> </option>
+                            <% } %>
                             <% } %>
                         </select>
                     </div>
@@ -70,9 +76,11 @@
                         <select name="size">
                             <option value="">Seleccionar</option>
                             <% for( const size of sizes ) { %>
-                                <option value="<%= size %>"<%= locals.oldData && (size == oldData.size)? "selected" :null%>>
-                                    <%= size %>
-                                 </option>
+                                <% if (size.id_talle == product.id_talle) { %>
+                                 <option value=" <%= size.id_talle %>  "selected><%= size.talle %></option> 
+                              <% } else { %>
+                                <option value=" <%= size.id_talle %>  "><%= size.talle %></option> 
+                            <% } %>
                             <% } %>
                         </select>
                     </div>
@@ -85,7 +93,7 @@
                         <label for="detailedDescription">Descripcion detallada</label>
                         <textarea name="detailedDescription" id="detailedDescription" cols="37" rows="6" placeholder="Color, tamaño, etc."
                         class="<%= locals.errors && errors.name? "is-invalid": null %> <%= locals.oldData && oldData.detailedDescription? "is-valid2": null %>"
-                        ><%= locals.oldData ? oldData.detailedDescription: null %></textarea>
+                        ><%= locals.oldData && oldData.detailedDescription?oldData.detailedDescription:product.detailedDescription%></textarea> 
                     </div>
                     <% if (locals.errors && errors.detailedDescription) { %>                
                         <div class="text-danger">
@@ -96,7 +104,7 @@
                         <label for="price">Precio</label>
                         <input type="number" name="price" id="price"
                         class="<%= locals.errors && errors.price? "is-invalid": null %> <%= locals.oldData && oldData.price? "is-valid": null %> "
-                        value="<%= locals.oldData ?oldData.price:null %>">
+                        value="<%= locals.oldData && oldData.price?oldData.price:product.price%>"> 
                     </div>
                     <% if (locals.errors && errors.price) { %>                
                         <div class="text-danger">
@@ -113,7 +121,7 @@
         </section>
         <section>
             <h2>Eliminacion de Producto</h2>
-            <form action="/products/<%=id+1%>?_method=DELETE" method="post" class="product-create">
+            <form action="/products/<%=product.id_producto%>?_method=DELETE" method="post" class="product-create">
                 <div class="send-reset">
                     <button class="buy-now-button" type="submit">Borrar Producto</button>                
                 </div>

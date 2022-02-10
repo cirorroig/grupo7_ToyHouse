@@ -42,11 +42,11 @@
                 <select name="age" id="age" class="<%= locals.errors && errors.age? "is-invalid2": null %> <%= locals.oldData && oldData.age? "is-valid2": null %>" 
                     value="<%= locals.oldData ? oldData.age: null %>">
                     <option value="">Seleccionar</option>
-                    <% for( const age of ages ) { %>
-                        <option value="<%= age %>"<%= locals.oldData && (age == oldData.age)? "selected" :null%>>
-                            <%= age %>
-                         </option>
-                    <% } %> 
+                   <% for( let i = 0; i < ages.length; i++ ) { %>
+                    <option value=" <%= ages[i].id_edad %>  ">
+                        <%= ages[i].range %> 
+                    </option>
+                   <% } %>
                 </select>
                 <% if (locals.errors && errors.age) { %>                
                     <div class="text-danger">
@@ -57,10 +57,10 @@
                     <label for="category">Categoría</label>
                     <select name="category" class="<%= locals.errors && errors.category? "is-invalid2": null %> <%= locals.oldData && oldData.category? "is-valid2": null %>" >
                         <option value="">Seleccionar</option>
-                        <% for( const category of categories ) { %>
-                            <option value="<%= category %>"<%= locals.oldData && (category == oldData.category)? "selected" :null%>>
-                                <%= category %>
-                             </option>
+                        <% for( let i = 0; i < categories.length; i++ ) { %>
+                            <option value=" <%= categories[i].id_categoria %>  ">
+                                <%= categories[i].name %> 
+                            </option>
                         <% } %>
                     </select>
                 </div>
@@ -73,10 +73,10 @@
                     <label for="size">Talle</label>
                     <select name="size">
                         <option value="">Seleccionar</option>
-                        <% for( const size of sizes ) { %>
-                            <option value="<%= size %>"<%= locals.oldData && (size == oldData.size)? "selected" :null%>>
-                                <%= size %>
-                             </option>
+                        <% for( let i = 0; i < sizes.length; i++ ) { %>
+                            <option value=" <%= sizes[i].id_talle %>  ">
+                                <%= sizes[i].talle %> 
+                            </option>
                         <% } %>
                     </select>
                 </div>
