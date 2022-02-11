@@ -28,7 +28,7 @@ module.exports=(sequelize,dataTypes)=>{
             type:dataTypes.STRING(100),
             allowNull: false,
         },
-        isa_admin:{
+        is_admin:{
             type: dataTypes.INTEGER,
             allowNull: false,
         }
