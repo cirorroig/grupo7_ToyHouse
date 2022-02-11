@@ -12,7 +12,7 @@ let sizes=db.Talle.findAll()
 
 const productController={
     list:(req,res)=>{
-
+        
         db.Producto.findAll()
             .then(products=>{
                res.render("productList",{products:products}) 

@@ -24,11 +24,11 @@ header.header{
     background-color:#ff4545f8;
     padding: 0.5rem 0;
     font-size: 18px;
-    position: sticky;
     top:0;
     left:0;
     right:0;
     z-index: 2;
+
 }
 header .menu-icon{
     display: none;
@@ -114,6 +114,7 @@ main.register form.register-form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 65%;
 }
 main div.information{
     display: flex;

@@ -1,12 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFile = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
+const db = require('../../database/models');
 
 const indexController = {
     index: (req,res) => {
-        res.render("index",{products})
+        db.Producto.findAll()
+            .then(products=>{
+                res.render("index",{products}) 
+            })
+        
     },
     login:(req,res)=>{
         res.render("login")
@@ -18,6 +21,5 @@ const indexController = {
         res.render("productCart")
     },
 }
-//prueba
-//akjdhgasjhidhgasjhdghasd
+
 module.exports = indexController;

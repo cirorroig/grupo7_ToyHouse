@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const User = require("../../models/Users");
 const usersFile = path.join(__dirname, '../data/users.json');
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs');
@@ -23,9 +22,12 @@ const usersController = {
             })
         }
         
-        let userInDB= User.findByField("email",req.body.email)
-
-        if(userInDB){
+        db.Usuario.findOne({
+            where:{
+                email:req.body.email
+            }
+        }).then((userInDB) => {
+            if(userInDB){
             return res.render ("register",{
                 errors:{
                     email:{
@@ -35,6 +37,9 @@ const usersController = {
                 oldData:req.body,
             })
         }
+        })
+
+        
     
        
         db.Usuario.create({
@@ -54,13 +59,12 @@ const usersController = {
         res.render("login")
     },
     processLogin:(req,res)=>{
-        let userToLogin =db.Usuario.findOne({
+        db.Usuario.findOne({
             where:{
                 email:req.body.email
             }
-        })
-        
-        if(userToLogin){
+        }).then((userToLogin) => {
+            if(userToLogin){
             let correctPassword= bcryptjs.compareSync(req.body.password,userToLogin.password)
                 if(correctPassword){
                     delete userToLogin.password;
@@ -79,14 +83,19 @@ const usersController = {
                   }
                 }
                 })
-        }
-        return res.render("login",{
+        }else{
+           return res.render("login",{
             errors:{
                 email:{
                     msg:"El email que usted ingreso no se encuentra registrado"
                 }
             }
+        }) 
+        } 
         })
+        
+        
+       
     },
     userProfile:(req,res)=>{
         res.render("userProfile",{
