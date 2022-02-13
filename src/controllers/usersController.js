@@ -105,8 +105,20 @@ const usersController = {
         })
     },
     processEdit:(req,res)=>{
-
-
+        db.Usuario.update({
+           first_name:req.body.first_name,
+           last_name: req.body.last_name,
+           email:req.body.email,
+           password:bcryptjs.hashSync(req.body.password),
+           image:req.file.filename
+        },{
+            where:{
+                id_usuario:req.params.id
+            }
+        })
+           
+        
+        res.redirect("/users/logout")
     }
 }
 

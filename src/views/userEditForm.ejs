@@ -6,7 +6,7 @@
     <main class="edit">
         <h1>¡Edita tu cuenta!</h1>
         <div class="edit-form">
-            <form action="/users/edit" enctype="multipart/form-data" method="post" class="edit-form">
+            <form action="/users/<%= locals.userLogged.id_usuario %>?_method=PUT " enctype="multipart/form-data" method="post" class="edit-form">
                 <div class="edit-information">
                     <label for="first_name">Nombre</label>
                     <input type="text" name="first_name" id="first_name" placeholder="Ej: Juan"

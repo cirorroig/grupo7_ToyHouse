@@ -63,7 +63,7 @@ router.get("/logout",usersController.logout);
 //Vista de la edicion de usuario
 router.get("/edit/:id",usersController.edit);
 
-//
+//Proceso de edicion
 router.put("/:id",upload.single("image"),usersController.processEdit)
 
 module.exports = router;
