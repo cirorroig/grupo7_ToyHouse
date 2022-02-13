@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `toyhouse_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE  IF NOT EXISTS `toyhouse_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `toyhouse_db`;
 -- MariaDB dump 10.19  Distrib 10.4.22-MariaDB, for Win64 (AMD64)
 --
@@ -142,7 +142,7 @@ CREATE TABLE `usuarios` (
   `image` varchar(100) NOT NULL,
   `is_admin` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +151,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Ciro','Rodriguez','cirorodriguezroig@gmail.com','$2a$10$xZLyVSIdm4KN2fpMIXCQ8OXBcU2NVi1S3ulfqOXVD.KGXZDr9vWey','user-1641344873943.jpg',1),(2,'Santino','Brigante','santinobrigante1@gmail.com','$2a$10$uLtCa9RZNWqkCGQy.GU6EOGp1rUBLYqrKHznim1Bo5zYBDOmxro7W','user-1644539163338.jpg',1);
+INSERT INTO `usuarios` VALUES (1,'Ciro','Rodriguez','cirorodriguezroig@gmail.com','$2a$10$xZLyVSIdm4KN2fpMIXCQ8OXBcU2NVi1S3ulfqOXVD.KGXZDr9vWey','user-1641344873943.jpg',1),(2,'Santino','Brigante','santinobrigante1@gmail.com','$2a$10$uLtCa9RZNWqkCGQy.GU6EOGp1rUBLYqrKHznim1Bo5zYBDOmxro7W','user-1644539163338.jpg',1),(3,'Paulina','Roig','paulinaroig@hotmail.com','$2a$10$7SBRhD5d67XCAZxKe6GmzeQ.uJ1UPh0voi1y8LR.V1py21Uk2SkVa','user-1644603801470.png',0),(4,'Ricardo','Fort','elriki@gmail.com','$2a$10$liy/36sMSv9bV2EuixM8POCm9D95Q5nSSZCqWBwjodwK9m3GHUJZi','user-1644713958560.jpg',0);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -164,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-10 22:00:48
+-- Dump completed on 2022-02-12 22:56:38
