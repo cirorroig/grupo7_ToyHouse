@@ -58,6 +58,38 @@ header div.logo {
 header div.logo img{
     border-radius: 50%;
 }
+header form{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+    flex-wrap: wrap;
+    width: 30%;
+    border-radius: 15px;
+}
+header form input.search{
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-width: 1px;
+    padding: 5px;
+    width: 85%;
+}
+header form input.search:focus{
+    border-color: -internal#1259C3;
+}
+header form button.submit{
+    border-width: 1px;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+}
+header form .submit i{
+    width: 100%;
+}
+
 header div.list{
 width: 60%;
 display: flex;

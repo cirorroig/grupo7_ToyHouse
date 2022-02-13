@@ -61,5 +61,7 @@ router.put("/:id",upload.single("image"),productValidations ,productController.u
 // Eliminacion de productos //
 router.delete("/:id",productController.destroy)
 
+//Busqueda de productos
+router.post("/search",productController.search)
 
 module.exports = router;

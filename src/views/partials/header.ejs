@@ -10,7 +10,10 @@
                 </ul>        
             </div>   
         </div>
-         
+        <form action="/products/search" method="post">
+            <input class="search" type="text" name="search" id="search" placeholder="Buscar productos">
+            <button type="submit"class="submit"><i class="fa fa-search"></i></button>
+        </form>
         <nav class="navigation">
             <% if (locals.isLogged) { %>
              <ul>
