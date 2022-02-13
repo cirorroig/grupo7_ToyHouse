@@ -123,6 +123,17 @@ const productController={
             }
         })
 		res.redirect("/products");
+    },
+    search:(req,res)=>{
+        db.Producto.findOne({
+            where:{
+                name:req.body.search,
+            }
+        }).then(product=>{
+        
+           res.redirect("/products/"+product.id_producto)
+        })
+
     }
 }
 
