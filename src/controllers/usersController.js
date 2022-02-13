@@ -37,11 +37,7 @@ const usersController = {
                 oldData:req.body,
             })
         }
-        })
-
-        
-    
-       
+        })   
         db.Usuario.create({
             first_name:req.body.first_name,
             last_name:req.body.last_name,
@@ -50,9 +46,6 @@ const usersController = {
             image:req.file.filename,
             is_admin:0
         })
-
-        
-
         res.redirect("/users/login")
     },
     login:(req,res)=>{
@@ -92,10 +85,7 @@ const usersController = {
             }
         }) 
         } 
-        })
-        
-        
-       
+        })      
     },
     userProfile:(req,res)=>{
         res.render("userProfile",{
@@ -106,6 +96,17 @@ const usersController = {
         res.clearCookie("userEmail")
         req.session.destroy();
         return res.redirect("/")
+    },
+    edit:(req,res)=>{
+    
+        db.Usuario.findByPk(req.params.id)
+        .then(usuario=>{
+            res.render("userEditForm",{usuario})
+        })
+    },
+    processEdit:(req,res)=>{
+
+
     }
 }
 

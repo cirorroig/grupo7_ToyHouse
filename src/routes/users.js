@@ -60,4 +60,10 @@ router.get("/profile",authMiddleware,usersController.userProfile);
 // Logout
 router.get("/logout",usersController.logout);
 
+//Vista de la edicion de usuario
+router.get("/edit/:id",usersController.edit);
+
+//
+router.put("/:id",upload.single("image"),usersController.processEdit)
+
 module.exports = router;
