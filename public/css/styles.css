@@ -175,7 +175,100 @@ main.register button.reg-button{
     text-decoration: none;
     color:white;
 }
+main.edit h1{
+    padding-bottom: 5rem;
+    margin:10px 0px;
+    width: 90%;
+    text-align: center;
+    color: #3880bf;
+}
+main div.edit-information{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 1rem;
+}
+main.edit div.edit-information label{
+    font-weight: 600;
+}
+main.edit div.edit-information input{
+    margin:5px 0px;
+    padding: 5px 0px;
+    border: #3880bf solid 1px;
+}
+main.edit div.image{
+    display: flex;
+    flex-direction: column;
+ width: 80%;
+}
+main.edit div.image input{
+    margin: 5px;
+}
+main.edit div.image label{
+    font-weight: 600;
+}
+main.edit div.notifications {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+}
+main.edit div.notifications label{
+    width: 90%;
+    text-align: center;
+    font-size: 15px;
+    
+}
+main.edit div.notifications input{
+    padding: 2px;
+    cursor: pointer;
+}
+main.edit button.check{
+    background-color: transparent;
+    border: none;
+}
 
+main.edit button.reg-button{
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    margin:0px 0px 20px;
+    cursor: pointer;
+    background-color: #3880bf;
+    border-radius: 5px;
+    font-size: 20px;
+    border:none;
+    text-decoration: none;
+    color:white;
+}
+main.edit button.edit-button{
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    margin:0px 0px 20px;
+    cursor: pointer;
+    background-color: #3880bf;
+    border-radius: 5px;
+    font-size: 20px;
+    border:none;
+    text-decoration: none;
+    color:white;
+}
+main.edit div.edit-image{
+    display: flex;
+    flex-direction: column;
+ width: 80%;
+}
+main.edit div.edit-image input{
+    margin: 5px;
+}
+main.edit div.edit-image label{
+    font-weight: 600;
+}
+main.edit .edit-form{
+    width: 80%;
+}
 .percent{
     position: relative;
     left: 60px;
