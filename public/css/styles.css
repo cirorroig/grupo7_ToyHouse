@@ -14,7 +14,7 @@ html{
 }
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #ebebeb;
+    background-color: white;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -207,12 +207,20 @@ main.register button.reg-button{
     text-decoration: none;
     color:white;
 }
+main.edit{
+   border: white;
+    
+}
 main.edit h1{
     padding-bottom: 5rem;
     margin:10px 0px;
     width: 90%;
     text-align: center;
     color: #3880bf;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 40px;
 }
 main div.edit-information{
     display: flex;
@@ -297,6 +305,13 @@ main.edit div.edit-image input{
 }
 main.edit div.edit-image label{
     font-weight: 600;
+}
+main.edit div.edit-form{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 80px;
 }
 .percent{
     position: relative;
@@ -879,8 +894,23 @@ div.footer{
 }
 
 div.profile-image{
-    width: 50%;
+    width: 400px;  
 }
+main.profile button.reg-button{
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin:0px 0px 20px;
+    cursor: pointer;
+    background-color: #3880bf;
+    border-radius: 5px;
+    font-size: 20px;
+    border:none;
+    text-decoration: none;
+    color:white;  
+}
+
+
 
 
 @media (max-width: 767px){

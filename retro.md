@@ -32,3 +32,10 @@ Sprint 5:
 3.Continuar haciendo:trabajar en grupo y hacer las cosas con mas tiempo
 4.Hacer menos: no estar todos al dia con los temas
 5.Dejar de hacer: perder tiempo con otras cosas
+
+Sprint 6:
+1.Comenzar a hacer: uso de base de datos
+2.Hacer más: profundizar el uso de las consultas en la base de datos
+3.Continuar haciendo:trabajar en grupo y estar bien organizados
+4.Hacer menos: no estar todos al dia con los temas
+5.Dejar de hacer: dejar cosas a ultimo momento
