@@ -2,6 +2,7 @@ const fs = require('fs');
 const { validationResult } = require('express-validator');
 const path = require('path');
 const db = require('../../database/models');
+const Op= db.Sequelize.Op
 
 const productsFile = path.join(__dirname, '../data/products.json');
 //let products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
@@ -125,13 +126,12 @@ const productController={
 		res.redirect("/products");
     },
     search:(req,res)=>{
-        db.Producto.findOne({
+        db.Producto.findAll({
             where:{
-                name:req.body.search,
+                name:{[Op.like]:`%${req.body.search}%`},
             }
-        }).then(product=>{
-        
-           res.redirect("/products/"+product.id_producto)
+        }).then(products=>{
+           res.render("productSearch",{products,search:req.body.search})
         })
 
     }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head")%>
+<body>
+    <%- include("./partials/header")%>
+    <main>
+       <h1>Resultados de la busqueda "<%= search %>"</h1>
+    <section class="our-products">
+        <% for(const product of products) { %>
+        <article class="product">
+            <div class="image">
+                <a href="/products/<%=product.id%>">
+                <img src="../images/Products/<%=product.image%>" alt="product">
+                <i class="fas fa-percent"></i>
+                </a>
+            </div>
+            <div class="description">
+                <p class="product-name"><%=product.name%></p>
+                <div class="brand">
+                    <p><%=product.description%></p>
+                </div>
+                <div class="price">
+                    <p>$<%=product.price%></p>
+                    <p> $<%= product.price/2 %></p>
+            </div>
+            </div> 
+            <div class="buy-button">
+                <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
+                <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
+            </div>
+        </article>
+    <% } %>
+    </section> 
+    </main> 
+    <%- include("./partials/footer")%> 
+</body>
+</html>
