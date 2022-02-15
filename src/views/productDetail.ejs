@@ -22,9 +22,13 @@
                  <% } %>                
             </ul>
         </div>
+       
         <div class="detail-buy-button">
             <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-            <a href="/products/<%= product.id_producto %>/edit"><button class="edit">Editar Producto</button></a></div>   
+             <% if (locals.isLogged && locals.userLogged.is_admin==1) { %>
+            <a href="/products/<%= product.id_producto %>/edit"><button class="edit">Editar Producto</button></a>
+            <% } %>        
+        </div>   
         </div>       
         </section>
         
