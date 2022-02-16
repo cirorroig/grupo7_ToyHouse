@@ -125,14 +125,17 @@ const productController={
 		res.redirect("/products");
     },
     search:(req,res)=>{
-        db.Producto.findAll({
+        if(req.body.search){
+           db.Producto.findAll({
             where:{
                 name:{[Op.like]:`%${req.body.search}%`},
             }
         }).then(products=>{
            res.render("productSearch",{products,search:req.body.search})
-        })
-
+        }) 
+        }else{
+            res.redirect("/");
+        }
     }
 }
 
