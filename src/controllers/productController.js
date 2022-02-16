@@ -4,8 +4,7 @@ const path = require('path');
 const db = require('../../database/models');
 const Op= db.Sequelize.Op
 
-const productsFile = path.join(__dirname, '../data/products.json');
-//let products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
+
 
 let ages=db.Edad.findAll()
 let categories=db.Categoria.findAll() 
