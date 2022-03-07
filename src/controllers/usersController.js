@@ -69,13 +69,8 @@ const usersController = {
 
                     return res.redirect("/users/profile")  
                 }
-            return res.render("login",{
-                  errors:{
-                      email:{
-                        msg:"Las credenciales son inválidas"
-                  }
-                }
-                })
+            
+                
         }else{
            return res.render("login",{
             errors:{

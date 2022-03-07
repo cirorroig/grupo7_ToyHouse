@@ -9,8 +9,8 @@ const { body } = require('express-validator');
 
 // Express Validator
 const productValidations=[
-    body("name").notEmpty().withMessage("Ingrese un nombre de producto"),
-    body("description").notEmpty().withMessage("Ingrese una descripcion"),
+    body("name").notEmpty().withMessage("Ingrese un nombre de producto").isLength({min:5}).withMessage("Debe contener al menos cinco caracteres"),
+    body("description").notEmpty().withMessage("Ingrese una descripcion").isLength({min:20}).withMessage("Debe contener al veinte caracteres"),
     body("age").notEmpty().withMessage("Seleccione un rango de edad"),
     body("category").notEmpty().withMessage("Seleccione una categoria para el producto"),
     body("detailedDescription").notEmpty().withMessage("Escriba una descripcion detallada del producto"),
