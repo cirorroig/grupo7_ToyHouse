@@ -8,7 +8,7 @@ window.addEventListener("load",()=>{
     }  
 
     let formulario=document.getElementById("formulario")
-    let  inputs=document.querySelectorAll("#formulario input")
+    let inputs=document.querySelectorAll("#formulario input")
     let image=document.getElementById("image")
 
     const campos={
