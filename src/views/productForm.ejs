@@ -75,7 +75,12 @@
                         <option value="">Seleccionar</option>
                         <% for( let i = 0; i < sizes.length; i++ ) { %>
                             <option value=" <%= sizes[i].id_talle %>  ">
-                                <%= sizes[i].talle %> 
+                                <% if (sizes[i].talle==null) { %>
+                                 No tiene talle
+                                <% } else { %>
+                                    <%= sizes[i].talle %>
+                                <% } %>
+                                 
                             </option>
                         <% } %>
                     </select>

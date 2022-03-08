@@ -61,8 +61,7 @@ const productController={
                 id_categoria:req.body.category,
                 id_talle:req.body.size,
                 id_edad:req.body.age
-            })
-
+            }).catch(error=>res.send(error)) 
             res.redirect("/products");
 
         }

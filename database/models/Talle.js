@@ -6,11 +6,9 @@ module.exports=(sequelize,dataTypes)=>{
             type: dataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true,
-            allowNull: false,
         },
         talle:{
             type:dataTypes.STRING(5),
-            allowNull: false,
         }
 
     }

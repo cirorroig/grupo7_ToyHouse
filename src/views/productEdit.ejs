@@ -77,9 +77,21 @@
                             <option value="">Seleccionar</option>
                             <% for( const size of sizes ) { %>
                                 <% if (size.id_talle == product.id_talle) { %>
-                                 <option value=" <%= size.id_talle %>  "selected><%= size.talle %></option> 
+                                 <option value=" <%= size.id_talle %>  "selected>
+                                    <% if (size.talle==null) { %>
+                                    No tiene talle
+                                   <% } else { %>
+                                       <%= size.talle %>
+                                   <% } %>
+                                </option> 
                               <% } else { %>
-                                <option value=" <%= size.id_talle %>  "><%= size.talle %></option> 
+                                <option value=" <%= size.id_talle %>  ">
+                                    <% if (size.talle==null) { %>
+                                     No tiene talle
+                                    <% } else { %>
+                                        <%= size.talle %>
+                                    <% } %>
+                                </option>
                             <% } %>
                             <% } %>
                         </select>

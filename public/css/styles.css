@@ -892,6 +892,12 @@ div.footer{
     border-color: #198754 !important;
     box-shadow: 0 0 0 .25rem rgba(25, 135, 84, .25)
 }
+.error{
+    display: none;
+}
+.error-activo{
+    display: block;
+}
 
 div.profile-image{
     width: 400px;  
