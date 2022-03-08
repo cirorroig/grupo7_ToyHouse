@@ -13,10 +13,10 @@ const guestMiddleware = require('../../middlewares/guestMiddleware');
 const authMiddleware = require('../../middlewares/authMiddleware');
 // Express Validator
 const registerValidations=[
-    body('first_name').notEmpty().withMessage('Tienes que escribir un nombre'),
-    body("last_name").notEmpty().withMessage('Tienes que escribir un apellido'),
+    body('first_name').notEmpty().withMessage('Tienes que escribir un nombre').isLength({min:2}).withMessage("Debe contener al menos dos caracteres"),
+    body("last_name").notEmpty().withMessage('Tienes que escribir un apellido').isLength({min:2}).withMessage("Debe contener al menos dos caracteres"),
 	body('email').notEmpty().withMessage('Tienes que escribir un correo electrónico').bail().isEmail().withMessage('Debes escribir un formato de correo válido'),
-	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+	body('password').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({min:8}).withMessage("Debe contener al menos ocho caracteres"),
 	body('image').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.gif'];		
@@ -30,6 +30,10 @@ const registerValidations=[
 		}
 		return true;
 	})
+]
+const loginValidations=[
+	body('email').notEmpty().withMessage('Tienes que escribir un correo electrónico').bail().isEmail().withMessage('Debes escribir un formato de correo válido'),
+	body('password').notEmpty().withMessage('Tienes que escribir una contraseña')
 ]
 // Multer
 const storage=multer.diskStorage({
@@ -46,7 +50,7 @@ const upload=multer({storage})
 router.get("/login",guestMiddleware,usersController.login);
 
 // Proceso del Login
-router.post("/login",usersController.processLogin);
+router.post("/login",loginValidations,usersController.processLogin);
 
 // Formulario de Registro
 router.get("/register",guestMiddleware,usersController.register);
