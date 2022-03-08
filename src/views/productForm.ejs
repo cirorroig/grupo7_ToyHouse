@@ -4,11 +4,11 @@
 <body>
     <%- include("./partials/header")%>
     <main class="productForm-page">
-        <form action="/products" enctype="multipart/form-data" method="post" class="product-create">
+        <form action="/products" enctype="multipart/form-data" method="post" id="formulario" class="product-create">
             <div class="information">
                 <label for="name">Nombre del producto</label>
-                <input type="name" name="name" id="name"
-                class="<%= locals.errors && errors.name? "is-invalid": null %> <%= locals.oldData && oldData.name? "is-valid": null %>"  
+                <input type="text" name="name" id="name"
+                class="validation <%= locals.errors && errors.name? "is-invalid": null %> <%= locals.oldData && oldData.name? "is-valid": null %>"  
                 value="<%= locals.oldData ? oldData.name: null %>"
                 > 
                 <% if (locals.errors && errors.name) { %>                
@@ -16,30 +16,35 @@
                     <%= errors.name.msg %> 
                     </div>
                 <% } %>
+                <small class="nameError error">El nombre del producto debe tener al menos 5 caracteres</small>
             </div>
             <div class="description">
                 <label for="description">Descripción</label>
                 <input type="text" name="description" id="description"
-                class="<%= locals.errors && errors.description? "is-invalid": null %> <%= locals.oldData && oldData.description? "is-valid": null %>"
+                class="validation <%= locals.errors && errors.description? "is-invalid": null %> <%= locals.oldData && oldData.description? "is-valid": null %>"
                 value="<%= locals.oldData ? oldData.description: null %>">
                 <% if (locals.errors && errors.description) { %>                
                     <div class="text-danger">
                     <%= errors.description.msg %> 
                     </div>
                 <% } %>
+                <small class="descriptionError error">La descripción debe tener al menos 20 caracteres</small>
             </div>
             <div class="image">
                 <label for="image">Imagen del Producto</label>
-                <input type="file" name="image" id="image" >
+                <input type="file" name="image" id="image" 
+                class="image <%= locals.errors && errors.first_name? "is-invalid": null %> <%= locals.oldData && oldData.image? "is-valid": null %>"  
+                value="<%= locals.oldData ? oldData.image: null %>">
                 <% if (locals.errors && errors.image) { %>                
                     <div class="text-danger">
                     <%= errors.image.msg %> 
                     </div>
                 <% } %>
+                <small class="imageError error">La imagen debe ser de formato JPG, JPEG, PNG o GIF</small>
             </div>
             <div class="especifications">
                 <label for="age">Rango de edad</label>
-                <select name="age" id="age" class="<%= locals.errors && errors.age? "is-invalid2": null %> <%= locals.oldData && oldData.age? "is-valid2": null %>" 
+                <select name="age" id="age" class="select<%= locals.errors && errors.age? "is-invalid2": null %> <%= locals.oldData && oldData.age? "is-valid2": null %>" 
                     value="<%= locals.oldData ? oldData.age: null %>">
                     <option value="">Seleccionar</option>
                    <% for( let i = 0; i < ages.length; i++ ) { %>
@@ -55,7 +60,7 @@
                 <% } %>
                 <div class="category">
                     <label for="category">Categoría</label>
-                    <select name="category" class="<%= locals.errors && errors.category? "is-invalid2": null %> <%= locals.oldData && oldData.category? "is-valid2": null %>" >
+                    <select name="category" class="select<%= locals.errors && errors.category? "is-invalid2": null %> <%= locals.oldData && oldData.category? "is-valid2": null %>" >
                         <option value="">Seleccionar</option>
                         <% for( let i = 0; i < categories.length; i++ ) { %>
                             <option value=" <%= categories[i].id_categoria %>  ">
@@ -71,7 +76,7 @@
                 <% } %>
                 <div class="size">
                     <label for="size">Talle</label>
-                    <select name="size">
+                    <select name="size" class="select">
                         <option value="">Seleccionar</option>
                         <% for( let i = 0; i < sizes.length; i++ ) { %>
                             <option value=" <%= sizes[i].id_talle %>  ">
@@ -93,8 +98,9 @@
                 <div class="detailedDescription">
                     <label for="detailedDescription">Descripcion detallada</label>
                     <textarea name="detailedDescription" id="detailedDescription" cols="37" rows="6" placeholder="Color, tamaño, etc."
-                    class="<%= locals.errors && errors.name? "is-invalid": null %> <%= locals.oldData && oldData.detailedDescription? "is-valid2": null %>"
+                    class="validation <%= locals.errors && errors.name? "is-invalid": null %> <%= locals.oldData && oldData.detailedDescription? "is-valid2": null %>"
                     ><%= locals.oldData ? oldData.detailedDescription: null %></textarea>
+                    <small class="detailedDescriptionError error">La descripción detallada debe tener al menos 20 caracteres</small>
                 </div>
                 <% if (locals.errors && errors.detailedDescription) { %>                
                     <div class="text-danger">
@@ -104,7 +110,7 @@
                 <div class="price">
                     <label for="price">Precio</label>
                     <input type="number" name="price" id="price"
-                    class="<%= locals.errors && errors.price? "is-invalid": null %> <%= locals.oldData && oldData.price? "is-valid": null %> "
+                    class="validation<%= locals.errors && errors.price? "is-invalid": null %> <%= locals.oldData && oldData.price? "is-valid": null %> "
                     value="<%= locals.oldData ?oldData.price:null %>">
                 </div>
                 <% if (locals.errors && errors.price) { %>                
@@ -119,6 +125,7 @@
             </div>
         </form>
     </main>
+    <script src="/js/productForm.js"></script>
 </body>
 </html>
 

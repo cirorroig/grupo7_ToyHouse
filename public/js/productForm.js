@@ -1,46 +1,41 @@
 window.addEventListener("load",()=>{
 
     const expresiones = {
-        nombre: /^[a-zA-ZÀ-ÿ\s]{2,20}$/,
-        password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-        email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-        image:/^.*\.(jpg|JPG|gif|GIF|jpeg|JPEG|png|PNG)$/
-    }  
-
-    let formulario=document.getElementById("formulario")
-    let inputs=document.querySelectorAll("#formulario input")
+        nombre: /^[a-zA-ZÀ-ÿ\s]{5,50}$/,
+        description: /^[a-zA-ZÀ-ÿ@$!%*?&\s]{20,}$/,
+        image:/^.*\.(jpg|JPG|gif|GIF|jpeg|JPEG|png|PNG)$/,
+        price:/^[0-9]*$/
+    }
 
     const campos={
-        first_name:false,
-        last_name:false,
-        email:false,
-        password:false,
-        image:false
+        nombre:false,
+        description:false,
+        //image:false,
+        detailedDescription:false,
     }
+
+    let formulario=document.getElementById("formulario")
+    let inputs=document.querySelectorAll(".validation")
+    let image=document.getElementById("image")
 
 
 
     const validarFormulario=(e)=>{
         switch (e.target.name) {
-            case "first_name":
-                validarCampo(expresiones.nombre,e.target,"first_name")
+            case "name":
+                validarCampo(expresiones.nombre,e.target,"name")
             break;
-            case "last_name":
-                validarCampo(expresiones.nombre,e.target,"last_name")
+            case "description":
+                validarCampo(expresiones.description,e.target,"description")
             break;
-            case "email":
-                validarCampo(expresiones.email,e.target,"email")
-            break;
-            case "password":
-                validarCampo(expresiones.password,e.target,"password")
+            case "detailedDescription":
+                validarCampo(expresiones.description,e.target,"detailedDescription")
             break;
             case "image":
                 validarCampo(expresiones.image,e.target,"image")
             break;
         }
-        console.log();
     }
-
     const validarCampo=(expresion,input,campo)=>{
         console.log(input.value);
         if(expresion.test(input.value)){
@@ -56,17 +51,16 @@ window.addEventListener("load",()=>{
         }
     }
 
-    inputs.forEach((input)=>{
+   
+    inputs.forEach(input => {
         input.addEventListener("keyup",validarFormulario)
         input.addEventListener("blur",validarFormulario)
-    })
-    
-
+    });
 
     formulario.addEventListener("submit",(e)=>{
 
-   
-        if(campos.first_name && campos.last_name && campos.email && campos.password && campos.image){
+        console.log(campos.name,campos.description,campos.detailedDescription);
+        if(campos.name && campos.description && campos.detailedDescription){
  
         }
         else{
@@ -75,10 +69,6 @@ window.addEventListener("load",()=>{
         }
         
     })
-
-
-
-
 
 
 })
