@@ -31,9 +31,9 @@
                 <small class="descriptionError error">La descripción debe tener al menos 20 caracteres</small>
             </div>
             <div class="image">
-                <label for="image">Imagen del Producto</label>
-                <input type="file" name="image" id="image" 
-                class="image <%= locals.errors && errors.first_name? "is-invalid": null %> <%= locals.oldData && oldData.image? "is-valid": null %>"  
+                <label for="image">Imagen de producto</label>
+                <input type="file" name="image" id="image"
+                class="image <%= locals.errors && errors.image? "is-invalid": null %> <%= locals.oldData && oldData.image? "is-valid": null %>"  
                 value="<%= locals.oldData ? oldData.image: null %>">
                 <% if (locals.errors && errors.image) { %>                
                     <div class="text-danger">

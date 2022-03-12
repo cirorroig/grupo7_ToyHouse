@@ -4,7 +4,7 @@ const router = express.Router();
 const { body } = require('express-validator');
 const path = require('path');
 const multer = require("multer");
-
+const db = require('../../database/models');
 // Controladores
 const usersController = require("../controllers/usersController")
 
@@ -19,7 +19,7 @@ const registerValidations=[
 	body('password').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({min:8}).withMessage("Debe contener al menos ocho caracteres"),
 	body('image').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];		
+		let acceptedExtensions = ['.jpg','.JPG','.jpeg','.JPEG', '.png','.PNG','.gif','.GIF'];		
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');
 		} else {
@@ -69,5 +69,9 @@ router.get("/edit/:id",usersController.edit);
 
 //Proceso de edicion
 router.put("/:id",upload.single("image"),usersController.processEdit)
+
+//Rutas APIS
+
+router.get("/usersApi",usersController.users)
 
 module.exports = router;

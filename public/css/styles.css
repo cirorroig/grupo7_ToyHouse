@@ -51,6 +51,9 @@ header div.logo-list{
     display: flex;
     height: 100px;
 }
+header div.logo-list ul{
+    list-style: none;
+}
 header div.logo {
     width: 100px;
     
@@ -96,12 +99,15 @@ display: flex;
 align-items: center;
 padding-left: 2rem;
 }
-header ul{
+header ul.notLoggedUl{
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     align-items: center;
+}
+header nav .navigation{
+    width: 30%;
 }
 header .navigation ul li{
     display: inline-block;
@@ -110,8 +116,8 @@ header .navigation ul li.user-image{
     text-align: center;
     display: flex;
     align-items: center;
-    width: 200px;
-    padding-left: 40px;
+    width: 150px;
+    padding-left: 10px;
 }
 header .navigation ul li.user-image a img{
     width: 30%;
@@ -136,7 +142,7 @@ main{
     margin-bottom: 10rem;
 }
 main.register h1{
-    padding-top: 5rem;
+    padding-top: 1rem;
     margin:10px 0px;
     width: 90%;
     text-align: center;
@@ -159,7 +165,7 @@ main.register div.information label{
 main.register div.information input{
     margin:5px 0px;
     padding: 5px 0px;
-    border: #3880bf solid 1px;
+    border:#6a6a6a solid 1.5px;
 }
 main.register div.image{
     display: flex;
@@ -436,7 +442,7 @@ main.login-page  div.information label{
 main.login-page  div.information input{
         margin:5px 0px;
         padding: 5px 90px 5px 2px;
-        border: solid #3880bf 1px;
+        border: solid #6a6a6a 1px;
 }
 
 main.login-page  div.mail{
@@ -604,7 +610,7 @@ article.product i.fa-percent{
     position: absolute;
     top: -16px;
     left: -18px;
-    border: solid #97D3E5 3px;
+    border: solid#39b54a 3px;
     border-radius: 50%;
     padding: 5px;
     font-size: 20px;
@@ -642,12 +648,13 @@ main div.buy-button{
     height: 50px;
 }
 main button.buy,.edit{
- background-color: #fff;
- color:rgb(62, 193, 253);
- font-size: 20px;
- border-radius: 7px;
- padding: 5px;
- border: rgb(62, 193, 253) 2px solid;
+    background-color: #ff4545f8;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 7px;
+    font-weight: 400;
+    padding: 5px;
+    border: #ff4545f8 2px solid;
 }
 main button.buy:hover{
     background-color: rgb(62, 193, 253);
@@ -871,6 +878,7 @@ div.footer{
 .is-valid
 {
     border-color: #198754 !important;
+    border-width: 1.5px 1.5px 1.5px 1.5px;
     padding-right: calc(1.5em + .75rem);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
@@ -880,6 +888,7 @@ div.footer{
 .is-valid2
 {
     border-color: #198754 !important;
+    border-width: 1.5px 1.5px 1.5px 1.5px;
     padding-right: calc(1.5em + .75rem);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
@@ -916,7 +925,17 @@ main.profile button.reg-button{
     color:white;  
 }
 
-
+.title{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+div.title a.create{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
 
 
 @media (max-width: 767px){
@@ -928,9 +947,20 @@ main.profile button.reg-button{
        display: flex;
        
     }
+    .loggedUl{
+       display: flex;
+       align-items: center;
+       flex-direction: column; 
+    }
+    header form{
+        width: 95%;
+        justify-content: center;
+        margin-top: 1em;
+    }
     header div.logo-list{
-        width: 50%;
+        width: 100%;
         display: flex;
+        justify-content: center;
     }
     header div.logo-list div.logo{
         width: 100px;
@@ -941,6 +971,7 @@ main.profile button.reg-button{
     header div.logo-list div.list{
         width: 60%;
         padding:0px;
+        justify-content: center;
     }
     header .menu-icon{
         display: block;
@@ -948,12 +979,13 @@ main.profile button.reg-button{
         padding: 0.5rem 1rem;
     }
     header .navigation{
-        width: 40%;
+        width: 100%;
         margin-top: 1rem;
     }
     header .navigation ul {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
     }
     header .navigation ul li{
         display: block;
@@ -982,9 +1014,17 @@ main.profile button.reg-button{
         justify-content: space-around;
         width: 100%;
     }
+    nav .navigation{
+        width: 30%;
+    }
 }
 @media (min-width: 1024px){
     main section article.product{
         width: 20%;
     }
+    .loggedUl{
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+     }
 }
