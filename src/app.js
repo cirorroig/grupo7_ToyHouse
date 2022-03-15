@@ -4,6 +4,8 @@ const app=express();
 const indexRouter = require('./routes/index');
 const productsRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
+const apisRouter = require('./routes/apis');
+const imagesRouter = require('./routes/images');
 const methodOverride=require("method-override")
 const session = require('express-session');
 const cookie = require('cookie-parser');
@@ -29,6 +31,8 @@ app.use(express.json())
 app.use('/', indexRouter);
 app.use("/users",usersRouter)
 app.use("/products",productsRouter)
+app.use("/api",apisRouter)
+app.use("/images",imagesRouter)
 
 app.use((req,res,next)=>{
     res.status(404).render("not-found")

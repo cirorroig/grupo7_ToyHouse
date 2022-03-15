@@ -116,15 +116,7 @@ const usersController = {
         
         res.redirect("/users/logout")
     },
-    users:(req,res)=>{
-        db.Usuario.findAll()
-            .then(users=>{
-                return res.status(200).json({
-                    total:users.length,
-                    data:users,
-                })
-            }) 
-    }
+   
 }
 
 module.exports = usersController;

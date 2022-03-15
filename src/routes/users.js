@@ -70,8 +70,5 @@ router.get("/edit/:id",usersController.edit);
 //Proceso de edicion
 router.put("/:id",upload.single("image"),usersController.processEdit)
 
-//Rutas APIS
-
-router.get("/usersApi",usersController.users)
 
 module.exports = router;
