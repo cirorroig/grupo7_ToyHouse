@@ -46,7 +46,7 @@ const apisController={
             .then(products=>{
                 products.forEach(product => {
                     data.push({
-                        id:product.id_usuario,
+                        id:product.id_producto,
                         name: product.name,
                         description:product.description,
                         relations:[product.categoria,product.talle,product.edad],
