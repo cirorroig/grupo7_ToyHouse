@@ -14,9 +14,8 @@ const apisController={
                         id:user.id_usuario,
                         name: user.first_name+" "+user.last_name,
                         email:user.email,
-                        detail:{
-                            image:`http://localhost:3000/images/user/${user.image}`
-                        }
+                        detail:`http://localhost:3000/api/users/${user.id_usuario}`,
+                        image:`http://localhost:3000/images/user/${user.image}`,                           
                     })
                 })
                 return res.status(200).json({
@@ -51,15 +50,15 @@ const apisController={
                         name: product.name,
                         description:product.description,
                         relations:[product.categoria,product.talle,product.edad],
-                        detail:{
-                            image:`http://localhost:3000/images/product/${product.image}`,
+                        detail:`http://localhost:3000/api/products/${product.id_producto}`,
+                        image:`http://localhost:3000/images/product/${product.image}`,
                             price:product.price
-                        }
+                        
                     })
                 })
                 return res.status(200).json({
                     count:products.length,
-                    users:data,
+                    products:data,
                 })
             }) 
     },
@@ -74,10 +73,9 @@ const apisController={
                     name: product.name,
                         description:product.description,
                         relations:[product.categoria,product.talle,product.edad],
-                        detail:{
-                            image:`http://localhost:3000/images/product/${product.image}`,
-                            price:product.price
-                        }
+                        image:`http://localhost:3000/images/product/${product.image}`,
+                        price:product.price
+                        
                 },
             }) 
         })
