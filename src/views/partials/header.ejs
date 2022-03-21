@@ -6,7 +6,7 @@
             </div>
             <div class="list">
                 <ul>
-                     <li class="products"><a href="/products">Productos</a></li>    
+                    <li class="products"><a style="text-decoration: none;color: white;" href="/products">Productos</a></li>    
                 </ul>        
             </div>   
         </div>
@@ -18,15 +18,15 @@
             <% if (locals.isLogged) { %>
              <ul class="loggedUl">
                 <li class="user-image"><img src="../../images/Users/<%=  locals.userLogged.image %>"><a href="#">Hola <%= locals.userLogged.first_name%></a></li>                         
-                <li><a href="/users/profile">Mi perfil</a></li>
-                <li><a href="/cart">Carrito</a></li>           
-                <li><a href="/users/logout">Cerrar sesion</a></li>              
+                <li><a style="text-decoration: none;color: white;" href="/users/profile">Mi perfil</a></li>
+                <li><a style="text-decoration: none;color: white;" href="/cart">Carrito</a></li>           
+                <li><a style="text-decoration: none;color: white;" href="/users/logout">Cerrar sesion</a></li>              
             </ul>   
             <% } else { %>                   
             <ul class="notLoggedUl">
-                <li><a href="/cart">Carrito</a></li>   
-                <li><a href="/users/register">Registrarse</a></li>
-                <li><a href="/users/login">Iniciar sesion</a></li>
+                <li><a style="text-decoration: none;color: white;" href="/cart">Carrito</a></li>   
+                <li><a style="text-decoration: none;color: white;" href="/users/register">Registrarse</a></li>
+                <li><a style="text-decoration: none;color: white;" href="/users/login">Iniciar sesion</a></li>
             </ul>
             <% } %> 
         </nav>  
