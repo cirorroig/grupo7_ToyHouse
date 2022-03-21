@@ -10,6 +10,7 @@ img{
 }
 html{
     height: 100%;
+
 }
 body{
     font-family: 'Roboto', sans-serif;
@@ -559,9 +560,9 @@ main.home-page .dots{
     font-size: 30px;
     bottom:1px;
 }
-main section.our-products{
+main .our-products{
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;   
@@ -780,6 +781,7 @@ main.product-detail div.img{
     margin: 20px;
     display: flex;
     align-items: center;
+    width: 300px;
 }
 main.product-detail div.info{
     display: flex;
@@ -1088,7 +1090,7 @@ main.contenedor-cart .sumario-cart{
     }
 }
 @media (min-width: 768px) {
-    main section article.product{
+    main  article.product{
         width: 40%;
         margin: 20px;
     }
@@ -1103,7 +1105,7 @@ main.contenedor-cart .sumario-cart{
     }
 }
 @media (min-width: 1024px){
-    main section article.product{
+    main article.product{
         width: 20%;
     }
     .loggedUl{

@@ -23,7 +23,7 @@ window.onload = function () {
               <p>Cantidad:${producto.inputCantidad}</p>
           </div>
       </div> 
-  </article> 
+      </article> 
       `;
       
       div.innerHTML += contenido;
