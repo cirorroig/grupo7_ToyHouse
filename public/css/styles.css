@@ -522,11 +522,7 @@ main.login-page  button.login a{
     color: white;
     text-decoration: none;
 }
-main.home-page section.banner{
-    position: relative;
-    margin-bottom: 15px;
-    width: 100%;
-}
+
 main.home-page div.banner{
     display: flex;
     position: relative;
