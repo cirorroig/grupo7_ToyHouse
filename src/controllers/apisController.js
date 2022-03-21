@@ -14,8 +14,8 @@ const apisController={
                         id:user.id_usuario,
                         name: user.first_name+" "+user.last_name,
                         email:user.email,
-                        detail:`http://localhost:3000/api/users/${user.id_usuario}`,
-                        image:`http://localhost:3000/images/user/${user.image}`,                           
+                        detail:`http://localhost:4000/api/users/${user.id_usuario}`,
+                        image:`http://localhost:4000/images/user/${user.image}`,                           
                     })
                 })
                 return res.status(200).json({
@@ -33,7 +33,7 @@ const apisController={
                     first_name:user.first_name,
                     last_name:user.last_name,
                     email:user.email,
-                    image:`http://localhost:3000/images/user/${user.image}`
+                    image:`http://localhost:4000/images/user/${user.image}`
                 },
             }) 
         })
@@ -49,9 +49,10 @@ const apisController={
                         id:product.id_producto,
                         name: product.name,
                         description:product.description,
+                        detailedDescription:product.detailedDescription,
                         relations:[product.categoria,product.talle,product.edad],
-                        detail:`http://localhost:3000/api/products/${product.id_producto}`,
-                        image:`http://localhost:3000/images/product/${product.image}`,
+                        detail:`http://localhost:4000/api/products/${product.id_producto}`,
+                        image:`http://localhost:4000/images/product/${product.image}`,
                             price:product.price
                         
                     })
@@ -73,14 +74,79 @@ const apisController={
                     name: product.name,
                         description:product.description,
                         relations:[product.categoria,product.talle,product.edad],
-                        image:`http://localhost:3000/images/product/${product.image}`,
+                        image:`http://localhost:4000/images/product/${product.image}`,
                         price:product.price
                         
                 },
             }) 
         })
     },
+    lastProduct: (req, res) => {
+        db.Producto.findAll({order:[["id_producto", "DESC"]], limit:1})
+        .then(product=> {
 
+            res.status(200).json({
+                data:{
+                name: product[0].name,
+                description:product[0].description,
+                detailedDescription:product[0].detailedDescription,
+                image:`http://localhost:4000/images/product/${product[0].image}`,
+                price:product[0].price  
+                },
+            })
+        })
+        .catch(function(error){
+            res.json({status:500})
+        })
+    },
+    categoryList:(req,res)=>{
+        let data=[]
+           db.Categoria.findAll()
+               .then(categories=>{
+                categories.forEach(category => {
+                       data.push({
+                           id:category.id_categoria,
+                           name: category.name,                          
+                       })
+                   })
+                   return res.status(200).json({
+                       count:categories.length,
+                       categories:data,
+                   })
+               }) 
+    },
+    ageList:(req,res)=>{
+        let data=[]
+           db.Edad.findAll()
+               .then(ages=>{
+                ages.forEach(age => {
+                       data.push({
+                           id:age.id_edad,
+                           name: age.range,                          
+                       })
+                   })
+                   return res.status(200).json({
+                       count:ages.length,
+                       ages:data,
+                   })
+               }) 
+    },
+    sizeList:(req,res)=>{
+        let data=[]
+           db.Talle.findAll()
+               .then(sizes=>{
+                sizes.forEach(size => {
+                       data.push({
+                           id:size.id_talle,
+                           name: size.talle,                          
+                       })
+                   })
+                   return res.status(200).json({
+                       count:sizes.length,
+                       sizes:data,
+                   })
+               }) 
+    },
 
 }
 

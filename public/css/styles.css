@@ -907,6 +907,9 @@ div.footer{
 .error-activo{
     display: block;
 }
+.admin{
+    width: 50%;
+}
 
 div.profile-image{
     width: 400px;  
@@ -924,7 +927,10 @@ main.profile button.reg-button{
     text-decoration: none;
     color:white;  
 }
-
+.vacio{
+    display: flex;
+    flex-direction: row;
+}
 .title{
     display: flex;
     width: 100%;

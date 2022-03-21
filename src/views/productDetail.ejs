@@ -12,19 +12,26 @@
             <img src="../images/Products/<%=product.image%>" alt="product">
         </div>
         <div class="info">
-          <div class="information">
-            <p><%=product.detailedDescription%></p>
-            <ul>
-                <li>Este producto esta recomendado para niños y niñas <%=product.edad.range%></li>
-                <li>Este producto pertenece a la categoria de <%=product.categoria.name%></li>
-                <% if (product.talle) { %>
-                 <li> El talle de este producto es <%=product.talle.talle%></li>
-                 <% } %>                
-            </ul>
-        </div>
+            <div class="information">
+                <p><%=product.detailedDescription%></p>
+                <ul>
+                    <li>Este producto esta recomendado para niños y niñas <%=product.edad.range%></li>
+                    <li>Este producto pertenece a la categoria de <%=product.categoria.name%></li>
+                    <% if (product.id_talle!=5) { %>
+                    <li> El talle de este producto es <%=product.talle.talle%></li>
+                    <% } %>                
+                </ul>
+                <h2 class="precio">$<%= product.price %></h2>
+            </div>
        
         <div class="detail-buy-button">
-            <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
+            <button type="submit"class="boton-formulario-shop"><i class="fas fa-shopping-cart"></i></button>
+            <div class="cant">
+                <label class="count">Cantidad</label>
+                <button class="menos" onclick="contadormenos()">-</button>
+                <input id="count" type="text" value="1" style="text-align: center; width: 30px;" >
+                <button class="menos" onclick="contadormas()">+</button>
+            </div>
              <% if (locals.isLogged && locals.userLogged.is_admin==1) { %>
             <a href="/products/<%= product.id_producto %>/edit"><button class="edit">Editar Producto</button></a>
             <% } %>        
@@ -34,5 +41,7 @@
         
     </main>
        <%- include("./partials/footer")%>
+       <script src="/js/addCartProduct.js"></script>
+       <script src="/js/count.js"></script>
 </body>
 </html>

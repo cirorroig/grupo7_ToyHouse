@@ -5,7 +5,11 @@ const apisController = require("../controllers/apisController")
 router.get("/users",apisController.userList);
 router.get("/users/:id",apisController.user);
 router.get("/products",apisController.productList);
+router.get("/products/last",apisController.lastProduct);
 router.get("/products/:id",apisController.product);
+router.get("/ages",apisController.ageList);
+router.get("/sizes",apisController.sizeList);
+router.get("/categories",apisController.categoryList);
 
 
 module.exports = router;  

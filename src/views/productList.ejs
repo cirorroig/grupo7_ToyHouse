@@ -16,7 +16,6 @@
                 <div class="image">
                     <a href="/products/<%=products[i].id_producto%>">
                     <img src="../images/Products/<%=products[i].image%>" alt="product">
-                    <i class="fas fa-percent"></i>
                     </a>
                 </div>
                 <div class="description">
@@ -30,8 +29,7 @@
                 </div>
                 </div> 
                 <div class="buy-button">
-                    <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-                    <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
+                    <a href="/products/<%=products[i].id_producto%>"><button type="submit" class="buy">Detalle</button></a>            
                 </div>
             </article>
         <%}%>    

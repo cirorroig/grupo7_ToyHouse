@@ -13,40 +13,38 @@ const usersController = {
     register:(req,res)=>{
         res.render("register")
     },
-    processRegister:(req,res)=>{
-        const resultValidation = validationResult(req)
-        if (resultValidation.errors.length > 0){
-           return res.render ("register",{
-                errors:resultValidation.mapped(),
-                oldData:req.body,
-            })
-        }
-        
+    processRegister:(req,res)=>{     
         db.Usuario.findOne({
             where:{
                 email:req.body.email
             }
         }).then((userInDB) => {
             if(userInDB){
-            return res.render ("register",{
-                errors:{
-                    email:{
-                        msg:"Este email ya esta registrado"
-                    }
-                },
-                oldData:req.body,
+                const resultValidation = validationResult(req)
+                if (resultValidation.errors.length > 0){
+                let validations=resultValidation.mapped()
+                    return res.render("register",{
+                    errors:{
+                        email:{
+                            msg:"El email que usted ingreso ya se encuentra registrado"
+                        },
+                        ...validations
+                    },
+                    oldData:req.body,
+                    })
+                }
+            }else{
+                db.Usuario.create({
+                first_name:req.body.first_name,
+                last_name:req.body.last_name,
+                email:req.body.email,
+                password:bcryptjs.hashSync(req.body.password),
+                image:req.file.filename,
+                is_admin:req.body.admin
             })
-        }
+            res.redirect("/users/login")
+            }
         })   
-        db.Usuario.create({
-            first_name:req.body.first_name,
-            last_name:req.body.last_name,
-            email:req.body.email,
-            password:bcryptjs.hashSync(req.body.password),
-            image:req.file.filename,
-            is_admin:0
-        })
-        res.redirect("/users/login")
     },
     login:(req,res)=>{
         res.render("login")

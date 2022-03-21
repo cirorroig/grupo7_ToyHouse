@@ -9,6 +9,7 @@ const imagesRouter = require('./routes/images');
 const methodOverride=require("method-override")
 const session = require('express-session');
 const cookie = require('cookie-parser');
+const cors = require('cors');
 const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
 
 
@@ -19,6 +20,9 @@ app.use(session({
     secret:"Shhh",
     resave:false,
     saveUninitialized:false
+}))
+app.use(cors({
+    origin:"*"
 }))
 app.use(cookie())
 app.use(userLoggedMiddleware)

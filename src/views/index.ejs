@@ -18,7 +18,7 @@
            <% for(let i=0;i<4;i++) {%>
             <article class="product">
                 <div class="image">
-                    <a href="/products/<%=products[i].id%>">
+                    <a href="/products/<%=products[i].id_producto%>">
                     <img src="../images/Products/<%=products[i].image%>" alt="product">
                     </a>
                 </div>
@@ -32,8 +32,7 @@
                 </div>
                 </div> 
                 <div class="buy-button">
-                    <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-                    <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
+                    <a href="/products/<%=products[i].id_producto%>"><button type="submit" class="buy">Detalle</button></a>
                 </div>
             </article> 
             <%}%>     
@@ -61,8 +60,7 @@
             </div>
             </div> 
             <div class="buy-button">
-                <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-                <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
+                <a href="/products/<%=products[i].id_producto%>"><button type="submit" class="buy">Detalle</button></a>            
             </div>
         </article> 
         <%}%>     
