@@ -89,7 +89,7 @@ CREATE TABLE `productos` (
   CONSTRAINT `id_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id_categoria`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `id_edad` FOREIGN KEY (`id_edad`) REFERENCES `edades` (`id_edad`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `id_talle` FOREIGN KEY (`id_talle`) REFERENCES `talles` (`id_talle`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +98,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'Buzz Lightyear Muñeco Articulado','Vendido por Disney Pixar','Muñeco articulado de Buzz LightYear, famoso personaje de las peliculas Toy Story, 30cm de altura y gran rango de movimientos de brazos y piernas. ¡Para hacer todas las poses que se te puedan ocurrir!',5000,'BuzzLightYear.jpg',4,5,2),(2,'T-Rex muñeco articulado','Vendido por Jurassic world','Un muñeco del famoso dinosaurio T-Rex, perfecto para observar a uno de los animales mas impresionantes de la historia',1200,'t-rex.jpg',4,5,3),(3,'Godzilla Muñeco articulado','Vendido por King of the monsters','El temible Godzilla llega a la venta para causar terror y destruccion en cualquier pelea a la que se presente',4500,'godzilla.jpg',4,5,3),(4,'Arma de juguete de Fortnite','Vendido por Nerf','Con esta replica del arma de uno de los mejores juegos de los ultimos tiempos podras recrear las mismas peleas epicas de Fortnite ¡Consiguela y hazte con la victoria!',2500,'nerf fort.jpg ',10,5,5),(5,'Spiderman muñeco de plastico','Vendido por PlayTienda','El asombroso Spider-Man se balancea entre los edificios con sus telas de araña hacia la batalla ¡Consiguelo para vivir sus batallas junto a el!',1100,'spiderman.jpg',4,5,3),(6,'Muñeco armable de Minion','Vendido por Lego','¡Tus famosos amigos redondos y amarillos ya estan aqui! Disfruta de armarlos desde cero pieza por pieza.',3750,'rompecabezas minion.jpg',8,5,4),(7,'Slinky','Vendido por Toyrose','El clásico resorte colorido ha llegado! Realiza todo tipo de trucos con este divertidisimo juguete',450,'resorte.jpg',8,5,2),(8,'Muñeco señor cara de papa','Vendido por PlaysCool','El enojón pero gracioso Señor Cara de Papa ha llegado. ',1800,'señor cara de papa.jpg',4,5,2),(9,'Monopatin','Vendido por Scooter','Desplazate por todos lados con este asombroso monopatin',7000,'product-1639247846653.jpg',3,5,3),(10,'Monopoly','Vendido por Hasbro','El clasico juego de mesa para jugar con amigos o familia. A demostrar quien es el mejor en el juego de la vida',6000,'product-1639247944819.jpg',2,5,4),(11,'Chevrolet Camaro 2017 Hotwheels','Vendido por Hotwheels','Modelo a escala del famoso Chevrolet Camaro en color rojo. ¡Perfecto para correr carreras con tus amigos!',1500,'product-1639363023203.jpg',3,5,2);
+INSERT INTO `productos` VALUES (1,'Buzz Lightyear Muñeco Articulado','Vendido por Disney Pixar','Muñeco articulado de Buzz LightYear, famoso personaje de las peliculas Toy Story, 30cm de altura y gran rango de movimientos de brazos y piernas. ¡Para hacer todas las poses que se te puedan ocurrir!',5000,'BuzzLightYear.jpg',4,5,2),(2,'T-Rex muñeco articulado','Vendido por Jurassic world','Un muñeco del famoso dinosaurio T-Rex, perfecto para observar a uno de los animales mas impresionantes de la historia',1200,'t-rex.jpg',4,5,3),(3,'Godzilla Muñeco articulado','Vendido por King of the monsters','El temible Godzilla llega a la venta para causar terror y destruccion en cualquier pelea a la que se presente',4500,'godzilla.jpg',4,5,3),(4,'Arma de juguete de Fortnite','Vendido por Nerf','Con esta replica del arma de uno de los mejores juegos de los ultimos tiempos podras recrear las mismas peleas epicas de Fortnite ¡Consiguela y hazte con la victoria!',2500,'nerf-fort.jpg ',10,5,5),(5,'Spiderman muñeco de plastico','Vendido por PlayTienda','El asombroso Spider-Man se balancea entre los edificios con sus telas de araña hacia la batalla ¡Consiguelo para vivir sus batallas junto a el!',1100,'spiderman.jpg',4,5,3),(6,'Muñeco armable de Minion','Vendido por Lego','¡Tus famosos amigos redondos y amarillos ya estan aqui! Disfruta de armarlos desde cero pieza por pieza.',3750,'rompecabezas minion.jpg',8,5,4),(7,'Slinky','Vendido por Toyrose','El clásico resorte colorido ha llegado! Realiza todo tipo de trucos con este divertidisimo juguete',450,'resorte.jpg',8,5,2),(8,'Muñeco señor cara de papa','Vendido por PlaysCool','El enojón pero gracioso Señor Cara de Papa ha llegado. ',1800,'señor cara de papa.jpg',4,5,2),(9,'Monopatin','Vendido por Scooter','Desplazate por todos lados con este asombroso monopatin',7000,'product-1639247846653.jpg',3,5,3),(10,'Monopoly','Vendido por Hasbro','El clasico juego de mesa para jugar con amigos o familia. A demostrar quien es el mejor en el juego de la vida',6000,'product-1639247944819.jpg',2,5,4),(11,'Chevrolet Camaro 2017 Hotwheels','Vendido por Hotwheels','Modelo a escala del famoso Chevrolet Camaro en color rojo. ¡Perfecto para correr carreras con tus amigos!',1500,'product-1639363023203.jpg',3,5,2);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +142,7 @@ CREATE TABLE `usuarios` (
   `image` varchar(100) NOT NULL,
   `is_admin` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +151,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Ciro','Rodriguez','cirorodriguezroig@gmail.com','$2a$10$xZLyVSIdm4KN2fpMIXCQ8OXBcU2NVi1S3ulfqOXVD.KGXZDr9vWey','user-1641344873943.jpg',1),(2,'Santino','Brigante','santinobrigante1@gmail.com','$2a$10$uLtCa9RZNWqkCGQy.GU6EOGp1rUBLYqrKHznim1Bo5zYBDOmxro7W','user-1644539163338.jpg',1),(3,'Paulina','Roig','paulinaroig@hotmail.com','$2a$10$7SBRhD5d67XCAZxKe6GmzeQ.uJ1UPh0voi1y8LR.V1py21Uk2SkVa','user-1644603801470.png',0),(4,'Ricardo','Fort','elriki@gmail.com','$2a$10$liy/36sMSv9bV2EuixM8POCm9D95Q5nSSZCqWBwjodwK9m3GHUJZi','user-1644713958560.jpg',0),(5,'Test','Admin','test@gmail.com','$2a$10$IOt2HPExkVLN0YxZO.CUXOhug6zQYiVkvJZ1vMzF1JNvMb6fCAFJu','user-1644968130039.png',1);
+INSERT INTO `usuarios` VALUES (1,'Ciro','Rodriguez','cirorodriguezroig@gmail.com','$2a$10$A1JxylSnO1ug3CrmD2cMsO3A5BIzbHi2YE1T5dXuyOcGN0BSQ498K','user-1641344873943.jpg',1),(2,'Santino','Brigante','santinobrigante1@gmail.com','$2a$10$uLtCa9RZNWqkCGQy.GU6EOGp1rUBLYqrKHznim1Bo5zYBDOmxro7W','user-1644539163338.jpg',1),(3,'Paulina','Roig','paulinaroig@hotmail.com','$2a$10$7SBRhD5d67XCAZxKe6GmzeQ.uJ1UPh0voi1y8LR.V1py21Uk2SkVa','user-1644603801470.png',0),(4,'Ricardo','Fort','elriki@gmail.com','$2a$10$liy/36sMSv9bV2EuixM8POCm9D95Q5nSSZCqWBwjodwK9m3GHUJZi','user-1644713958560.jpg',0),(5,'Test','Admin','test@gmail.com','$2a$10$IOt2HPExkVLN0YxZO.CUXOhug6zQYiVkvJZ1vMzF1JNvMb6fCAFJu','user-1644968130039.png',1),(19,'Juanca','Carlos','juanca@gmail.com','$2a$10$vXsXdoXXkW4WAMxmNXsRi.ol5sFAOhfEu4yR.FWXPWTSYheLI7Bq6','user-1647396940350.png',0),(21,'asdasd','Fernandez','test2@gmail.com','$2a$10$zPW76WyGvhOf.F2pdE/QBO/DQE9hmBLLMKZgjLc7oXtShRQ0I2/bu','user-1647720774686.png',1);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -164,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-17 23:27:00
+-- Dump completed on 2022-03-21 18:19:38
