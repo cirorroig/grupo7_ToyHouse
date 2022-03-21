@@ -933,7 +933,94 @@ div.title a.create{
     align-items: center;
     text-decoration: none;
 }
+main.contenedor-cart .sumario-cart{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    }
+    main.contenedor-cart  .buttons{
+        display: flex;
+        flex-direction: row;
+        
+    
+    }
+    
+    main.contenedor-cart .sumario-cart .resumen{
+        display: flex;
+        position: relative;
+        justify-content: left;
+        left: 98px;
+        margin: 5px;
+    }
+    main.contenedor-cart .sumario-cart .totales{
+        display: flex;
+        position: relative;
+        justify-content: left;
+        left: 98px;
+        margin: 5px;
+        
+    }
 
+    main.contenedor-cart .pay-button{
+        border-radius: 4px;
+        margin: 5px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        background-color: #4CAF50;
+        color: white;
+        border: 2px solid #4CAF50;
+        -webkit-transition-duration: 0.4s; 
+        transition-duration: 0.4s;
+    }
+    main.contenedor-cart .pay-button:hover {
+        background-color: white; /* Green */
+        color: #4CAF50;
+    }
+        
+    main.contenedor-cart .delete-button{
+        border-radius: 4px;
+        margin: 5px;
+        padding:  15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        background-color: #f44336;
+        color: white;
+        border: 2px solid #f44336;
+        -webkit-transition-duration: 0.4s; 
+        transition-duration: 0.4s;
+    }
+    main.contenedor-cart .delete-button:hover {
+        background-color: white; 
+        color: #f44336;;
+    }
+    main.contenedor-cart .agregar-productos{
+        border-radius: 4px;
+        margin: 5px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        background-color: #008CBA;
+        color: white;
+        border: 2px solid #008CBA;
+        -webkit-transition-duration: 0.4s; 
+        transition-duration: 0.4s;
+    }
+    main.contenedor-cart .agregar-productos:hover {
+        background-color: white; 
+        color: #008CBA;;
+    }
+    main.contenedor-cart .totales{
+        display: flex;
+        position: relative;
+        left: 130px;
+    }
 
 @media (max-width: 767px){
     header{

@@ -11,7 +11,7 @@
         <!-- <div id="total" class="total"></div> -->
   
         <section class="sumario-cart">
-          <h4>Resumen de compra</h4>
+          <h4 class="resumen">Resumen de compra</h4>
           
       
           <div class="totales">
@@ -22,20 +22,20 @@
               <h3 id="precioTotal">$</h3>
             </div>
           </div>
-  
-          <form action="#" method="GET">
-            <button type="submit">Iniciar Pago</button>
-          </form>
-      
-          <button id="botonBorrar" type="button" onclick="">Vaciar Carrito</button>
+          <div class="buttons">
+            <form action="#" method="GET">
+              <button class="pay-button" type="submit">Iniciar Pago</button>
+            </form>
         
-          <a href="/products">
-            <button type="submit">Agregar más productos</button>
-          </a>
-        </section>
-  
+            <button class="delete-button" id="botonBorrar" type="button" onclick="">Vaciar Carrito</button>
+          
+            <a href="/products">
+              <button class="agregar-productos" type="submit">Agregar más productos</button>
+            </a>
+          </section>
+          </div>
       </main>
-         <%- include("./partials/footer")%> 
+      <%- include("./partials/footer")%> 
     <%- include("./partials/scripts")%> 
     <script src="/js/carrito.js"></script>
 </body>
