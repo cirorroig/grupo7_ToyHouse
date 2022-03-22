@@ -1167,6 +1167,6 @@ div.detail-buy-button .edit{
         align-items: center; 
      }
      main.product-detail{
-         
+        border: red; 
      }
 }

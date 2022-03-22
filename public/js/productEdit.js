@@ -17,9 +17,13 @@ window.addEventListener("load",()=>{
     let formulario=document.getElementById("formulario")
     let inputs=document.querySelectorAll(".validation")
     let image=document.getElementById("image")
-
+    let deleteButton=document.querySelector(".deleteForm")
     image.addEventListener("change",(e)=>{
         validarCampo(expresiones.image,e.target,"image")
+    })
+
+    deleteButton.addEventListener("submit",()=>{
+        alert("Producto eliminado correctamente")
     })
 
     const validarFormulario=(e)=>{
@@ -60,7 +64,7 @@ window.addEventListener("load",()=>{
 
         console.log(campos.name,campos.description,campos.detailedDescription);
         if(campos.name && campos.description && campos.image && campos.detailedDescription){
- 
+            alert("Producto editado correctamente")
         }
         else{
             e.preventDefault() 

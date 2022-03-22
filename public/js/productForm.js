@@ -60,7 +60,7 @@ window.addEventListener("load",()=>{
 
         console.log(campos.name,campos.description,campos.detailedDescription);
         if(campos.name && campos.description && campos.image && campos.detailedDescription){
- 
+            alert("Producto creado correctamente!")
         }
         else{
             e.preventDefault() 

@@ -68,7 +68,7 @@ window.addEventListener("load",()=>{
 
    
         if(campos.first_name && campos.last_name && campos.email && campos.password && campos.image){
- 
+            alert("Usuario creado correctamente!")
         }
         else{
             e.preventDefault() 
