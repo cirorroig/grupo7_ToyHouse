@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-
 const db = require('../../database/models');
-
+const Op= db.Sequelize.Op
 const apisController={
 
     userList:(req,res)=>{
@@ -53,7 +52,7 @@ const apisController={
                         relations:[product.categoria,product.talle,product.edad],
                         detail:`http://localhost:4000/api/products/${product.id_producto}`,
                         image:`http://localhost:4000/images/product/${product.image}`,
-                            price:product.price
+                        price:product.price
                         
                     })
                 })
@@ -98,6 +97,37 @@ const apisController={
         .catch(function(error){
             res.json({status:500})
         })
+    },
+    productSearch:(req,res)=>{
+        if(req.params.keyword!=""){
+           db.Producto.findAll({
+            where:{
+                name:{[Op.like]:`%${req.params.keyword}%`},
+            }
+        }).then(products=>{
+            console.log(products);
+            res.json({
+                count:products.length,
+                data:products.map(product=>{
+                    return({
+                        id:product.id_producto,
+                        name: product.name,
+                        description:product.description,
+                        detailedDescription:product.detailedDescription,
+                        detail:`http://localhost:4000/api/products/${product.id_producto}`,
+                        image:`http://localhost:4000/images/product/${product.image}`,
+                        price:product.price
+                    })
+                })
+
+            })
+        }) 
+        }else{
+            res.json({})
+        }
+    },
+    emptySearch:(req,res)=>{
+        res.json({})
     },
     categoryList:(req,res)=>{
         let data=[]
