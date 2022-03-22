@@ -17,7 +17,8 @@
         <nav class="navigation">
             <% if (locals.isLogged) { %>
              <ul class="loggedUl">
-                <li class="user-image"><img src="../../images/Users/<%=  locals.userLogged.image %>"><a href="#">Hola <%= locals.userLogged.first_name%></a></li>                         
+                <li class="user-image"><img src="../../images/Users/<%=  locals.userLogged.image %>"><a href="#"style="pointer-events: none;
+                    cursor: default;">Hola <%= locals.userLogged.first_name%></a></li>                         
                 <li><a style="text-decoration: none;color: white;" href="/users/profile">Mi perfil</a></li>
                 <li><a style="text-decoration: none;color: white;" href="/cart">Carrito</a></li>           
                 <li><a style="text-decoration: none;color: white;" href="/users/logout">Cerrar sesion</a></li>              
