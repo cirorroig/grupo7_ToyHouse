@@ -305,6 +305,7 @@ main.edit div.edit-image{
     display: flex;
     flex-direction: column;
  width: 80%;
+ color: #000;
 }
 main.edit div.edit-image input{
     margin: 5px;
