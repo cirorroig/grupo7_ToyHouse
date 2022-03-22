@@ -151,7 +151,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Ciro','Rodriguez','cirorodriguezroig@gmail.com','$2a$10$A1JxylSnO1ug3CrmD2cMsO3A5BIzbHi2YE1T5dXuyOcGN0BSQ498K','user-1641344873943.jpg',1),(2,'Santino','Brigante','santinobrigante1@gmail.com','$2a$10$uLtCa9RZNWqkCGQy.GU6EOGp1rUBLYqrKHznim1Bo5zYBDOmxro7W','user-1644539163338.jpg',1),(3,'Paulina','Roig','paulinaroig@hotmail.com','$2a$10$7SBRhD5d67XCAZxKe6GmzeQ.uJ1UPh0voi1y8LR.V1py21Uk2SkVa','user-1644603801470.png',0),(4,'Ricardo','Fort','elriki@gmail.com','$2a$10$liy/36sMSv9bV2EuixM8POCm9D95Q5nSSZCqWBwjodwK9m3GHUJZi','user-1644713958560.jpg',0),(5,'Test','Admin','test@gmail.com','$2a$10$IOt2HPExkVLN0YxZO.CUXOhug6zQYiVkvJZ1vMzF1JNvMb6fCAFJu','user-1644968130039.png',1),(19,'Juanca','Carlos','juanca@gmail.com','$2a$10$vXsXdoXXkW4WAMxmNXsRi.ol5sFAOhfEu4yR.FWXPWTSYheLI7Bq6','user-1647396940350.png',0),(21,'asdasd','Fernandez','test2@gmail.com','$2a$10$zPW76WyGvhOf.F2pdE/QBO/DQE9hmBLLMKZgjLc7oXtShRQ0I2/bu','user-1647720774686.png',1);
+INSERT INTO `usuarios` VALUES (1,'Ciro','Rodriguez','cirorodriguezroig@gmail.com','$2a$10$A1JxylSnO1ug3CrmD2cMsO3A5BIzbHi2YE1T5dXuyOcGN0BSQ498K','user-1641344873943.jpg',1),(2,'Santino','Brigante','santinobrigante1@gmail.com','$2a$10$uLtCa9RZNWqkCGQy.GU6EOGp1rUBLYqrKHznim1Bo5zYBDOmxro7W','user-1644539163338.jpg',1);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -164,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-21 18:19:38
+-- Dump completed on 2022-03-22 20:43:48
