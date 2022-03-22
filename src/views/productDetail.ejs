@@ -28,9 +28,11 @@
             <button type="submit"class="boton-formulario-shop"><i class="fas fa-shopping-cart"></i></button>
             <div class="cant">
                 <label class="count">Cantidad</label>
+                <div class="summary">
                 <button class="menos" onclick="contadormenos()">-</button>
                 <input id="count" type="text" value="1" style="text-align: center; width: 30px;" >
-                <button class="menos" onclick="contadormas()">+</button>
+                <button class="mas" onclick="contadormas()">+</button>
+            </div>
             </div>
              <% if (locals.isLogged && locals.userLogged.is_admin==1) { %>
             <a href="/products/<%= product.id_producto %>/edit"><button class="edit">Editar Producto</button></a>

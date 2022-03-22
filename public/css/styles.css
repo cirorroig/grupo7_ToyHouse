@@ -235,6 +235,7 @@ main div.edit-information{
 }
 main.edit div.edit-information label{
     font-weight: 600;
+    color: #000;
 }
 main.edit div.edit-information input{
     margin:5px 0px;
@@ -943,8 +944,6 @@ main.contenedor-cart .sumario-cart{
     main.contenedor-cart  .buttons{
         display: flex;
         flex-direction: row;
-        
-    
     }
     
     main.contenedor-cart .sumario-cart .resumen{
@@ -1023,7 +1022,61 @@ main.contenedor-cart .sumario-cart{
         position: relative;
         left: 130px;
     }
+    /*.product-detail .detail-buy-button .menos{
+        margin: 10px;
+        color: #008CBA;
+        font-size: 30px;
+        border-color:#008CBA;
+        border-radius: 20px;
+        background-color:transparent;
 
+    }
+    div.cant button.menos{
+        border: #008CBA 2px solid;
+        border-radius: 30px;
+        font-size: 29px;
+        color: #008CBA;
+        padding: 3px;
+    }
+*/
+    div.detail-buy-button label.count{
+    position: relative;
+    left: 14px;
+}
+    div.detail-buy-button .summary{
+    border: solid rgba(27, 27, 27, 0.472) 2px;
+    margin: 6px;
+    box-shadow: #000;
+    padding: 1px 12px 1px 12px;
+    border-radius: 50px;
+}
+    div.cant button.menos{
+    border: none;
+    background-color: transparent;
+    font-size: 28px;
+}
+    div.cant button.mas{
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+}
+    div.cant input#count{
+    border: none;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+div.detail-buy-button .boton-formulario-shop{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: rgb(44, 44, 44);
+    margin-top: 15px;
+
+}
+div.detail-buy-button .edit{
+    position: relative;
+    top: 9px;
+}
 @media (max-width: 767px){
     header{
         font-size: 15px;
@@ -1112,5 +1165,8 @@ main.contenedor-cart .sumario-cart{
         display: flex;
         flex-direction: row;
         align-items: center; 
+     }
+     main.product-detail{
+         
      }
 }
