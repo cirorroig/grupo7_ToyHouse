@@ -32,11 +32,23 @@ header.header{
 header .menu-icon{
     display: none;
 }
+.navigation{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
 .header a{
     color: white;
     text-decoration: none;
 }
-
+.toggle-menu{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 25px;
+    display: none;
+    cursor:pointer
+}
 header div.logo-nav-container{
     width: 95%;
     margin:0 auto;
@@ -816,6 +828,9 @@ footer{
     width: 100%;
     padding:7px;
     margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   
 }
 footer .inform, .pay, .contact-us{
@@ -831,7 +846,7 @@ footer div.info{
 
 footer .social-media{
     display: flex;
-    width: 100%; 
+    width: 30%; 
     justify-content: center;
     font-size: 30px;
 
@@ -1078,22 +1093,85 @@ div.detail-buy-button .edit{
     position: relative;
     top: 9px;
 }
-@media (max-width: 767px){
+
+.carrusel{
+    width: 90%;
+    max-width: 120em;
+    padding: 2em;
+    overflow: hidden;
+}
+.grande{
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+}
+.carrusel-img{
+    min-height: 10vh;
+    width: calc(100%/3 - 2em);
+}
+.puntos{
+    width: 100%;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin:1em 0 0
+    
+}
+.punto{
+    width: 1em;
+    height: 1em;
+    margin: 1em 1em 0;
+    border: 1px solid #6a6a6a;
+    list-style: none;
+    border-radius: 50px;
+}
+.punto-activo{
+    background-color: red;
+}
+
+@media (max-width: 768px){
     header{
         font-size: 15px;
+        position: fixed;
+    }
+    footer{
+        flex-direction: column;
+    }
+    body{
+        margin-top:8rem;
     }
     header div.logo-nav-container{
        justify-content:space-around;
        display: flex;
-       
+       height: 100%;
     }
-    .loggedUl{
-       display: flex;
-       align-items: center;
-       flex-direction: column; 
+    .toggle-menu{
+        display: block;
+    }
+    .navigation{
+        flex-direction: column;
+        margin: 0;
+        background-color: rgb(94, 0, 0);
+        width: 100%;
+        position: fixed;
+        top: 116px;
+        justify-content: start;
+        height: 100%;
+        left:100%;
+        transition:left 0.3s;
+    }
+    .navigation-active{
+        left:0;
     }
     header form{
-        width: 95%;
+        width: 100%;
         justify-content: center;
         margin-top: 1em;
     }
@@ -1118,17 +1196,20 @@ div.detail-buy-button .edit{
         cursor: pointer;
         padding: 0.5rem 1rem;
     }
-    header .navigation{
-        width: 100%;
-        margin-top: 1rem;
-    }
     header .navigation ul {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow-y: auto;
+        margin-top: 5px;
+    }
+    .user-image{
         justify-content: space-around;
     }
     header .navigation ul li{
         display: block;
+        margin:10px 0;
     }
     header .navigation ul li a{
         display: block;

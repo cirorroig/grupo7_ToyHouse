@@ -8,13 +8,16 @@
                 <ul>
                     <li class="products"><a style="text-decoration: none;color: white;" href="/products">Productos</a></li>    
                 </ul>        
-            </div>   
+            </div>
+           <button class="toggle-menu"><i class="fa-solid fa-bars"></i></button>    
         </div>
+        
+        <nav class="navigation">
         <form action="/products/search" method="post">
             <input class="search" type="text" name="search" id="search" placeholder="Buscar productos">
             <button type="submit"class="submit"><i class="fa fa-search"></i></button>
         </form>
-        <nav class="navigation">
+        
             <% if (locals.isLogged) { %>
              <ul class="loggedUl">
                 <li class="user-image"><img src="../../images/Users/<%=  locals.userLogged.image %>"><a href="#"style="pointer-events: none;

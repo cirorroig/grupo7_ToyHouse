@@ -11,6 +11,7 @@ window.addEventListener("load",()=>{
     let formulario=document.getElementById("formulario")
     let inputs=document.querySelectorAll("#formulario input")
 
+
     const campos={
         first_name:false,
         last_name:false,
