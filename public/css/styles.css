@@ -579,7 +579,7 @@ main .our-products{
     justify-content:center;
     align-items: center;
     width: 100%;
-    flex-wrap: wrap;   
+    flex-wrap: wrap;  
 }
 main section.our-products h2{
     width: 100%;
@@ -588,6 +588,12 @@ main section.our-products h2{
 }
 main .products{
     margin-bottom: 20px;
+}
+main.home-page .image{
+    padding: 10px;
+}
+main.home-page .fas.fa-percent{
+    box-shadow:0 0 5px rgb(0, 0, 0);
 }
 main article.product{
     display: flex;
@@ -601,6 +607,9 @@ main article.product{
     position: relative;
     background-color: #fff;
     border: 1px solid #47525E;
+    border-radius: 7px;
+    box-shadow:0 0 5px rgba(51, 51, 51, 0.924);
+    transition: 300ms;
 }
 main article div.image{
     height: 200px;
@@ -613,7 +622,6 @@ main article div.description{
     align-items: center;
     height: 130px;
     text-align: center;
-  
 }
 article.product i.fa-percent{
     position: absolute;
@@ -800,16 +808,16 @@ main.product-detail div.img{
 main.product-detail div.info{
     display: flex;
     flex-direction: column;
-   align-items: center;
+    align-items: center;
 }
 main.product-detail div.information{
     display: flex;
-
     justify-content: center;
 }
 main.product-detail div.information p{
     font-size: 20px;
 }
+
 main div.detail-buy-button{
     display: flex;
     justify-content: space-around;
@@ -1038,23 +1046,16 @@ main.contenedor-cart .sumario-cart{
         position: relative;
         left: 130px;
     }
-    /*.product-detail .detail-buy-button .menos{
-        margin: 10px;
-        color: #008CBA;
-        font-size: 30px;
-        border-color:#008CBA;
-        border-radius: 20px;
-        background-color:transparent;
-
+    main.contenedor-cart{
+        display: flex;
+        height: 500px;
+        align-items: center;
+        justify-content: space-between;
+        margin: 15px;
     }
-    div.cant button.menos{
-        border: #008CBA 2px solid;
-        border-radius: 30px;
-        font-size: 29px;
-        color: #008CBA;
-        padding: 3px;
+    main.contenedor-cart img{
+        padding: 8px;
     }
-*/
     div.detail-buy-button label.count{
     position: relative;
     left: 14px;
@@ -1080,6 +1081,7 @@ main.contenedor-cart .sumario-cart{
     border: none;
     font-size: 20px;
     margin-bottom: 4px;
+    background-color: transparent;
 }
 div.detail-buy-button .boton-formulario-shop{
     background-color: transparent;
@@ -1135,7 +1137,14 @@ div.detail-buy-button .edit{
 .punto-activo{
     background-color: red;
 }
-
+.remove-product{
+    border:none;
+    font-size: 22px;
+    background-color: white;
+}
+main.product-list div.image{
+    padding: 5px;
+}
 @media (max-width: 768px){
     header{
         font-size: 15px;
@@ -1155,6 +1164,7 @@ div.detail-buy-button .edit{
     .toggle-menu{
         display: block;
     }
+
     .navigation{
         flex-direction: column;
         margin: 0;
@@ -1251,4 +1261,49 @@ div.detail-buy-button .edit{
      main.product-detail{
         border: red; 
      }
+     main.product-detail section{
+        position: relative;
+        border: rgba(114, 113, 113, 0.856) solid 1px;
+        box-shadow: 0 0 6px rgba(116, 116, 116, 0.787);
+        height: 650px;
+        border-left: none;
+        border-right: none;
+    }
+    main.product-detail section img{
+        border: rgba(110, 110, 110, 0.856) solid 1px;
+        position: relative;
+        box-shadow: 0 0 5px rgba(19, 19, 19, 0.787);
+        padding: 20px;
+        border-radius: 7px;
+    }
+    main.product-detail section div.img{
+        position: relative;
+        top: 150px;
+        width: 400px;
+        height: 320px;
+    }
+    main.product-detail div.info{
+        display: flex;
+        font-size: 18px;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        position: relative;
+        top: 270px;
+        height: 55%;
+    }
+    main.product-detail div.detail-text{
+        display: flex;
+        height: 40%;
+        font-size: 23px;
+    }
+    ul.detail-list li{
+        margin: 10px 0;
+    }
+    main article.product:hover{
+        box-shadow:0 0 13px rgba(255, 0, 0, 0.705);
+        transition: 300ms;
+        width: 22%;
+        position: relative;
+    }
 }

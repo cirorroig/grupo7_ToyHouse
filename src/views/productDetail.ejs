@@ -12,9 +12,9 @@
             <img src="../images/Products/<%=product.image%>" alt="product">
         </div>
         <div class="info">
-            <div class="information">
-                <p><%=product.detailedDescription%></p>
-                <ul>
+            <div class="information detail-text">
+                <p style="font-size: 25px;"><%=product.detailedDescription%></p>
+                <ul class="detail-list">
                     <li>Este producto esta recomendado para niños y niñas <%=product.edad.range%></li>
                     <li>Este producto pertenece a la categoria de <%=product.categoria.name%></li>
                     <% if (product.id_talle!=5) { %>
