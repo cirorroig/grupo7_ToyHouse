@@ -56,7 +56,6 @@ window.addEventListener("load",()=>{
 
    
         if(campos.email && campos.password ){
-            alert("Sesion iniciada correctamente!")
         }
         else{
             e.preventDefault() 

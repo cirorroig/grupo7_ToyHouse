@@ -3,7 +3,7 @@
     <%- include("./partials/head")%>
 <body>
     <%- include("./partials/header")%>
-    <main class="edit" style="background-color: white;">
+    <main class="edit" style="background-color: transparent;">
         <h1>¡Edita tu cuenta!</h1>
         <div class="edit-form" id="formulario">
             <form action="/users/<%= locals.userLogged.id_usuario %>?_method=PUT " enctype="multipart/form-data" method="post" class="edit-form">
