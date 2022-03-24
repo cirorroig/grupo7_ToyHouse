@@ -1,6 +1,6 @@
 
 window.addEventListener("load",()=>{
-   
+
     const expresiones = {
         nombre: /^[a-zA-ZÀ-ÿ\s]{2,20}$/,
         password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
@@ -69,7 +69,8 @@ window.addEventListener("load",()=>{
 
    
         if(campos.first_name && campos.last_name && campos.email && campos.password && campos.image){
-            alert("Usuario creado correctamente!")
+            
+            
         }
         else{
             e.preventDefault() 

@@ -56,7 +56,7 @@ router.post("/login",loginValidations,usersController.processLogin);
 router.get("/register",guestMiddleware,usersController.register);
 
 // Proceso de Registro
-router.post("/register",upload.single("image"),registerValidations,usersController.processRegister)
+router.post("/register",registerValidations,upload.single("image"),usersController.processRegister)
 
 // Vista del perfil de usuario
 router.get("/profile",authMiddleware,usersController.userProfile);

@@ -30,6 +30,7 @@
     "mysql2": "^2.3.3",
     "node-fetch": "^3.2.2",
     "sequelize": "^6.15.0",
-    "sequelize-cli": "^6.4.1"
+    "sequelize-cli": "^6.4.1",
+    "sweetalert2": "^11.4.7"
   }
 }
