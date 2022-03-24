@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `toyhouse_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `toyhouse_db`;
 -- MariaDB dump 10.19  Distrib 10.4.22-MariaDB, for Win64 (AMD64)
 --
 -- Host: 127.0.0.1    Database: toyhouse_db
@@ -162,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-23 23:59:39
+-- Dump completed on 2022-03-24  0:04:44
