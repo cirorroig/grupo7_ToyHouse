@@ -11,7 +11,6 @@
             <div class="image">
                 <a href="/products/<%=product.id%>">
                 <img src="../images/Products/<%=product.image%>" alt="product">
-                <i class="fas fa-percent"></i>
                 </a>
             </div>
             <div class="description">
@@ -21,14 +20,12 @@
                 </div>
                 <div class="price">
                     <p>$<%=product.price%></p>
-                    <p> $<%= product.price/2 %></p>
             </div>
             </div> 
             <div class="buy-button">
-                <a href="/cart"><button type="submit" class="buy">Comprar</button></a>
-                <button type="submit" class="cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></button>
+                <a href="/products/<%=product.id_producto%>"><button type="submit" class="buy">Detalle</button></a>
             </div>
-        </article>
+        </article> 
     <% } %>
     </section> 
     </main> 

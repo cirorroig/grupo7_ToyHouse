@@ -5,7 +5,6 @@ window.onload = function () {
     div.innerHTML += "<h2>No hay productos agregados </h2>";
   } else {
     let carrito = JSON.parse(localStorage.carrito);
-    console.log(carrito);
     for (let i = 0; i < carrito.length; i++) {
       let producto = carrito[i];
       let div = document.querySelector(".vacio");
@@ -22,7 +21,8 @@ window.onload = function () {
               <p>$${producto.precio}</p>
               <p>Cantidad:${producto.inputCantidad}</p>
           </div>
-      </div> 
+      </div>
+      <button class="remove-product" onclick=borrarItem(${producto.idProducto})><i class="fa-solid fa-trash-can"></i><button/> 
       </article> 
       `;
       
@@ -39,17 +39,28 @@ window.onload = function () {
     let contenido2 =totalCarrito
     h3.innerHTML += contenido2
   }
-
-  
 };
 
 function borrarItem(id) {
   let carrito = JSON.parse(localStorage.carrito);
-  carrito = carrito.filter((producto, i) => {
-    return i !== id;
+  let arrayBorrar=carrito.filter((producto, i) => {
+    return producto.idProducto == id;
   });
-
+  let elementoBorrar=arrayBorrar.pop()
+  console.log(elementoBorrar);
+  carrito = carrito.filter((producto, i) => {
+    return producto.idProducto != id;
+  });
+  
+  let total=localStorage.getItem("totalCarrito")
+ 
+  total-=elementoBorrar.precio*elementoBorrar.inputCantidad
+  localStorage.setItem("totalCarrito", JSON.stringify(total));
   localStorage.setItem("carrito", JSON.stringify(carrito));
+  let verificar=JSON.parse(localStorage.getItem("carrito"))
+  if(verificar.length==0){
+    localStorage.clear();
+  }
   location.reload();
 }
 

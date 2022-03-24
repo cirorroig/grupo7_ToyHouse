@@ -23,7 +23,6 @@ window.onload = function() {
         let id = url [url.length -1]
         
         let imagen = document.querySelector('.img img').getAttribute("src")
-        console.log(imagen);
         let tituloProd = document.querySelector('h1').innerText
         let precioConSigno = document.querySelector('.precio').innerText
         let precio = getNumbersInString(precioConSigno)
@@ -35,7 +34,6 @@ window.onload = function() {
             precio:precio,
             inputCantidad:inputCantidad
         }
-        console.log(producto);
         if(localStorage.length == 0) {
             let carrito = []
             carrito.push(producto)     
